@@ -30,3 +30,17 @@ export interface ServiceInterface {
     title?: string;
     icon?: string;
 }
+
+export interface WhyChooseUsInterface {
+    image: string;
+    title: string;
+    subtitle: string;
+    description: string;
+    items: WhyChooseUsItemInterface[];
+}
+
+export interface WhyChooseUsItemInterface {
+    icon: string;
+    title: string;
+    description: string;
+}
