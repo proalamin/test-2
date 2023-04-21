@@ -44,3 +44,17 @@ export interface WhyChooseUsItemInterface {
     title: string;
     description: string;
 }
+
+export interface HowItWorksInterface {
+    image: string;
+    title: string;
+    subtitle: string;
+    description: string;
+    items: HowItWorksItemInterface[];
+}
+
+export interface HowItWorksItemInterface {
+    icon: string;
+    title: string;
+    description: string;
+}

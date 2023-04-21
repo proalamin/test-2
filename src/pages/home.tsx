@@ -1,8 +1,15 @@
 import React from "react";
 import { Banner } from "@/components/Banner";
-import { AwesomeNumberInterface, OurClientInterface, ServiceInterface, WhyChooseUsItemInterface } from "@/types";
+import {
+    AwesomeNumberInterface,
+    HowItWorksItemInterface,
+    OurClientInterface,
+    ServiceInterface,
+    WhyChooseUsItemInterface
+} from "@/types";
 import { About } from "@/components/About";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
+import { HowItWorks } from "@/components/HowItWorks";
 
 const Home: React.FC = () => {
 
@@ -88,6 +95,29 @@ const Home: React.FC = () => {
         }
     ];
 
+    const howItWorksData: HowItWorksItemInterface[] = [
+        {
+            icon: "/images/how-its-work/what-you-need.svg",
+            title: "Tell Us What You Need",
+            description: "No Matter Your Needs, We'll Connect You with a Qualified Expert.",
+        },
+        {
+            icon: "/images/how-its-work/partner.svg",
+            title: "We Connect You With a Partner",
+            description: "No Matter Your Needs, We'll Connect You with a Qualified Expert.",
+        },
+        {
+            icon: "/images/how-its-work/contracts.svg",
+            title: "Sign Contracts",
+            description: "Receive fast & free services quotes from the expert talents near you.",
+        },
+        {
+            icon: "/images/how-its-work/track-your-project.svg",
+            title: "Track Your Project Progress",
+            description: "Pick from some of the best Top-Rated Marketing Specialists with Ease.",
+        },
+    ];
+
     return <div>
         <Banner
             image={"/images/banner.png"}
@@ -115,6 +145,14 @@ const Home: React.FC = () => {
             subtitle="Why Choose Search My Expert?"
             description="Our team of customer-focused professionals works with a diverse range of certified partners to ensure seamless project management from start to finish."
             items={whyChooseUsData}
+        />
+
+        <HowItWorks
+            image="/images/how-its-work-bg.png"
+            title="STEP-BY-STEP"
+            subtitle="How It Works"
+            description="With us, you can kickstart your digital journey in 24 hours!"
+            items={howItWorksData}
         />
     </div>
 }
