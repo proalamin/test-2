@@ -6,18 +6,18 @@ export interface BannerInterface {
         title: string;
         link?: string;
     },
-    clients?: {
+    ourClients: {
         title: string;
-        data?: ClientInterface[]
+        data: OurClientInterface[]
     },
-    awesomeNumbers?: {
+    awesomeNumbers: {
         title: string;
         data?: AwesomeNumberInterface[]
     },
-    services?: ServiceInterface[]
+    services: ServiceInterface[]
 }
 
-export interface ClientInterface {
+export interface OurClientInterface {
     image?: string;
 }
 

@@ -1,10 +1,10 @@
 import React from "react";
 import { Banner } from "@/components/Banner";
-import { AwesomeNumberInterface, ClientInterface, ServiceInterface } from "@/types";
+import { AwesomeNumberInterface, OurClientInterface, ServiceInterface } from "@/types";
 
 const Home: React.FC = () => {
 
-    const clients: ClientInterface[] = [
+    const OurClientsData: OurClientInterface[] = [
         {
             image: "/images/clients/stryker.svg",
         },
@@ -66,9 +66,9 @@ const Home: React.FC = () => {
             button={{
                 title: "Let`s Get Started",
             }}
-            clients={{
+            ourClients={{
                 title: "Clients that Trust Us",
-                data: clients
+                data: OurClientsData
             }}
             awesomeNumbers={{
                 title: "Our Awesome Numbers",

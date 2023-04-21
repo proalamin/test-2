@@ -4,7 +4,7 @@ import { Button } from "@/utils/Button";
 import { Img } from "@/utils/Img";
 
 export const Banner: React.FC<BannerInterface> = (props) => {
-    const { title, subtitle, image, button, clients, awesomeNumbers, services } = props;
+    const { title, subtitle, image, button, ourClients, awesomeNumbers, services } = props;
     return <div
         style={{ backgroundImage: `url(${image})` }}
         className="bg-cover bg-center bg-no-repeat max-h-[150vh]"
@@ -30,13 +30,13 @@ export const Banner: React.FC<BannerInterface> = (props) => {
                     <h2
                         className="font-semibold text-[#FFFFFF] text-[17px] leading-[27px] tracking-[-0.24px] pb-[24px]"
                     >
-                        {clients.title}
+                        {ourClients.title}
                     </h2>
                     <div className="flex gap-[39.01px]">
                         {
-                            clients.data.map((client, index) => {
+                            ourClients.data.map((row, index) => {
                                 return <div key={index}>
-                                    <Img src={client.image} alt="client" className="w-auto h-auto"/>
+                                    <Img src={row.image} alt="client" className="w-auto h-auto"/>
                                 </div>
                             })
                         }
