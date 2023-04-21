@@ -22,7 +22,7 @@ export interface OurClientInterface {
 }
 
 export interface AwesomeNumberInterface {
-    number?: number;
+    number?: string;
     title?: string;
 }
 
