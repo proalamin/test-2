@@ -5,11 +5,13 @@ import {
     HowItWorksItemInterface,
     OurClientInterface,
     ServiceInterface,
+    TrackYourProjectItemInterface,
     WhyChooseUsItemInterface
 } from "@/types";
 import { About } from "@/components/About";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { HowItWorks } from "@/components/HowItWorks";
+import { TrackYourProject } from "@/components/TrackYourProject";
 
 const Home: React.FC = () => {
 
@@ -118,6 +120,45 @@ const Home: React.FC = () => {
         },
     ];
 
+    const trackYourProjectData: TrackYourProjectItemInterface[] = [
+        {
+            position: 1,
+            icon: "/images/track-your-project/client-portal.svg",
+            title: "A Client Portal",
+            description: "On your project dashboard, you'll be able to see the status of your project, including the tasks that have been completed and those that are still in progress.",
+        },
+        {
+            position: 2,
+            icon: "/images/track-your-project/project-manager.svg",
+            title: "Dedicated Project Manager",
+            description: "You can communicate with your project team through our platform, whether it's sending messages, sharing files, or scheduling meetings.",
+        },
+        {
+            position: 3,
+            icon: "/images/track-your-project/progress.svg",
+            title: "Monitor Progress",
+            description: "As your project progresses, you'll be able to monitor the progress of individual tasks and milestones, ensuring that everything is on track.",
+        },
+        {
+            position: 6,
+            icon: "/images/track-your-project/revision.svg",
+            title: "Request Revisions",
+            description: "You can request revisions from your vendors if you are not fully satisfied with the final work, and they will make the required changes until you are content with the outcome.",
+        },
+        {
+            position: 5,
+            icon: "/images/track-your-project/complete-work.svg",
+            title: "Approve Completed Work",
+            description: "Once a task or milestone is completed, you'll be able to review it and provide feedback. If you're satisfied with the work, you can approve it and move on to the next task.",
+        },
+        {
+            position: 4,
+            icon: "/images/track-your-project/regular-update.svg",
+            title: "Receive Regular Updates",
+            description: "Our digital marketing professionals provide regular updates on their progress, so you'll always know what's happening with your project.",
+        },
+    ];
+
     return <div>
         <Banner
             image={"/images/banner.png"}
@@ -153,6 +194,13 @@ const Home: React.FC = () => {
             subtitle="How It Works"
             description="With us, you can kickstart your digital journey in 24 hours!"
             items={howItWorksData}
+        />
+
+        <TrackYourProject
+            title="EASILY TRACK"
+            subtitle="Track Your Project"
+            description="Easily track & ensure that your project is completed to your satisfaction."
+            items={trackYourProjectData}
         />
     </div>
 }

@@ -58,3 +58,25 @@ export interface HowItWorksItemInterface {
     title: string;
     description: string;
 }
+
+export interface TrackYourProjectInterface {
+    title: string;
+    subtitle: string;
+    description: string;
+    items: TrackYourProjectItemInterface[];
+}
+
+export interface TrackYourProjectItemInterface {
+    icon: string;
+    title: string;
+    position: number;
+    description: string;
+}
+
+export interface CardInterface {
+    icon: string;
+    position: number;
+    title: string;
+    description: string;
+    type: "how-it-works" | "track-your-project";
+}
