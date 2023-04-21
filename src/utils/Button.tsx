@@ -17,6 +17,11 @@ export const Button: React.FC<ButtonInterface> = ({ label, onClick, className, c
                 className={`${className || null} md:py-[19px] md:px-[40px] p-[12px] bg-primary text-primaryAccent rounded-[31.5px] text-[19px] leading-[22.99px] tracking-[-0.25px] font-semibold`}
             >
                 {label}
-            </button> : ""
+            </button> : <button
+                onClick={onClick}
+                className={`${className || null} md:py-[19px] md:px-[40px] p-[12px] bg-primary text-primaryAccent rounded-[31.5px] text-[19px] leading-[22.99px] tracking-[-0.25px] font-semibold`}
+            >
+                {label}
+            </button>
     )
 }
