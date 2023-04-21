@@ -36,7 +36,7 @@ export const Banner: React.FC<BannerInterface> = (props) => {
                         {
                             ourClients.data.map((row, index) => {
                                 return <div key={index}>
-                                    <Img src={row.image} alt="client" className="w-auto h-auto"/>
+                                    <Img src={row.image || ""} alt="client" className="w-auto h-auto"/>
                                 </div>
                             })
                         }
@@ -79,7 +79,7 @@ export const Banner: React.FC<BannerInterface> = (props) => {
                                         className="service-card cursor-pointer flex flex-col items-center text-center px-34px">
                                 <div
                                     className="service-card-icon ease-linear duration-300 w-[182px] h-[134px] bg-white rounded-[12px] flex items-center justify-center mb-[16px]">
-                                    <Img src={service.icon} alt="service"
+                                    <Img src={service.icon || ""} alt="service"
                                          className="w-auto h-auto ease-linear duration-300"/>
                                 </div>
                                 <p
