@@ -2,18 +2,21 @@ import React from 'react'
 
 interface ButtonInterface {
     label: string
-    onClick: () => any
+    type: "button" | "submit" | "reset"
+    href?: string
+    onClick?: () => any
     className?: string
-    color?: string
+    color: "primary" | "secondary" | "accent"
 }
 
-export const Button: React.FC<ButtonInterface> = ({ label, onClick, className, color }) => {
+export const Button: React.FC<ButtonInterface> = ({ label, onClick, className, color, type }) => {
     return (
-        <button
-            onClick={onClick}
-            className={`button ${className} ${color} md:py-[13px] md:[px-22px] p-[12px]`}
-        >
-            {label}
-        </button>
+        type === "button" ?
+            <button
+                onClick={onClick}
+                className={`${className || null} md:py-[19px] md:px-[40px] p-[12px] bg-primary text-primaryAccent rounded-[31.5px] text-[19px] leading-[22.99px] tracking-[-0.25px] font-semibold`}
+            >
+                {label}
+            </button> : ""
     )
 }

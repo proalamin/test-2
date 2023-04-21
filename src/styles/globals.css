@@ -12,6 +12,14 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+.service-card:hover .service-card-icon {
+    background-color: #FF6666;
+}
+
+.service-card:hover .service-card-text {
+    color: #FF6666;
+}
+
 @media screen and (max-width: 768px) {
 
 }
