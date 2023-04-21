@@ -14,7 +14,7 @@ export const StayOnTop: React.FC<StayOnTopInterface> = (props) => {
                 <h6 className="text-[12px] leading-[12px] tracking-[1.66px] font-medium pb-[10px] uppercase text-primaryAccent">
                     {title}
                 </h6>
-                <h2 className="text-[35px] leading-[44px] underline underline-offset-[8px] tracking-[-0.44px] font-semibold text-primaryAccent">
+                <h2 className="text-[31px] leading-[44px] tracking-[-0.42px] font-semibold text-primaryAccent">
                     {subtitle}
                 </h2>
             </div>
