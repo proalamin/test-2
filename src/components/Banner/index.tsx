@@ -34,7 +34,7 @@ export const Banner: React.FC<BannerInterface> = (props) => {
                     </h2>
                     <div className="flex gap-[39.01px]">
                         {
-                            ourClients.data.map((row, index) => {
+                            ourClients.data?.map((row, index) => {
                                 return <div key={index}>
                                     <Img src={row.image || ""} alt="client" className="w-auto h-auto"/>
                                 </div>
@@ -52,7 +52,7 @@ export const Banner: React.FC<BannerInterface> = (props) => {
                     </h2>
                     <div className="flex gap-[28px]">
                         {
-                            awesomeNumbers.data.map((awesomeNumber, index) => {
+                            awesomeNumbers.data?.map((awesomeNumber, index) => {
                                 return <div key={index}>
                                     <h3 className="font-bold text-[29px] leading-[29px] tracking-[-0.88px] text-primaryAccent">
                                         {awesomeNumber.number}
