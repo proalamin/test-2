@@ -60,7 +60,7 @@ const Home: React.FC = () => {
         },
     ];
 
-    const whyChooseUsData: WhyChooseUsItemInterface = [
+    const whyChooseUsData: WhyChooseUsItemInterface[] = [
         {
             icon: "/images/why-choose-us/pricing.svg",
             title: "Affordable Pricing",
