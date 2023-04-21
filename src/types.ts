@@ -73,6 +73,20 @@ export interface TrackYourProjectItemInterface {
     description: string;
 }
 
+export interface StayOnTopInterface {
+    image: string;
+    title: string;
+    subtitle: string;
+    featured_1: StayOnTopFeaturedInterface;
+    featured_2: StayOnTopFeaturedInterface;
+}
+
+export interface StayOnTopFeaturedInterface {
+    image: string;
+    title: string;
+    description: string;
+}
+
 export interface CardInterface {
     icon: string;
     position: number;

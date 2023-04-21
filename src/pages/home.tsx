@@ -5,6 +5,7 @@ import {
     HowItWorksItemInterface,
     OurClientInterface,
     ServiceInterface,
+    StayOnTopInterface,
     TrackYourProjectItemInterface,
     WhyChooseUsItemInterface
 } from "@/types";
@@ -12,6 +13,7 @@ import { About } from "@/components/About";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { HowItWorks } from "@/components/HowItWorks";
 import { TrackYourProject } from "@/components/TrackYourProject";
+import { StayOnTop } from "@/components/StayOnTop";
 
 const Home: React.FC = () => {
 
@@ -159,6 +161,22 @@ const Home: React.FC = () => {
         },
     ];
 
+    const stayOnTopData: StayOnTopInterface = {
+        image: "/images/stay-on-top-bg.png",
+        title: "EASY COMMUNICATION",
+        subtitle: "Stay on Top of Your Work",
+        featured_1: {
+            image: "/images/alerts-featured.png",
+            title: "Get Alerts & Notifications for your Project Tasks.",
+            description: "With alerts and notifications, you can receive reminders about upcoming deadlines, changes to project schedules, and updates on the progress of your work. This can help you stay on top of your workload, reducing the risk of missed deadlines or overlooked tasks.",
+        },
+        featured_2: {
+            image: "/images/comunicate-directly-featured.png",
+            title: "Communicate directly with the agency partners and your project managers.",
+            description: "We believe that direct communication between clients and project managers is critical to the success of any project. You can share their ideas, concerns, and feedback with our team, allowing us to better understand their needs and expectations. This help our vendors to deliver projects that meet our clients' expectations.",
+        }
+    };
+
     return <div>
         <Banner
             image={"/images/banner.png"}
@@ -201,6 +219,14 @@ const Home: React.FC = () => {
             subtitle="Track Your Project"
             description="Easily track & ensure that your project is completed to your satisfaction."
             items={trackYourProjectData}
+        />
+
+        <StayOnTop
+            image={stayOnTopData.image}
+            title={stayOnTopData.title}
+            subtitle={stayOnTopData.subtitle}
+            featured_1={stayOnTopData.featured_1}
+            featured_2={stayOnTopData.featured_2}
         />
     </div>
 }
