@@ -2,8 +2,11 @@ import React from "react";
 import { Banner } from "@/components/Banner";
 import {
     BannerInterface,
+    ContactUsInterface,
+    FooterInterface,
     HowItWorksInterface,
     StayOnTopInterface,
+    TestimonialsInterface,
     TrackYourProjectInterface,
     WhyChooseUsInterface
 } from "@/types";
@@ -12,6 +15,9 @@ import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { HowItWorks } from "@/components/HowItWorks";
 import { TrackYourProject } from "@/components/TrackYourProject";
 import { StayOnTop } from "@/components/StayOnTop";
+import { Testimonials } from "@/components/Testimonials";
+import { ContactUs } from "@/components/ContactUs";
+import { Footer } from "@/components/Comman/Footer";
 
 const Home: React.FC = () => {
 
@@ -33,6 +39,9 @@ const Home: React.FC = () => {
                 },
                 {
                     image: "/images/clients/corelogic.svg",
+                },
+                {
+                    image: "/images/clients/greenfence.svg",
                 }
             ]
         },
@@ -50,6 +59,10 @@ const Home: React.FC = () => {
                 {
                     number: "1,512",
                     title: "Agencies",
+                },
+                {
+                    number: "2,145",
+                    title: "Happy Clients",
                 }
             ]
         },
@@ -78,7 +91,13 @@ const Home: React.FC = () => {
                 title: "Software Development",
                 icon: "/images/services/software-development.svg",
             },
-        ]
+        ],
+        header: {
+            logo: "/images/logo.svg",
+            button: {
+                title: "Get Started"
+            }
+        }
     }
 
     const whyChooseUsData: WhyChooseUsInterface = {
@@ -204,8 +223,232 @@ const Home: React.FC = () => {
         }
     };
 
+    const TestimonialsData: TestimonialsInterface = {
+        title: "TESTIMONIALS",
+        subtitle: "We’re So Grateful For The Trust Our Customers Have Placed In Us.",
+        description: "Don't just take “OUR” word for it",
+        items: [
+            {
+                title: "I was struggling to gain traction with…",
+                description: "I was struggling to gain traction with my digital marketing efforts, but the search my expert helped me to turn things around. They provided me with practical solutions that have had a …",
+                date_of_experience: "2023-03-22T18:30:00.000Z",
+                date: "2023-04-18T18:30:00.000Z",
+                rating: 2,
+                author: {
+                    name: "Gagan Singh"
+                }
+            },
+            {
+                title: "I had a tight deadline for my app and…",
+                description: "I was struggling to gain traction I had a tight deadline for my app and the SearchMyExpert was able to deliver on time without compromising on quality. I was really impressed with …",
+                date_of_experience: "2023-03-31T18:30:00.000Z",
+                date: "2023-04-16T18:30:00.000Z",
+                rating: 3,
+                author: {
+                    name: "Karan Kumar"
+                }
+            },
+            {
+                title: "I recently worked with a SearchMyExpert…",
+                description: "I recently worked with a SearchMyExpert for website development and was blown away by their expertise. They helped me to create a beautiful and functional …",
+                date_of_experience: "2023-03-28T18:30:00.000Z",
+                date: "2023-04-11T17:30:00.000Z",
+                rating: 5,
+                author: {
+                    name: "Avtar Singh"
+                }
+            },
+            {
+                title: "I was struggling to gain traction with…",
+                description: "I was struggling to gain traction with my digital marketing efforts, but the search my expert helped me to turn things around. They provided me with practical solutions that have had a …",
+                date_of_experience: "2023-03-22T18:30:00.000Z",
+                date: "2023-03-30T18:30:00.000Z",
+                rating: 4,
+                author: {
+                    name: "Gagan Singh"
+                }
+            },
+            {
+                title: "I was struggling to gain traction with…",
+                description: "I was struggling to gain traction with my digital marketing efforts, but the search my expert helped me to turn things around. They provided me with practical solutions that have had a …",
+                date_of_experience: "2023-03-22T18:30:00.000Z",
+                date: "2023-03-28T18:30:00.000Z",
+                rating: 1,
+                author: {
+                    name: "Chaman Singh"
+                }
+            },
+        ]
+    };
+
+    const ContactUsData: ContactUsInterface = {
+        title: "FREE QUOTATION",
+        subtitle: "Get a Free Quotation",
+        description: "Don't Worry Your Data and Business Ideas Are Safe With Us.",
+        form: {
+            f_name: {
+                label: "First Name",
+                name: "f_name",
+                value: "",
+            },
+            l_name: {
+                label: "Last Name",
+                name: "l_name",
+                value: "",
+            },
+            mobile: {
+                label: "",
+                name: "phone",
+                value: "",
+            },
+            email: {
+                label: "Email",
+                name: "email",
+                value: "",
+            }
+        },
+        countries: ['us', 'ca', 'in']
+    }
+
+    const FooterData: FooterInterface = {
+        logo: "/images/logo_dark.svg",
+        countries: [
+            {
+                name: "India",
+                icon: "/images/countries/india.svg",
+            },
+            {
+                name: "United States",
+                icon: "/images/countries/usa.svg",
+            },
+            {
+                name: "Canada",
+                icon: "/images/countries/canada.svg",
+            }
+        ],
+        links: {
+            quick: {
+                title: "Quick",
+                links: [
+                    {
+                        title: "Home",
+                        href: ""
+                    },
+                    {
+                        title: "About Us",
+                        href: ""
+                    },
+                    {
+                        title: "Services",
+                        href: ""
+                    },
+                    {
+                        title: "How It Works",
+                        href: ""
+                    },
+                    {
+                        title: "Testimonials",
+                        href: ""
+                    },
+                    {
+                        title: "Contact Us",
+                        href: ""
+                    }
+                ]
+            },
+            products: {
+                title: "Products",
+                links: [
+                    {
+                        title: "Web Design",
+                        href: ""
+                    },
+                    {
+                        title: "Web Development",
+                        href: ""
+                    },
+                    {
+                        title: "Social Media",
+                        href: ""
+                    },
+                    {
+                        title: "PPC Marketing",
+                        href: ""
+                    },
+                    {
+                        title: "SEO",
+                        href: ""
+                    }
+                ]
+            },
+            resources: {
+                title: "Resources",
+                links: [
+                    {
+                        title: "Customer Service",
+                        href: ""
+                    },
+                    {
+                        title: "Technical Support",
+                        href: ""
+                    },
+                    {
+                        title: "Site Map",
+                        href: ""
+                    },
+                    {
+                        title: "Testimonials",
+                        href: ""
+                    },
+                    {
+                        title: "FAQ",
+                        href: ""
+                    },
+                    {
+                        title: "Newsletter",
+                        href: ""
+                    }
+                ]
+            },
+            services: {
+                title: "Services",
+                links: [
+                    {
+                        title: "Live Chat",
+                        href: ""
+                    },
+                    {
+                        title: "Phone Support",
+                        href: ""
+                    },
+                    {
+                        title: "Email Support",
+                        href: ""
+                    },
+                    {
+                        title: "Knowledge Base",
+                        href: ""
+                    },
+                    {
+                        title: "Submit a Ticket",
+                        href: ""
+                    }
+                ]
+            }
+        },
+        legal: {
+            title: "Legal",
+            address: "2710 Broadway, New York, NY 10025",
+            email: "info@searchmyexpert.com",
+            phone: "+91 7769970007",
+            phone_link: "+917769970007"
+        },
+        copyRight: "Copyright © 2023 · SearchMyExpert Company · All Rights Reserved"
+    }
+
     return <div>
         <Banner
+            header={BannerData.header}
             image={BannerData.image}
             title={BannerData.title}
             subtitle={BannerData.subtitle}
@@ -247,6 +490,39 @@ const Home: React.FC = () => {
             featured_1={stayOnTopData.featured_1}
             featured_2={stayOnTopData.featured_2}
         />
+
+        <Testimonials
+            title={TestimonialsData.title}
+            subtitle={TestimonialsData.subtitle}
+            description={TestimonialsData.description}
+            items={TestimonialsData.items}
+        />
+
+        <div
+            style={
+                {
+                    backgroundImage: 'url(/images/footer_bg.png)',
+                }
+            }
+            className="bg-[length:100%_100%] bg-no-repeat bg-top"
+        >
+            <ContactUs
+                title={ContactUsData.title}
+                subtitle={ContactUsData.subtitle}
+                description={ContactUsData.description}
+                form={ContactUsData.form}
+                countries={ContactUsData.countries}
+            />
+
+            <Footer
+                logo={FooterData.logo}
+                links={FooterData.links}
+                legal={FooterData.legal}
+                copyRight={FooterData.copyRight}
+                countries={FooterData.countries}
+            />
+
+        </div>
     </div>
 }
 

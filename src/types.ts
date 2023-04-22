@@ -1,20 +1,29 @@
 export interface BannerInterface {
+    header?: HeaderInterface;
     title: string;
-    subtitle?: string;
+    subtitle: string;
     image: string;
     button: {
         title: string;
         link?: string;
-    },
+    };
     ourClients: {
         title: string;
         data: OurClientInterface[]
-    },
+    };
     awesomeNumbers: {
         title: string;
         data?: AwesomeNumberInterface[]
-    },
+    };
     services: ServiceInterface[]
+}
+
+export interface HeaderInterface {
+    logo: string;
+    button: {
+        title: string;
+        href?: string;
+    }
 }
 
 export interface OurClientInterface {
@@ -85,6 +94,89 @@ export interface StayOnTopFeaturedInterface {
     image: string;
     title: string;
     description: string;
+}
+
+export interface TestimonialsInterface {
+    title: string;
+    subtitle: string;
+    description: string;
+    items: TestimonialsItemInterface[];
+}
+
+export interface TestimonialsItemInterface {
+    date: string;
+    rating: number;
+    title: string;
+    description: string;
+    author: AuthorInterface;
+    date_of_experience: string;
+}
+
+export interface AuthorInterface {
+    name: string;
+    image?: string;
+}
+
+export interface ContactUsInterface {
+    title: string;
+    subtitle: string;
+    description: string;
+    form: ContactUsFormInterface;
+    countries: string[];
+}
+
+export interface ContactUsFormInterface {
+    f_name: FormValuesInterface;
+    l_name: FormValuesInterface;
+    mobile: FormValuesInterface;
+    email: FormValuesInterface;
+}
+
+export interface FormValuesInterface {
+    label: string;
+    name: string;
+    value: string;
+}
+
+export interface FooterInterface {
+    logo: string;
+    countries: CountryInterface[];
+    links: {
+        quick: {
+            title: string,
+            links: LinksInterface[];
+        },
+        products: {
+            title: string,
+            links: LinksInterface[];
+        },
+        resources: {
+            title: string,
+            links: LinksInterface[];
+        },
+        services: {
+            title: string,
+            links: LinksInterface[];
+        }
+    };
+    legal: {
+        title: string;
+        address: string;
+        email: string;
+        phone: string;
+        phone_link: string;
+    };
+    copyRight: string;
+}
+
+export interface CountryInterface {
+    icon: string;
+    name: string;
+}
+
+export interface LinksInterface {
+    title: string;
+    href?: string;
 }
 
 export interface CardInterface {

@@ -2,13 +2,28 @@ import React from "react";
 import { BannerInterface } from "@/types";
 import { Button } from "@/utils/Button";
 import { Img } from "@/utils/Img";
+import Slider from 'react-slick';
+import { Header } from "@/components/Comman/Header";
 
 export const Banner: React.FC<BannerInterface> = (props) => {
-    const { title, subtitle, image, button, ourClients, awesomeNumbers, services } = props;
+    const { header, title, subtitle, image, button, ourClients, awesomeNumbers, services } = props;
+
+    const settings = {
+        dots: true,
+        infinite: true,
+        arrows: false,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+    };
+
     return <div
         style={{ backgroundImage: `url(${image})` }}
-        className="bg-cover bg-center bg-no-repeat max-h-[150vh]"
+        className="bg-cover bg-center bg-no-repeat max-h-[150vh] relative"
     >
+        <div className="pt-[40px] px-[55px] w-full">
+            <Header logo={header?.logo} button={header?.button}/>
+        </div>
         <div className="flex flex-col items-center justify-center pt-[117px] pb-[71px]">
             <h1
                 className="font-semibold text-[#FFFFFF] text-[53px] leading-[53px] tracking-[-1.55px] text-center pb-[11px]"
@@ -25,44 +40,48 @@ export const Banner: React.FC<BannerInterface> = (props) => {
             </div>
         </div>
         <div className="flex gap-[67px] pb-[121px] max-w-[923px] mx-auto">
-            <div className="flex-1">
+            <div className="flex-1 w-full max-w-[50%]">
                 <div className="flex flex-col">
                     <h2
                         className="font-semibold text-[#FFFFFF] text-[17px] leading-[27px] tracking-[-0.24px] pb-[24px]"
                     >
                         {ourClients.title}
                     </h2>
-                    <div className="flex gap-[39.01px]">
-                        {
-                            ourClients.data?.map((row, index) => {
-                                return <div key={index}>
-                                    <Img src={row.image || ""} alt="client" className="w-auto h-auto"/>
-                                </div>
-                            })
-                        }
+                    <div className="flex">
+                        <Slider {...settings}>
+                            {
+                                ourClients.data?.map((row, index) => {
+                                    return <div key={index}>
+                                        <Img src={row.image || ""} alt="client" className="w-auto h-[35px] pr-[20px]"/>
+                                    </div>
+                                })
+                            }
+                        </Slider>
                     </div>
                 </div>
             </div>
-            <div className="flex-1">
+            <div className="flex-1 w-full max-w-[50%]">
                 <div className="flex flex-col">
                     <h2
                         className="font-semibold text-[#FFFFFF] text-[17px] leading-[27px] tracking-[-0.24px] pb-[24px]"
                     >
                         {awesomeNumbers.title}
                     </h2>
-                    <div className="flex gap-[28px]">
-                        {
-                            awesomeNumbers.data?.map((awesomeNumber, index) => {
-                                return <div key={index}>
-                                    <h3 className="font-bold text-[29px] leading-[29px] tracking-[-0.88px] text-primaryAccent">
-                                        {awesomeNumber.number}
-                                    </h3>
-                                    <p className="font-semibold text-[16px] leading-[27px] tracking-[-0.32px] text-primaryAccent">
-                                        {awesomeNumber.title}
-                                    </p>
-                                </div>
-                            })
-                        }
+                    <div className="flex awesome-number">
+                        <Slider {...settings}>
+                            {
+                                awesomeNumbers.data?.map((awesomeNumber, index) => {
+                                    return <div key={index}>
+                                        <h3 className="font-bold text-[29px] leading-[27px] tracking-[-0.88px] text-primaryAccent">
+                                            {awesomeNumber.number}
+                                        </h3>
+                                        <p className="font-semibold text-[16px] leading-[22px] tracking-[-0.32px] text-primaryAccent">
+                                            {awesomeNumber.title}
+                                        </p>
+                                    </div>
+                                })
+                            }
+                        </Slider>
                     </div>
                 </div>
             </div>

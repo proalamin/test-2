@@ -14,12 +14,12 @@ export const Button: React.FC<ButtonInterface> = ({ label, onClick, className, c
         type === "button" ?
             <button
                 onClick={onClick}
-                className={`${className || null} md:py-[19px] md:px-[40px] p-[12px] bg-primary text-primaryAccent rounded-[31.5px] text-[19px] leading-[22.99px] tracking-[-0.25px] font-semibold`}
+                className={`md:py-[19px] md:px-[40px] p-[12px] border border-primary border-[2px] transition-all ease-linear bg-primary hover:bg-transparent text-primaryAccent hover:text-primary rounded-[31.5px] text-[19px] leading-[22.99px] tracking-[-0.25px] font-semibold ${className || null}`}
             >
                 {label}
             </button> : <button
                 onClick={onClick}
-                className={`${className || null} md:py-[19px] md:px-[40px] p-[12px] bg-primary text-primaryAccent rounded-[31.5px] text-[19px] leading-[22.99px] tracking-[-0.25px] font-semibold`}
+                className={`md:py-[19px] md:px-[40px] p-[12px] border border-primary border-[2px] transition-all ease-linear bg-primary hover:bg-transparent text-primaryAccent hover:text-primary rounded-[31.5px] text-[19px] leading-[22.99px] tracking-[-0.25px] font-semibold ${className || null}`}
             >
                 {label}
             </button>

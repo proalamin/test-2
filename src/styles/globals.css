@@ -23,3 +23,111 @@ body {
 @media screen and (max-width: 768px) {
 
 }
+
+.testimonial-slider .slick-slide {
+    opacity: .41;
+    padding: 0 20px;
+}
+
+.testimonial-slider .slick-slide.slick-active {
+    opacity: 1;
+}
+
+
+.testimonial-slider .slick-dots {
+    justify-content: center;
+}
+
+.testimonial-slider .slick-dots li button::before {
+    border: 1px solid #FF6666;
+}
+
+.testimonial-slider .slick-dots li.slick-active button::before {
+    background: #FF6666;
+}
+
+.slick-slider {
+    width: 100%;
+}
+
+.slick-dots {
+    display: flex !important;
+    position: unset;
+    margin-top: 34px;
+}
+
+.awesome-number .slick-dots {
+    margin-top: 24px;
+}
+
+.slick-dots li {
+    margin: 0 3.5px;
+    width: 8px;
+    height: 8px;
+}
+
+.slick-dots li button {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+}
+
+.slick-dots li button::before {
+    width: 8px;
+    height: 8px;
+    content: '';
+    opacity: 1;
+    border-radius: 50%;
+    transition: .2s linear;
+    border: 1px solid #FFFFFF;
+}
+
+.slick-dots li.slick-active button::before {
+    opacity: 1;
+    background: white;
+}
+
+:focus-visible {
+    outline: none !important;
+}
+
+.react-tel-input {
+    font-family: 'Inter', sans-serif;
+}
+
+.react-tel-input .form-control {
+    width: 100%;
+    height: 63px;
+    border-radius: 31.5px;
+    padding-left: 58px;
+}
+
+.react-tel-input .selected-flag .arrow {
+    display: none;
+}
+
+.react-tel-input .selected-flag {
+    padding: 0;
+}
+
+.react-tel-input .flag-dropdown.open, .react-tel-input .flag-dropdown.open .selected-flag {
+    border-radius: 0;
+    background: transparent;
+}
+
+.react-tel-input .flag-dropdown {
+    background: transparent;
+    border: none;
+    left: 30px;
+}
+
+input:checked::before {
+    border: 1px solid white !important;
+    content: '';
+    position: absolute;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
+}

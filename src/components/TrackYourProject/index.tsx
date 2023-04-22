@@ -33,7 +33,6 @@ export const TrackYourProject: React.FC<TrackYourProjectInterface> = (props) => 
                         </div>
                     })
                 }
-
             </div>
         </div>
     </div>

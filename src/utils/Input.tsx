@@ -33,7 +33,10 @@ export const Input: React.FC<InputInterface> = (
                 value={value}
                 onChange={onChange}
                 placeholder={placeholder}
-                className={`input px-[16px] py-[15px] ${className}`}
+                className={`bg-[#FFFFFF] rounded-[31.5px] text-[#101D2C] text-[16px] leading-[26px] px-[30px] py-[17px] border-[0.3px] w-full placeholder:text-[16px] placeholder:text-[#101D2C] placeholder:leading-[26px] placeholder:font-normal ${className}`}
+                style={{
+                    borderColor: 'rgba(75, 90, 105, .62)'
+                }}
             />
             {error && <p className="error">{error}</p>}
         </div>

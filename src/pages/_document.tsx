@@ -12,7 +12,6 @@ export default function Document () {
                     content="minimum-scale=1, initial-scale=1, maximum-scale=5, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
                 />
                 <meta name="description" content="Search My Expert"/>
-                <title>Search My Expert</title>
             </Head>
             <body>
             <Main/>
