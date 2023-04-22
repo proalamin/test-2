@@ -9,7 +9,7 @@ export const Header: React.FC<HeaderInterface> = (props) => {
     return <div className="max-w-[1377.5px] mx-auto">
         <div className="flex items-center">
             <div>
-                <Img src={logo} alt="Header Logo" className="w-[323px] h-[41px]"/>
+                <Img src={logo || ""} alt="Header Logo" className="w-[323px] h-[41px]"/>
             </div>
             <div className="flex-1 pl-[34px]">
                 <div className="flex">

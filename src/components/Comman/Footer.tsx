@@ -123,7 +123,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
         <div className="px-[140px] py-[34px]">
             <div className="max-w-[1260px] mx-auto flex items-center">
                 <div>
-                    <Img src={logo} alt="footer-logo" className="w-[211px] h-[26px]"/>
+                    <Img src={logo || ""} alt="footer-logo" className="w-[211px] h-[26px]"/>
                 </div>
                 <div className="flex-1">
                     <p
