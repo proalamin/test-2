@@ -22,7 +22,7 @@ export const Banner: React.FC<BannerInterface> = (props) => {
         className="bg-cover bg-center bg-no-repeat max-h-[150vh] relative"
     >
         <div className="pt-[40px] px-[55px] w-full">
-            <Header logo={header?.logo} button={header?.button}/>
+            <Header logo={header.logo} button={header.button}/>
         </div>
         <div className="flex flex-col items-center justify-center pt-[117px] pb-[71px]">
             <h1

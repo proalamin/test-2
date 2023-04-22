@@ -1,5 +1,5 @@
 export interface BannerInterface {
-    header?: HeaderInterface;
+    header: HeaderInterface;
     title: string;
     subtitle: string;
     image: string;
