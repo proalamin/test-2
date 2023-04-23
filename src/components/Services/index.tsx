@@ -7,7 +7,7 @@ export const Services: React.FC<ServicesInterface> = (props) => {
 
     return <div
         style={{ backgroundImage: `url(${image})` }}
-        className="flex max-w-[900px] mx-auto md:bg-[length:100%_100%] bg-cover bg-top bg-no-repeat"
+        className="flex max-w-[900px] mx-auto md:bg-[length:100%_100%] bg-cover bg-top bg-no-repeat relative md:mt-[-420px]"
     >
         <div className="pt-[109px] pb-[58px] md:px-[55px] px-[18px] w-[100%]">
             <div className="grid sm:grid-cols-3 grid-cols-2 gap-[20px]">

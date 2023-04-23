@@ -19,9 +19,9 @@ export const Banner: React.FC<BannerInterface> = (props) => {
 
     return <div
         style={{ backgroundImage: `url(${image})` }}
-        className="bg-cover bg-center bg-no-repeat relative"
+        className="bg-cover bg-center bg-no-repeat relative md:pb-[561px]"
     >
-        <div className="ms:pt-[40px] pt-[16px] md:px-[55px] sm:px-[30px] px-[16px] w-full">
+        <div className="md:pt-[40px]  pt-[16px] md:px-[55px] sm:px-[30px] px-[16px] w-full">
             <Header logo={header.logo} button={header.button}/>
         </div>
         <div className="flex flex-col items-center justify-center pt-[117px] pb-[71px] px-[29px]">

@@ -4,7 +4,7 @@ import { Img } from "@/utils/Img";
 
 export const About: React.FC = () => {
     return <div
-        className="max-w-[1440px] mx-auto md:pt-[272px] pt-[100px] md:pb-[140px] pb-[100px] md:px-[100px] sm:px-[50px] px-[16px]">
+        className="max-w-[1440px] mx-auto md:pt-[98px] pt-[100px] md:pb-[140px] pb-[100px] md:px-[100px] sm:px-[50px] px-[16px]">
         <div className="flex md:flex-row flex-col items-center md:gap-[59.5px] md:mb-[64px] mb-[53px]">
             <div className="flex-1 max-w-[541.5px]">
                 <h6 className="text-primary md:text-left text-center text-[12px] leading-[12px] tracking-[1.66px] font-medium pb-[10px]">
