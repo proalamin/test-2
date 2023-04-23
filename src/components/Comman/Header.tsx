@@ -9,13 +9,14 @@ export const Header: React.FC<HeaderInterface> = (props) => {
     return <div className="max-w-[1377.5px] mx-auto">
         <div className="flex items-center">
             <div>
-                <Img src={logo || ""} alt="Header Logo" className="w-[323px] h-[41px]"/>
+                <Img src={logo || ""} alt="Header Logo"
+                     className="md:w-[323px] sm:w-[291.6px] w-[150px] md:h-[41px] sm:h-[37.67px] h-[20px]"/>
             </div>
-            <div className="flex-1 pl-[34px]">
+            <div className="flex-1 md:pl-[34px] sm:pl-[17px] pl-[16px]">
                 <div className="flex">
                     <a
                         href="#"
-                        className="text-[#FFFFFF] text-[17px] leading-[27px] tracking-[-0.24px] d-block"
+                        className="text-[#FFFFFF] md:text-[17px] sm:text-[16px] text-[14px] md:leading-[27px] sm:leading-[17px] leading-[14px] tracking-[-0.24px] d-block"
                     >
                         Explore
                     </a>
@@ -26,7 +27,7 @@ export const Header: React.FC<HeaderInterface> = (props) => {
                     label={button.title}
                     type="button"
                     color="primary"
-                    className="lg:py-[12px] lg:px-[26]"
+                    className="md:text-[19px] md:leading-[22.99px] font-semibold py-[12px] px-[26] sm:text-[17px] text-[14px] sm:leading-[20.57px] leading-[14px] tracking-[-0.22px]"
                 />
             </div>
         </div>

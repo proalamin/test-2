@@ -15,7 +15,6 @@ export interface BannerInterface {
         title: string;
         data?: AwesomeNumberInterface[]
     };
-    services: ServiceInterface[]
 }
 
 export interface HeaderInterface {
@@ -35,13 +34,17 @@ export interface AwesomeNumberInterface {
     title?: string;
 }
 
+export interface ServicesInterface {
+    image: string;
+    data: ServiceInterface[];
+}
+
 export interface ServiceInterface {
     title?: string;
     icon?: string;
 }
 
 export interface WhyChooseUsInterface {
-    image: string;
     title: string;
     subtitle: string;
     description: string;

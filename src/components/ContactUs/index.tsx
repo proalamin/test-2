@@ -7,23 +7,23 @@ import { Button } from "@/utils/Button";
 export const ContactUs: React.FC<ContactUsInterface> = (props) => {
     const { title, subtitle, description, form, countries } = props;
     return <div
-        className="px-[140px] pt-[134px] pb-[140px]"
+        className="md:px-[140px] px-[34px] pt-[134px] pb-[140px]"
     >
         <div className="max-w-[1380px] mx-auto">
             <div className="max-w-[395px] mx-auto text-center mb-[52px]">
                 <h6 className="text-[12px] leading-[12px] tracking-[1.66px] font-medium pb-[10px] uppercase text-primary">
                     {title}
                 </h6>
-                <h2 className="text-[35px] leading-[44px] tracking-[-0.97px] font-semibold pb-[9px] text-[#101D2C]">
+                <h2 className="sm:text-[35px] text-[30px] sm:leading-[44px] leading-[35px] tracking-[-0.97px] font-semibold pb-[9px] text-[#101D2C]">
                     {subtitle}
                 </h2>
-                <p className="text-[19px] leading-[30px] tracking-[-0.16px] text-[#101D2C] font-medium max-w-[395px] mx-auto">
+                <p className="md:text-[19px] text-[14px] leading-[30px] tracking-[-0.16px] text-[#101D2C] font-medium max-w-[395px] mx-auto">
                     {description}
                 </p>
             </div>
             <div className="max-w-[569px] mx-auto">
-                <div className="flex gap-[10px] pb-[10px]">
-                    <div className="max-w-[238px]">
+                <div className="flex sm:flex-row flex-col gap-[10px] pb-[10px]">
+                    <div className="sm:max-w-[238px]">
                         <Input
                             placeholder={form.f_name.label}
                             value={form.f_name.value}

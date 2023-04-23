@@ -5,6 +5,7 @@ import {
     ContactUsInterface,
     FooterInterface,
     HowItWorksInterface,
+    ServicesInterface,
     StayOnTopInterface,
     TestimonialsInterface,
     TrackYourProjectInterface,
@@ -18,6 +19,7 @@ import { StayOnTop } from "@/components/StayOnTop";
 import { Testimonials } from "@/components/Testimonials";
 import { ContactUs } from "@/components/ContactUs";
 import { Footer } from "@/components/Comman/Footer";
+import { Services } from "@/components/Services";
 
 const Home: React.FC = () => {
 
@@ -66,7 +68,17 @@ const Home: React.FC = () => {
                 }
             ]
         },
-        services: [
+        header: {
+            logo: "/images/logo.svg",
+            button: {
+                title: "Get Started"
+            }
+        }
+    }
+
+    const servicesData: ServicesInterface = {
+        image: "/images/screen.svg",
+        data: [
             {
                 title: "Web Designing",
                 icon: "/images/services/web-designing.svg",
@@ -92,16 +104,9 @@ const Home: React.FC = () => {
                 icon: "/images/services/software-development.svg",
             },
         ],
-        header: {
-            logo: "/images/logo.svg",
-            button: {
-                title: "Get Started"
-            }
-        }
     }
 
     const whyChooseUsData: WhyChooseUsInterface = {
-        image: "/images/why-choose-us-bg.png",
         title: "why us",
         subtitle: "Why Choose Search My Expert?",
         description: "Our team of customer-focused professionals works with a diverse range of certified partners to ensure seamless project management from start to finish.",
@@ -135,7 +140,7 @@ const Home: React.FC = () => {
     };
 
     const howItWorksData: HowItWorksInterface = {
-        image: "/images/how-its-work-bg.png",
+        image: "/images/stay-on-top-bg.png",
         title: "STEP-BY-STEP",
         subtitle: "How It Works",
         description: "With us, you can kickstart your digital journey in 24 hours!",
@@ -455,13 +460,16 @@ const Home: React.FC = () => {
             button={BannerData.button}
             ourClients={BannerData.ourClients}
             awesomeNumbers={BannerData.awesomeNumbers}
-            services={BannerData.services}
+        />
+
+        <Services
+            image={servicesData.image}
+            data={servicesData.data}
         />
 
         <About/>
 
         <WhyChooseUs
-            image={whyChooseUsData.image}
             title={whyChooseUsData.title}
             subtitle={whyChooseUsData.subtitle}
             description={whyChooseUsData.description}
@@ -504,7 +512,7 @@ const Home: React.FC = () => {
                     backgroundImage: 'url(/images/footer_bg.png)',
                 }
             }
-            className="bg-[length:100%_100%] bg-no-repeat bg-top"
+            className="md:bg-[length:100%_100%] bg-cover bg-no-repeat bg-top"
         >
             <ContactUs
                 title={ContactUsData.title}
