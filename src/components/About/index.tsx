@@ -31,9 +31,9 @@ export const About: React.FC = () => {
                 </div>
             </div>
             <div className="flex-1">
-                <Img src="/images/about-featured.png" alt="About Featured" className="w-[100%] h-auto md:flex hidden"/>
+                <Img src="/images/about-featured.webp" alt="About Featured" className="w-[100%] h-auto md:flex hidden"/>
                 <Img
-                    src="/images/about-featured-mobile.png"
+                    src="/images/about-featured-mobile.webp"
                     alt="About Featured"
                     className="w-[100%] h-auto md:hidden mt-[-155px]"
                 />
