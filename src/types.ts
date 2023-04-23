@@ -13,7 +13,7 @@ export interface BannerInterface {
     };
     awesomeNumbers: {
         title: string;
-        data?: AwesomeNumberInterface[]
+        data: AwesomeNumberInterface[]
     };
 }
 
@@ -26,12 +26,12 @@ export interface HeaderInterface {
 }
 
 export interface OurClientInterface {
-    image?: string;
+    image: string;
 }
 
 export interface AwesomeNumberInterface {
-    number?: string;
-    title?: string;
+    number: string;
+    title: string;
 }
 
 export interface ServicesInterface {
@@ -40,8 +40,9 @@ export interface ServicesInterface {
 }
 
 export interface ServiceInterface {
-    title?: string;
-    icon?: string;
+    title: string;
+    icon: string;
+    iconLight: string;
 }
 
 export interface WhyChooseUsInterface {

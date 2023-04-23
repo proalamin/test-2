@@ -16,6 +16,18 @@ body {
     background-color: #FF6666;
 }
 
+.service-card .service-card-icon .non-hover {
+    display: flex;
+}
+
+.service-card:hover .service-card-icon .non-hover {
+    display: none;
+}
+
+.service-card:hover .service-card-icon .hover {
+    display: flex;
+}
+
 .service-card:hover .service-card-text {
     color: #FF6666;
 }
@@ -130,7 +142,7 @@ input:checked::before {
 
 
 .why-choose-data-section {
-    background: url("/images/why-choose-us-bg-web.svg");
+    background-image: url("/images/why-choose-us-bg-web.svg");
 }
 
 @media screen and (max-width: 768px) {
@@ -144,7 +156,7 @@ input:checked::before {
     }
 
     .why-choose-data-section {
-        background: url("/images/why-choose-us-bg.svg");
+        background-image: url("/images/why-choose-us-bg.svg");
     }
 
 }

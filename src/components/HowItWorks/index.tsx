@@ -1,13 +1,21 @@
 import React from "react";
 import { HowItWorksInterface } from "@/types";
 import { Card } from "@/components/Comman/Card";
+import { Img } from "@/utils/Img";
 
 export const HowItWorks: React.FC<HowItWorksInterface> = (props) => {
     const { image, title, subtitle, description, items } = props;
     return <div
         style={{ backgroundImage: `url(${image})` }}
-        className="md:bg-[length:100%_100%] bg-cover bg-center bg-no-repeat bg-top md:px-[140px] px-[50px] pt-[100px] md:pb-[180px] pb-[100px]"
+        className="md:bg-[length:100%_100%] bg-cover bg-center bg-no-repeat bg-top sm:px-[140px] px-[50px] pt-[100px] sm:pb-[180px] pb-[100px] relative overflow-hidden"
     >
+        <div>
+            <Img
+                src={"/images/dots.svg"}
+                alt={title}
+                className="absolute md:top-[20px] top-[6px] md:left-[20px] left-[-220px] w-[274px] h-[178px]"
+            />
+        </div>
         <div className="max-w-[1380px] mx-auto">
             <div className="max-w-[395px] mx-auto text-center mb-[52px]">
                 <h6 className="text-[12px] leading-[12px] tracking-[1.66px] font-medium pb-[10px] uppercase text-primaryAccent">
@@ -31,5 +39,10 @@ export const HowItWorks: React.FC<HowItWorksInterface> = (props) => {
                 }
             </div>
         </div>
+        <Img
+            src={"/images/dots.svg"}
+            alt={title}
+            className="absolute bottom-[-70px] sm:right-0 right-[-190px] w-[274px] h-[178px]"
+        />
     </div>
 }

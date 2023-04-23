@@ -23,7 +23,7 @@ export const WhyChooseUs: React.FC<WhyChooseUsInterface> = (props) => {
                 </div>
                 <div className="flex-1">
                     <div
-                        className="grid sm:grid-cols-2 grid-rows-2 sm:grid-rows-none md:gap-[30px] gap-[50px] max-w-[775px] ml-auto pb-[30px] pl-[60px]">
+                        className="grid sm:grid-cols-2 grid-rows-2 sm:grid-rows-none md:gap-[30px] gap-[50px] max-w-[775px] ml-auto pb-[30px] sm:pl-[60px]">
                         {
                             items?.slice(0, 2)?.map((item, index) => {
                                 return <div

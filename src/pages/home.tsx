@@ -82,26 +82,32 @@ const Home: React.FC = () => {
             {
                 title: "Web Designing",
                 icon: "/images/services/web-designing.svg",
+                iconLight: "/images/services/web-designing-light.svg"
             },
             {
                 title: "Web Development",
                 icon: "/images/services/web-development.svg",
+                iconLight: "/images/services/web-development-light.svg"
             },
             {
                 title: "Social Media Marketing",
                 icon: "/images/services/social-media.svg",
+                iconLight: "/images/services/social-media-light.svg"
             },
             {
                 title: "Pay Per Click Marketing",
                 icon: "/images/services/pay-per-click.svg",
+                iconLight: "/images/services/pay-per-click-light.svg"
             },
             {
                 title: "Search Engine Optimization",
                 icon: "/images/services/search-engine-optimization.svg",
+                iconLight: "/images/services/search-engine-optimization-light.svg"
             },
             {
                 title: "Software Development",
                 icon: "/images/services/software-development.svg",
+                iconLight: "/images/services/software-development-light.svg"
             },
         ],
     }
