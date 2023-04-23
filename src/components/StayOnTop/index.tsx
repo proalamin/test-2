@@ -50,7 +50,7 @@ export const StayOnTop: React.FC<StayOnTopInterface> = (props) => {
                         {featured_1.description}
                     </p>
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 md:order-1 order-0">
                     <Img src={featured_2.image} alt={featured_2.title} className="w-auto h-auto"/>
                 </div>
             </div>

@@ -24,7 +24,7 @@ import { Services } from "@/components/Services";
 const Home: React.FC = () => {
 
     const BannerData: BannerInterface = {
-        image: "/images/banner.png",
+        image: "/images/banner.webp",
         title: "Find Your Perfect Digital Marketing Partner",
         subtitle: "Search My Expert is The One-Stop Solution for Businesses Searching for Digital Services.",
         button: {
@@ -146,7 +146,7 @@ const Home: React.FC = () => {
     };
 
     const howItWorksData: HowItWorksInterface = {
-        image: "/images/stay-on-top-bg.png",
+        image: "/images/stay-on-top-bg.webp",
         title: "STEP-BY-STEP",
         subtitle: "How It Works",
         description: "With us, you can kickstart your digital journey in 24 hours!",
@@ -219,16 +219,16 @@ const Home: React.FC = () => {
     };
 
     const stayOnTopData: StayOnTopInterface = {
-        image: "/images/stay-on-top-bg.png",
+        image: "/images/stay-on-top-bg.webp",
         title: "EASY COMMUNICATION",
         subtitle: "Stay on Top of Your Work",
         featured_1: {
-            image: "/images/alerts-featured.png",
+            image: "/images/alerts-featured.webp",
             title: "Get Alerts & Notifications for your Project Tasks.",
             description: "With alerts and notifications, you can receive reminders about upcoming deadlines, changes to project schedules, and updates on the progress of your work. This can help you stay on top of your workload, reducing the risk of missed deadlines or overlooked tasks.",
         },
         featured_2: {
-            image: "/images/comunicate-directly-featured.png",
+            image: "/images/comunicate-directly-featured.webp",
             title: "Communicate directly with the agency partners and your project managers.",
             description: "We believe that direct communication between clients and project managers is critical to the success of any project. You can share their ideas, concerns, and feedback with our team, allowing us to better understand their needs and expectations. This help our vendors to deliver projects that meet our clients' expectations.",
         }
