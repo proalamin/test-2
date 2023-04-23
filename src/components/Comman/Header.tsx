@@ -14,6 +14,7 @@ export const Header: React.FC<HeaderInterface> = (props) => {
             <div className="flex-1 pl-[34px]">
                 <div className="flex">
                     <a
+                        href="#"
                         className="text-[#FFFFFF] text-[17px] leading-[27px] tracking-[-0.24px] d-block"
                     >
                         Explore

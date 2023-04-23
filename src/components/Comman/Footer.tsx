@@ -24,7 +24,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                                 links.quick.links?.map((item, index) => {
                                     return <a
                                         key={index}
-                                        href={item.href}
+                                        href={item.href || "#"}
                                         className="d-block text-[18px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
                                     >
                                         {item.title}
@@ -44,7 +44,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                                 links.products.links?.map((item, index) => {
                                     return <a
                                         key={index}
-                                        href={item.href}
+                                        href={item.href || "#"}
                                         className="d-block text-[18px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
                                     >
                                         {item.title}
@@ -64,7 +64,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                                 links.resources.links?.map((item, index) => {
                                     return <a
                                         key={index}
-                                        href={item.href}
+                                        href={item.href || "#"}
                                         className="d-block text-[18px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
                                     >
                                         {item.title}
@@ -84,7 +84,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                                 links.services.links?.map((item, index) => {
                                     return <a
                                         key={index}
-                                        href={item.href}
+                                        href={item.href || "#"}
                                         className="d-block text-[18px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
                                     >
                                         {item.title}
