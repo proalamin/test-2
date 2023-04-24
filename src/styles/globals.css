@@ -120,11 +120,6 @@ input:checked::before {
     left: 1px;
 }
 
-
-.why-choose-data-section {
-    background-image: url("/images/why-choose-us-bg-web.svg");
-}
-
 .track-project-item:nth-child(1) .track-your-project-arrow::before, .track-project-item:nth-child(1) .track-your-project-arrow::after, .track-project-item:nth-child(6) .track-your-project-arrow::before {
     content: unset;
 }
@@ -181,6 +176,22 @@ input:checked::before {
 
 .service-card:hover .service-card-content .service-card-details {
     display: block;
+}
+
+.why-choose-data-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 780px;
+    height: 100%;
+    background: linear-gradient(152.36deg, #CF3030 0.73%, #F66 66.5%);
+    z-index: 0;
+    -webkit-clip-path: url(#my-clip-path);
+    clip-path: url(#my-clip-path);
+}
+
+.why-choose-data-section {
+    z-index: 1;
 }
 
 .track-your-project-bg::before {
@@ -251,11 +262,43 @@ input:checked::before {
     .track-project-item:nth-child(6) .track-your-project-arrow::after {
         top: 55px;
     }
+
+    .why-choose-expert-grid-1 {
+        padding-left: 145px !important;
+    }
+
+    .why-choose-data-overlay {
+        width: 720px;
+    }
 }
 
-@media screen and (min-width: 1350px) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) and (max-width: 1340px) {
+    .why-choose-expert-grid-1 {
+        padding-left: 160px !important;
+    }
+
+    .why-choose-data-overlay {
+        width: 740px;
+    }
+}
+
+@media screen and (min-width: 1350px) and (max-width: 1399px) {
     .track-project-item:nth-child(6) .track-your-project-arrow::after {
         top: 80px;
+    }
+
+    .why-choose-expert-grid-1 {
+        padding-left: 120px !important;
+    }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1450px) {
+    .track-project-item:nth-child(6) .track-your-project-arrow::after {
+        top: 80px;
+    }
+
+    .why-choose-expert-grid-1 {
+        padding-left: 80px !important;
     }
 }
 
@@ -263,7 +306,19 @@ input:checked::before {
     .track-project-item:nth-child(6) .track-your-project-arrow::after {
         top: 86px;
     }
+
+    .why-choose-data-overlay {
+        width: 955px;
+    }
 }
+
+
+@media screen and (min-width: 1750px) and (max-width: 1900px) {
+    .why-choose-data-overlay {
+        width: 1140px;
+    }
+}
+
 
 @media screen and (max-width: 768px) {
     .slick-dots {
@@ -275,8 +330,14 @@ input:checked::before {
         justify-content: center;
     }
 
-    .why-choose-data-section {
+    .why-choose-data-section-wrapper {
         background-image: url("/images/why-choose-us-bg.svg");
+        background-repeat: no-repeat;
+        background-size: 120% auto;
+    }
+
+    .why-choose-data-overlay {
+        display: none;
     }
 
     .track-your-project-bg::after {

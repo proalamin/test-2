@@ -5,10 +5,17 @@ import { Img } from "@/utils/Img";
 export const WhyChooseUs: React.FC<WhyChooseUsInterface> = (props) => {
     const { title, subtitle, description, items } = props;
     return <div
-        className="why-choose-data-section md:bg-[length:160%_106.5%] bg-[length:120%_auto] md:bg-[position:-360px_top] bg-[position:top_left] bg-no-repeat md:px-[100px] px-[50px] py-[100px] bg-[#F5F9FF]"
+        className="relative md:px-[100px] px-[50px] py-[100px] bg-[#F5F9FF] why-choose-data-section-wrapper"
     >
-        <div></div>
-        <div className="max-w-[1440px] mx-auto">
+        <div className="why-choose-data-overlay">
+            <svg className="svg">
+                <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
+                    <path
+                        d="M0,0 H1 C1,0,0.87,0.174,0.775,0.317 C0.684,0.455,0.585,0.675,0.5,0.76 C0.288,0.972,0,1,0,1 V0"></path>
+                </clipPath>
+            </svg>
+        </div>
+        <div className="max-w-[1440px] mx-auto why-choose-data-section relative">
             <div className="flex md:flex-row flex-col">
                 <div className="md:max-w-[320px] md:m-0 mb-[50px]">
                     <h6 className="text-[12px] leading-[12px] tracking-[1.66px] font-medium pb-[10px] uppercase text-primaryAccent">
@@ -23,7 +30,7 @@ export const WhyChooseUs: React.FC<WhyChooseUsInterface> = (props) => {
                 </div>
                 <div className="flex-1">
                     <div
-                        className="why-choose-expert-grid-1 grid sm:grid-cols-2 grid-rows-2 sm:grid-rows-none md:gap-[30px] gap-[50px] max-w-[775px] ml-auto pb-[30px] sm:pl-[80px]">
+                        className="why-choose-expert-grid-1 grid sm:grid-cols-2 grid-rows-2 sm:grid-rows-none md:gap-[30px] gap-[50px] max-w-[775px] ml-auto pb-[30px] sm:pl-[40px]">
                         {
                             items?.slice(0, 2)?.map((item, index) => {
                                 return <div
