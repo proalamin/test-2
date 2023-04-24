@@ -7,7 +7,7 @@ export const Card: React.FC<CardInterface> = (props) => {
     return <div>
         <div className="flex flex-col items-center relative">
             <div
-                className="md:w-[100%] w-[80%] min-h-[166px] rounded-[10px] flex items-center justify-center"
+                className="md:w-[100%] w-[80%] min-h-[166px] rounded-[10px] flex items-center justify-center track-your-project-arrow"
                 style={{
                     background: type === "how-it-works" ? 'rgba(255, 255, 255, 0.021498)' : '#F0F6FF',
                     border: type === "how-it-works" ? '1px solid rgba(255, 255, 255, 0.0836975)' : 'none',

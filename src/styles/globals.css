@@ -12,26 +12,6 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-.service-card:hover .service-card-icon {
-    background-color: #FF6666;
-}
-
-.service-card .service-card-icon .non-hover {
-    display: flex;
-}
-
-.service-card:hover .service-card-icon .non-hover {
-    display: none;
-}
-
-.service-card:hover .service-card-icon .hover {
-    display: flex;
-}
-
-.service-card:hover .service-card-text {
-    color: #FF6666;
-}
-
 .testimonial-slider .slick-slide {
     opacity: .41;
     padding: 0 20px;
@@ -143,6 +123,62 @@ input:checked::before {
 
 .why-choose-data-section {
     background-image: url("/images/why-choose-us-bg-web.svg");
+}
+
+.track-project-item:nth-child(1) .track-your-project-arrow::before, .track-project-item:nth-child(4) .track-your-project-arrow::before {
+    content: unset;
+}
+
+.track-project-item:nth-child(5) .track-your-project-arrow::before, .track-project-item:nth-child(6) .track-your-project-arrow::before {
+    top: 87px;
+    left: -112px;
+    border-right-color: #ff6666;
+    border-left-color: transparent;
+}
+
+.track-project-item .track-your-project-arrow::before {
+    content: '';
+    border-width: 4px;
+    position: absolute;
+    left: -4px;
+    top: 82.25px;
+    border-color: #ff6666;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.track-project-item:nth-child(6) .track-your-project-arrow::after {
+    content: '';
+    top: 76px;
+    right: -4px;
+    border-width: 4px;
+    position: absolute;
+    border-color: #ff6666;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    transform: skew(16deg, 0deg);
+}
+
+.service-card-details {
+    display: none;
+}
+
+.service-card-content {
+    transition: .2s linear;
+}
+
+.service-card:hover .service-card-content {
+    background: rgba(255, 102, 102, .9);
+}
+
+.service-card:hover .service-card-content .plus-icon {
+    display: none;
+}
+
+.service-card:hover .service-card-content .service-card-details {
+    display: block;
 }
 
 @media screen and (max-width: 768px) {

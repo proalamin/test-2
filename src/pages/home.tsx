@@ -77,37 +77,39 @@ const Home: React.FC = () => {
     }
 
     const servicesData: ServicesInterface = {
-        image: "/images/screen.svg",
+        title: "OUR SERVICES",
+        subtitle: "One-Stop Solution",
+        description: "Our services are customized to meet your specific business requirements, while also considering your budget and other relevant needs.",
         data: [
             {
-                title: "Web Designing",
-                icon: "/images/services/web-designing.svg",
-                iconLight: "/images/services/web-designing-light.svg"
+                title: "E-Commerce",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius lacus non elit tincidunt, a ultrices mi lobortis. Nullam accumsan nisi dui, euismod placerat mauris tempor quis. Sed quis volutpat lectus.",
+                image: "/images/services/ecommerce.png"
             },
             {
-                title: "Web Development",
-                icon: "/images/services/web-development.svg",
-                iconLight: "/images/services/web-development-light.svg"
+                title: "Digital Marketing",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius lacus non elit tincidunt, a ultrices mi lobortis. Nullam accumsan nisi dui, euismod placerat mauris tempor quis. Sed quis volutpat lectus.",
+                image: "/images/services/digital-marketing.png"
             },
             {
-                title: "Social Media Marketing",
-                icon: "/images/services/social-media.svg",
-                iconLight: "/images/services/social-media-light.svg"
+                title: "Websites",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius lacus non elit tincidunt, a ultrices mi lobortis. Nullam accumsan nisi dui, euismod placerat mauris tempor quis. Sed quis volutpat lectus.",
+                image: "/images/services/websites.png"
             },
             {
-                title: "Pay Per Click Marketing",
-                icon: "/images/services/pay-per-click.svg",
-                iconLight: "/images/services/pay-per-click-light.svg"
+                title: "Mobile & Desktop Apps",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius lacus non elit tincidunt, a ultrices mi lobortis. Nullam accumsan nisi dui, euismod placerat mauris tempor quis. Sed quis volutpat lectus.",
+                image: "/images/services/mobile-development.png"
             },
             {
-                title: "Search Engine Optimization",
-                icon: "/images/services/search-engine-optimization.svg",
-                iconLight: "/images/services/search-engine-optimization-light.svg"
+                title: "ERP",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius lacus non elit tincidunt, a ultrices mi lobortis. Nullam accumsan nisi dui, euismod placerat mauris tempor quis. Sed quis volutpat lectus.",
+                image: "/images/services/erp.png"
             },
             {
-                title: "Software Development",
-                icon: "/images/services/software-development.svg",
-                iconLight: "/images/services/software-development-light.svg"
+                title: "Video Games",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius lacus non elit tincidunt, a ultrices mi lobortis. Nullam accumsan nisi dui, euismod placerat mauris tempor quis. Sed quis volutpat lectus.",
+                image: "/images/services/video-games.png"
             },
         ],
     }
@@ -469,7 +471,9 @@ const Home: React.FC = () => {
         />
 
         <Services
-            image={servicesData.image}
+            title={servicesData.title}
+            subtitle={servicesData.subtitle}
+            description={servicesData.description}
             data={servicesData.data}
         />
 

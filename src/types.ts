@@ -35,14 +35,16 @@ export interface AwesomeNumberInterface {
 }
 
 export interface ServicesInterface {
-    image: string;
+    title: string;
+    subtitle: string;
+    description: string;
     data: ServiceInterface[];
 }
 
 export interface ServiceInterface {
+    image: string;
     title: string;
-    icon: string;
-    iconLight: string;
+    description: string;
 }
 
 export interface WhyChooseUsInterface {

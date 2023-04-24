@@ -3,6 +3,7 @@ import { Button } from "@/utils/Button";
 import { Img } from "@/utils/Img";
 
 export const About: React.FC = () => {
+    
     return <div
         className="max-w-[1440px] mx-auto md:pt-[98px] pt-[100px] md:pb-[140px] pb-[100px] md:px-[100px] sm:px-[50px] px-[16px]">
         <div className="flex md:flex-row flex-col items-center md:gap-[59.5px] md:mb-[64px] mb-[53px]">
