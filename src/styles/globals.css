@@ -203,5 +203,10 @@ input:checked::before {
     .track-your-project-bg {
         background-image: none;
     }
+}
 
+@media screen and (min-width: 1550px) {
+    .why-choose-expert-grid-2 {
+        padding-left: 50px;
+    }
 }

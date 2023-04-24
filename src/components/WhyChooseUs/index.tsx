@@ -23,7 +23,7 @@ export const WhyChooseUs: React.FC<WhyChooseUsInterface> = (props) => {
                 </div>
                 <div className="flex-1">
                     <div
-                        className="grid sm:grid-cols-2 grid-rows-2 sm:grid-rows-none md:gap-[30px] gap-[50px] max-w-[775px] ml-auto pb-[30px] sm:pl-[60px]">
+                        className="why-choose-expert-grid-1 grid sm:grid-cols-2 grid-rows-2 sm:grid-rows-none md:gap-[30px] gap-[50px] max-w-[775px] ml-auto pb-[30px] sm:pl-[80px]">
                         {
                             items?.slice(0, 2)?.map((item, index) => {
                                 return <div
@@ -49,7 +49,7 @@ export const WhyChooseUs: React.FC<WhyChooseUsInterface> = (props) => {
                         }
                     </div>
                     <div
-                        className="grid sm:grid-cols-3 grid-rows-3 sm:grid-rows-none md:gap-[30px] gap-[50px] max-w-[1021px] ml-auto">
+                        className="why-choose-expert-grid-2 grid sm:grid-cols-3 grid-rows-3 sm:grid-rows-none md:gap-[30px] gap-[50px] max-w-[1021px] ml-auto">
                         {
                             items?.slice(2, 5)?.map((item, index) => {
                                 return <div key={index}
