@@ -454,7 +454,33 @@ const Home: React.FC = () => {
             address: "2710 Broadway, New York, NY 10025",
             email: "info@searchmyexpert.com",
             phone: "+91 7769970007",
-            phone_link: "+917769970007"
+            phone_link: "+917769970007",
+            social_media: [
+                {
+                    name: "Facebook",
+                    icon: "/images/social/facebook.svg",
+                },
+                {
+                    name: "Instagram",
+                    icon: "/images/social/instagram.svg",
+                },
+                {
+                    name: "Linkedin",
+                    icon: "/images/social/linkedin.svg",
+                },
+                {
+                    name: "Twitter",
+                    icon: "/images/social/twitter.svg",
+                },
+                {
+                    name: "Youtube",
+                    icon: "/images/social/youtube.svg",
+                },
+                {
+                    name: "Pinterest",
+                    icon: "/images/social/pintrest.svg",
+                }
+            ]
         },
         copyRight: "Copyright © 2023 · SearchMyExpert Company · All Rights Reserved"
     }

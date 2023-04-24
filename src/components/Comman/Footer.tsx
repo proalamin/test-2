@@ -116,6 +116,18 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                         >
                             {legal.phone}
                         </a>
+                        <div className="mt-[20px]">
+                            <div className="flex gap-[10px] items-center">
+                                {
+                                    legal.social_media?.map((item, index) => {
+                                        return <div key={index}>
+                                            <Img src={item.icon} alt={item.name}
+                                                 className="w-[23px] h-[23px]"/>
+                                        </div>
+                                    })
+                                }
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

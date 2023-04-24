@@ -171,6 +171,7 @@ export interface FooterInterface {
         email: string;
         phone: string;
         phone_link: string;
+        social_media: SocialMediaInterface[];
     };
     copyRight: string;
 }
@@ -178,6 +179,12 @@ export interface FooterInterface {
 export interface CountryInterface {
     icon: string;
     name: string;
+}
+
+export interface SocialMediaInterface {
+    icon: string;
+    name: string;
+    url?: string;
 }
 
 export interface LinksInterface {
