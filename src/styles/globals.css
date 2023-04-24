@@ -181,6 +181,10 @@ input:checked::before {
     display: block;
 }
 
+.track-your-project-bg {
+    background-image: url('/images/track-your-project-bg.svg');
+}
+
 @media screen and (max-width: 768px) {
     .slick-dots {
         justify-content: center;
@@ -193,6 +197,10 @@ input:checked::before {
 
     .why-choose-data-section {
         background-image: url("/images/why-choose-us-bg.svg");
+    }
+
+    .track-your-project-bg {
+        background-image: none;
     }
 
 }
