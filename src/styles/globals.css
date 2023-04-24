@@ -125,26 +125,27 @@ input:checked::before {
     background-image: url("/images/why-choose-us-bg-web.svg");
 }
 
-.track-project-item:nth-child(1) .track-your-project-arrow::before, .track-project-item:nth-child(1) .track-your-project-arrow::after, .track-project-item:nth-child(4) .track-your-project-arrow::before {
+.track-project-item:nth-child(1) .track-your-project-arrow::before, .track-project-item:nth-child(1) .track-your-project-arrow::after, .track-project-item:nth-child(6) .track-your-project-arrow::before {
     content: unset;
 }
 
-.track-project-item:nth-child(5) .track-your-project-arrow::before, .track-project-item:nth-child(6) .track-your-project-arrow::before {
-    top: 87px;
-    left: -112px;
+.track-project-item:nth-child(4) .track-your-project-arrow::before, .track-project-item:nth-child(5) .track-your-project-arrow::before, .track-project-item:nth-child(6) .track-your-project-arrow::before {
+    top: 86px;
+    left: unset;
+    right: -3px;
     border-right-color: #ff6666;
     border-left-color: transparent;
 }
 
 .track-project-item .track-your-project-arrow::before {
+    top: 83px;
+    left: -4px;
     content: '';
     border-width: 4px;
     position: absolute;
-    left: -4px;
-    top: 82.25px;
     border-color: #ff6666;
-    border-right-color: transparent;
     border-top-color: transparent;
+    border-right-color: transparent;
     border-bottom-color: transparent;
 }
 
@@ -182,8 +183,30 @@ input:checked::before {
     display: block;
 }
 
-.track-your-project-bg {
-    background-image: url('/images/track-your-project-bg.svg');
+.track-your-project-bg::before {
+    content: '';
+    top: 350px;
+    left: 290px;
+    height: 470px;
+    position: absolute;
+    width: calc(100% - 305px);
+    border: 1px dashed #f66;
+    border-radius: 0 230px 241px 0;
+    border-left-width: 0;
+}
+
+@media screen and (max-width: 1120px) {
+    .track-your-project-bg::before {
+        height: 510px;
+    }
+
+    .track-project-item:nth-child(4) .track-your-project-arrow::before, .track-project-item:nth-child(5) .track-your-project-arrow::before, .track-project-item:nth-child(6) .track-your-project-arrow::before {
+        top: 99px;
+    }
+
+    .track-project-item:nth-child(6) .track-your-project-arrow::after {
+        top: 68px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -200,8 +223,8 @@ input:checked::before {
         background-image: url("/images/why-choose-us-bg.svg");
     }
 
-    .track-your-project-bg {
-        background-image: none;
+    .track-your-project-bg::after {
+        content: unset;
     }
 
     .track-project-item .track-your-project-arrow::before, .track-project-item:nth-child(4) .track-your-project-arrow::before, .track-project-item:nth-child(5) .track-your-project-arrow::before, .track-project-item:nth-child(6) .track-your-project-arrow::before {
