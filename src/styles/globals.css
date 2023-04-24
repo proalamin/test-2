@@ -125,7 +125,7 @@ input:checked::before {
     background-image: url("/images/why-choose-us-bg-web.svg");
 }
 
-.track-project-item:nth-child(1) .track-your-project-arrow::before, .track-project-item:nth-child(4) .track-your-project-arrow::before {
+.track-project-item:nth-child(1) .track-your-project-arrow::before, .track-project-item:nth-child(1) .track-your-project-arrow::after, .track-project-item:nth-child(4) .track-your-project-arrow::before {
     content: unset;
 }
 
@@ -202,6 +202,56 @@ input:checked::before {
 
     .track-your-project-bg {
         background-image: none;
+    }
+
+    .track-project-item .track-your-project-arrow::before, .track-project-item:nth-child(4) .track-your-project-arrow::before, .track-project-item:nth-child(5) .track-your-project-arrow::before, .track-project-item:nth-child(6) .track-your-project-arrow::before {
+        content: '';
+        position: absolute;
+        top: -5px;
+        left: 150px;
+    }
+
+    .track-project-item .track-your-project-arrow::before {
+        transform: rotate(90deg);
+    }
+
+    .track-project-item:nth-child(5) .track-your-project-arrow::before, .track-project-item:nth-child(6) .track-your-project-arrow::before {
+        transform: rotate(-90deg);
+    }
+
+    .track-project-item:nth-child(1) {
+        order: 1;
+    }
+
+    .track-project-item:nth-child(2) {
+        order: 2;
+    }
+
+    .track-project-item:nth-child(3) {
+        order: 3;
+    }
+
+    .track-project-item:nth-child(4) {
+        order: 6;
+    }
+
+    .track-project-item:nth-child(5) {
+        order: 5;
+    }
+
+    .track-project-item:nth-child(6) {
+        order: 4;
+    }
+
+    .track-project-item .track-your-project-arrow::after, .track-project-item:nth-child(6) .track-your-project-arrow::after {
+        border: 1px dashed #f66;
+        content: '';
+        position: absolute;
+        left: 153px;
+        top: -52px;
+        height: 50px;
+        width: 1px;
+        transform: none;
     }
 }
 
