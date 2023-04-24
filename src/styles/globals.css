@@ -167,6 +167,7 @@ input:checked::before {
 
 .service-card-content {
     transition: .2s linear;
+    background: radial-gradient(65.92% 48.8% at 50% 50%, rgba(0, 0, 0, 0.0001) 0%, #000000 100%);
 }
 
 .service-card:hover .service-card-content {

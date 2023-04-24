@@ -84,32 +84,32 @@ const Home: React.FC = () => {
             {
                 title: "E-Commerce",
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius lacus non elit tincidunt, a ultrices mi lobortis. Nullam accumsan nisi dui, euismod placerat mauris tempor quis. Sed quis volutpat lectus.",
-                image: "/images/services/ecommerce.png"
+                image: "/images/services/ecommerce.webp"
             },
             {
                 title: "Digital Marketing",
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius lacus non elit tincidunt, a ultrices mi lobortis. Nullam accumsan nisi dui, euismod placerat mauris tempor quis. Sed quis volutpat lectus.",
-                image: "/images/services/digital-marketing.png"
+                image: "/images/services/digital-marketing.webp"
             },
             {
                 title: "Websites",
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius lacus non elit tincidunt, a ultrices mi lobortis. Nullam accumsan nisi dui, euismod placerat mauris tempor quis. Sed quis volutpat lectus.",
-                image: "/images/services/websites.png"
+                image: "/images/services/websites.webp"
             },
             {
                 title: "Mobile & Desktop Apps",
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius lacus non elit tincidunt, a ultrices mi lobortis. Nullam accumsan nisi dui, euismod placerat mauris tempor quis. Sed quis volutpat lectus.",
-                image: "/images/services/mobile-development.png"
+                image: "/images/services/mobile-development.webp"
             },
             {
                 title: "ERP",
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius lacus non elit tincidunt, a ultrices mi lobortis. Nullam accumsan nisi dui, euismod placerat mauris tempor quis. Sed quis volutpat lectus.",
-                image: "/images/services/erp.png"
+                image: "/images/services/erp.webp"
             },
             {
                 title: "Video Games",
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius lacus non elit tincidunt, a ultrices mi lobortis. Nullam accumsan nisi dui, euismod placerat mauris tempor quis. Sed quis volutpat lectus.",
-                image: "/images/services/video-games.png"
+                image: "/images/services/video-games.webp"
             },
         ],
     }
