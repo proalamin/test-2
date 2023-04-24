@@ -255,7 +255,7 @@ input:checked::before {
 
 @media screen and (min-width: 1350px) and (max-width: 1500px) {
     .track-project-item:nth-child(6) .track-your-project-arrow::after {
-        top: 73px;
+        top: 80px;
     }
 }
 
