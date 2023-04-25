@@ -7,7 +7,7 @@ export const StayOnTop: React.FC<StayOnTopInterface> = (props) => {
 
     return <div
         style={{ backgroundImage: `url(${image})` }}
-        className="bg-[length:100%_100%] bg-center bg-no-repeat xl:px-[140px] px-[50px] pt-[100px] xl:pb-[180px] pb-[100px]"
+        className="bg-[length:100%_100%] bg-center bg-no-repeat xl:px-[140px] sm:px-[50px] px-[20px] pt-[100px] xl:pb-[180px] pb-[100px]"
     >
         <div className="max-w-[1380px] mx-auto">
             <div className="max-w-[395px] mx-auto text-center mb-[52px]">

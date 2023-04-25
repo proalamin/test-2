@@ -310,6 +310,11 @@ input:checked::before {
         justify-content: center;
     }
 
+    .testimonial-slider .slick-slide {
+        padding: 0 5px;
+        opacity: 1;
+    }
+
     .awesome-number .slick-slide {
         display: flex;
         justify-content: center;
@@ -318,14 +323,14 @@ input:checked::before {
     .why-choose-data-section-wrapper {
         background-image: url("/images/why-choose-us-bg.svg");
         background-repeat: no-repeat;
-        background-size: 120% auto;
+        background-size: 170% auto;
     }
 
     .why-choose-data-overlay {
         display: none;
     }
 
-    .track-your-project-bg::after {
+    .track-your-project-bg::after, .track-your-project-bg::before {
         content: unset;
     }
 
@@ -340,8 +345,10 @@ input:checked::before {
         transform: rotate(90deg);
     }
 
-    .track-project-item:nth-child(5) .track-your-project-arrow::before, .track-project-item:nth-child(6) .track-your-project-arrow::before {
+    .track-project-item:nth-child(4) .track-your-project-arrow::before, .track-project-item:nth-child(5) .track-your-project-arrow::before, .track-project-item:nth-child(6) .track-your-project-arrow::before {
         transform: rotate(-90deg);
+        left: -7px;
+        top: 152px;
     }
 
     .track-project-item:nth-child(1) {

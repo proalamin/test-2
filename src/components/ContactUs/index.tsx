@@ -7,7 +7,7 @@ import { Button } from "@/utils/Button";
 export const ContactUs: React.FC<ContactUsInterface> = (props) => {
     const { title, subtitle, description, form, countries } = props;
     return <div
-        className="md:px-[140px] px-[34px] pt-[134px] pb-[140px]"
+        className="md:px-[140px] sm:px-[50px] px-[20px] pt-[134px] pb-[140px]"
     >
         <div className="max-w-[1380px] mx-auto">
             <div className="max-w-[395px] mx-auto text-center mb-[52px]">
@@ -71,7 +71,7 @@ export const ContactUs: React.FC<ContactUsInterface> = (props) => {
                         type="button"
                         color="primary"
                         label="Submit Right Now"
-                        className="md:text-[16px] leading-[19.36px] tracking-[-0.21px] font-semibold w-full xxl:h-[53px] sm:h-[50px]"
+                        className="md:text-[16px] leading-[19.36px] tracking-[-0.21px] font-semibold w-full xxl:h-[53px] h-[50px]"
                     />
                 </div>
             </div>

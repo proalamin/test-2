@@ -6,7 +6,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
     const { links, legal, logo, copyRight, countries } = props;
     return <div>
         <div
-            className="xl:px-[140px] px-[50px] md:pb-[132px] pb-[60px]"
+            className="xl:px-[140px] sm:px-[50px] px-[30px] md:pb-[132px] pb-[60px]"
             style={{
                 borderBottom: "0.4px solid rgba(75, 90, 105, 0.4)"
             }}

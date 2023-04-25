@@ -35,18 +35,19 @@ export const Testimonials: React.FC<TestimonialsInterface> = (props) => {
     };
     const mobileSettings = {
         dots: true,
+        centerMode: true,
         autoplay: true,
         autoplaySpeed: 3000,
+        centerPadding: '50px',
         infinite: true,
-        vertical: true,
         arrows: false,
         speed: 500,
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll: 1,
     };
 
     return <div className="md:pt-[140px] pt-[100px] pb-[6px]">
-        <div className="md:px-[140px] px-[50px]">
+        <div className="md:px-[140px] sm:px-[50px] px-[30px]">
             <div className="max-w-[1380px] mx-auto">
                 <div className="md:max-w-[659px] mx-auto text-center mb-[52px]">
                     <h6 className="text-[12px] leading-[12px] tracking-[1.66px] font-medium pb-[10px] uppercase text-primary">
