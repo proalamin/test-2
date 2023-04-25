@@ -5,8 +5,8 @@ import { Img } from "@/utils/Img";
 export const Services: React.FC<ServicesInterface> = (props) => {
     const { title, subtitle, description, data } = props;
 
-    return <div className="bg-[#F5F9FF] pt-[98px]">
-        <div className="max-w-[721px] mx-auto text-center mb-[97px]">
+    return <div className="bg-[#F5F9FF] md:pt-[98px] pt-[90px]">
+        <div className="max-w-[721px] mx-auto text-center mb-[97px] sm:px-0 px-[20px]">
             <h6 className="text-[12px] leading-[12px] tracking-[1.66px] font-medium pb-[10px] uppercase text-primary">
                 {title}
             </h6>
@@ -30,12 +30,12 @@ export const Services: React.FC<ServicesInterface> = (props) => {
                                 className="service-card-content absolute text-left w-full h-full p-[30px] flex flex-col top-0 left-0 text-[#FFFFFF] font-medium"
                             >
                                 <div
-                                    className="flex-1 w-full xxl:text-[35px] text-[30px] leading-[25px] tracking-[-0.84px]">
+                                    className="flex-1 w-full xxl:text-[35px] md:text-[30px] text-[25px] leading-[25px] tracking-[-0.84px]">
                                     0{index + 1}
                                 </div>
                                 <div>
                                     <div className="flex items-center">
-                                        <p className="xxl:text-[22px] text-[19px] leading-[25px] tracking-[-0.6px]">
+                                        <p className="xxl:text-[22px] md:text-[19px] text-[15px] leading-[25px] tracking-[-0.6px]">
                                             {service.title}
                                         </p>
                                         <Img
@@ -45,13 +45,13 @@ export const Services: React.FC<ServicesInterface> = (props) => {
                                         />
                                     </div>
                                     <div className="service-card-details">
-                                        <p className="mt-[20px] xxl:text-[17px] text-[15px] leading-[30px] tracking-[-0.46px] font-normal">
+                                        <p className="md:mt-[20px] mt-[5px] xxl:text-[17px] md:text-[15px] text-[12px] leading-[30px] tracking-[-0.46px] font-normal">
                                             {service.description}
                                         </p>
                                         <Img
                                             src="/images/circle.svg"
                                             alt={service.title}
-                                            className="xxl:w-[28px] w-[22px] xxl:h-[28px] h-[22px] mt-[24px]"
+                                            className="xxl:w-[28px] w-[22px] xxl:h-[28px] h-[22px] md:mt-[24px] mt-[5px]"
                                         />
                                     </div>
                                 </div>

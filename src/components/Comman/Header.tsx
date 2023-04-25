@@ -27,7 +27,7 @@ export const Header: React.FC<HeaderInterface> = (props) => {
                     label={button.title}
                     type="button"
                     color="primary"
-                    className="xxl:text-[19px] xxl:leading-[22.99px] font-semibold sm:text-[17px] text-[14px] sm:leading-[20.57px] leading-[14px] tracking-[-0.22px] w-[145px] xl:h-[44px] h-[38px]"
+                    className="xxl:text-[19px] xxl:leading-[22.99px] font-semibold sm:text-[17px] text-[14px] sm:leading-[20.57px] leading-[14px] tracking-[-0.22px] md:w-[145px] w-[115px] xl:h-[44px] md:h-[38px] h-[35px]"
                 />
             </div>
         </div>

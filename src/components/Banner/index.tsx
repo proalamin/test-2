@@ -27,9 +27,9 @@ export const Banner: React.FC<BannerInterface> = (props) => {
             <Header logo={header.logo} button={header.button}/>
         </div>
         <div
-            className="md:max-w-[1055px] mx-auto flex flex-col items-center justify-center md:pt-[238px] pt-[117px] pb-[71px] md:px-0 px-[29px]">
+            className="md:max-w-[1055px] mx-auto flex flex-col items-center justify-center md:pt-[238px] pt-[117px] pb-[71px] md:px-0 px-[20px]">
             <h1
-                className="font-semibold text-[#FFFFFF] xl:text-[53px] xxl:text-[40px] xl:text-[35px] text-[30px] xl:leading-[53px] leading-[56px] md:tracking-[-1.55px] text-center md:pb-[25px] pb-[18px]"
+                className="font-semibold text-[#FFFFFF] xl:text-[53px] xxl:text-[40px] xl:text-[35px] sm:text-[30px] text-[25px] xl:leading-[53px] md:leading-[56px] leading-[40px] md:tracking-[-1.55px] text-center md:pb-[25px] pb-[18px]"
             >
                 {title}
             </h1>
@@ -41,7 +41,7 @@ export const Banner: React.FC<BannerInterface> = (props) => {
                     label={button.title}
                     type="button"
                     color="primary"
-                    className="xxl:text-[19px] xxl:leading-[22.99px] tracking-[-0.25px] font-semibold sm:text-[17px] text-[14px] sm:leading-[20.57px] leading-[14px] xxl:w-[238px] w-[200px] xxl:h-[63px] h-[48px]"
+                    className="xxl:text-[19px] xxl:leading-[22.99px] tracking-[-0.25px] font-semibold sm:text-[17px] text-[14px] sm:leading-[20.57px] leading-[14px] xxl:w-[238px] md:w-[200px] w-[160px] xxl:h-[63px] md:h-[48px] h-[42px]"
                 />
             </div>
         </div>
