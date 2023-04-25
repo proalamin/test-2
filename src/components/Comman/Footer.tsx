@@ -12,8 +12,8 @@ export const Footer: React.FC<FooterInterface> = (props) => {
             }}
         >
             <div className="max-w-[1263px] mx-auto">
-                <div className="grid md:grid-cols-6 grid-cols-2 gap-[100px]">
-                    <div className="md:pb-0 pb-[50px]">
+                <div className="grid md:grid-cols-6 grid-cols-2 md:gap-[100px]">
+                    <div className="md:pb-0 pb-[30px]">
                         <h5
                             className="xxl:text-[16px] xl:text-[15px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold pb-[26px] text-[#101D2C]"
                         >
@@ -33,7 +33,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                             }
                         </div>
                     </div>
-                    <div className="md:pb-0 pb-[50px]">
+                    <div className="md:pb-0 pb-[30px]">
                         <h5
                             className="xl:text-[16px] xl:text-[15px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold pb-[26px] text-[#101D2C]"
                         >
@@ -53,7 +53,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                             }
                         </div>
                     </div>
-                    <div className="md:pb-0 pb-[50px]">
+                    <div className="md:pb-0 pb-[30px]">
                         <h5
                             className="xl:text-[16px] xl:text-[15px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold pb-[26px] text-[#101D2C]"
                         >
@@ -73,7 +73,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                             }
                         </div>
                     </div>
-                    <div className="md:pb-0 pb-[50px]">
+                    <div className="md:pb-0 pb-[30px]">
                         <h5
                             className="xl:text-[16px] xl:text-[15px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold pb-[26px] text-[#101D2C]"
                         >
