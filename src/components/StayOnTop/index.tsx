@@ -14,7 +14,7 @@ export const StayOnTop: React.FC<StayOnTopInterface> = (props) => {
                 <h6 className="text-[12px] leading-[12px] tracking-[1.66px] font-medium pb-[10px] uppercase text-primaryAccent">
                     {title}
                 </h6>
-                <h2 className="md:text-[31px] text-[22px] leading-[44px] tracking-[-0.42px] font-semibold text-primaryAccent">
+                <h2 className="xxl:text-[35px] xl:text-[30px] text-[24px] leading-[44px] tracking-[-0.42px] font-semibold text-primaryAccent">
                     {subtitle}
                 </h2>
             </div>
@@ -25,12 +25,12 @@ export const StayOnTop: React.FC<StayOnTopInterface> = (props) => {
                 </div>
                 <div className="md:flex-1">
                     <h3
-                        className="xl:text-[25px] text-[20px] xl:leading-[35px] leading-[27px] tracking-[-0.34px] mb-[21px] font-semibold text-primaryAccent"
+                        className="xxl:text-[25px] xl:text-[23px] text-[20px] xl:leading-[35px] leading-[27px] tracking-[-0.34px] mb-[21px] font-semibold text-primaryAccent"
                     >
                         {featured_1.title}
                     </h3>
                     <p
-                        className="xl:text-[19px] text-[14px] leading-[30px] md:font-semibold text-primaryAccent"
+                        className="xxl:text-[19px] xl:text-[17px] text-[14px] leading-[30px] font-light text-primaryAccent"
                     >
                         {featured_1.description}
                     </p>
@@ -40,14 +40,14 @@ export const StayOnTop: React.FC<StayOnTopInterface> = (props) => {
                 className="flex md:flex-row flex-col md:items-center md:gap-[128px] gap-[35px] md:text-left text-center">
                 <div className="flex-1 md:order-0 order-1">
                     <h3
-                        className="xl:text-[25px] text-[20px] xl:leading-[35px] leading-[27px] tracking-[-0.34px] mb-[21px] font-semibold text-primaryAccent"
+                        className="xxl:text-[25px] xl:text-[23px] text-[20px] xl:leading-[35px] leading-[27px] tracking-[-0.34px] mb-[21px] font-semibold text-primaryAccent"
                     >
-                        {featured_1.title}
+                        {featured_2.title}
                     </h3>
                     <p
-                        className="xl:text-[19px] text-[14px] leading-[30px] md:font-semibold text-primaryAccent"
+                        className="xxl:text-[19px] xl:text-[17px] text-[14px] leading-[30px] font-light text-primaryAccent"
                     >
-                        {featured_1.description}
+                        {featured_2.description}
                     </p>
                 </div>
                 <div className="flex-1 md:order-1 order-0">

@@ -10,13 +10,13 @@ export const Header: React.FC<HeaderInterface> = (props) => {
         <div className="flex items-center">
             <div>
                 <Img src={logo || ""} alt="Header Logo"
-                     className="xl:w-[323px] sm:w-[291.6px] w-[150px] xl:h-[41px] sm:h-[37.67px] h-[20px]"/>
+                     className="xxl:w-[323px] xl:w-[300px] sm:w-[291.6px] w-[150px] xl:h-[41px] sm:h-[37.67px] h-[20px]"/>
             </div>
             <div className="flex-1 md:pl-[34px] sm:pl-[17px] pl-[16px]">
                 <div className="flex">
                     <a
                         href="#"
-                        className="text-[#FFFFFF] md:text-[17px] sm:text-[16px] text-[14px] md:leading-[27px] sm:leading-[17px] leading-[14px] tracking-[-0.24px] d-block"
+                        className="text-[#FFFFFF] xxl:text-[17px] sm:text-[16px] text-[14px] md:leading-[27px] sm:leading-[17px] leading-[14px] tracking-[-0.24px] d-block"
                     >
                         Explore
                     </a>
@@ -27,7 +27,7 @@ export const Header: React.FC<HeaderInterface> = (props) => {
                     label={button.title}
                     type="button"
                     color="primary"
-                    className="xl:text-[19px] xl:leading-[22.99px] font-semibold sm:text-[17px] text-[14px] sm:leading-[20.57px] leading-[14px] tracking-[-0.22px] w-[145px] xl:h-[44px] h-[38px]"
+                    className="xxl:text-[19px] xxl:leading-[22.99px] font-semibold sm:text-[17px] text-[14px] sm:leading-[20.57px] leading-[14px] tracking-[-0.22px] w-[145px] xl:h-[44px] h-[38px]"
                 />
             </div>
         </div>

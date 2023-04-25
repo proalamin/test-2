@@ -21,14 +21,14 @@ export const HowItWorks: React.FC<HowItWorksInterface> = (props) => {
                 <h6 className="text-[12px] leading-[12px] tracking-[1.66px] font-medium pb-[10px] uppercase text-primaryAccent">
                     {title}
                 </h6>
-                <h2 className="xl:text-[35px] text-[30px] sm:leading-[44px] leading-[35px] underline underline-offset-[8px] tracking-[-0.44px] font-semibold pb-[9px] text-primaryAccent">
+                <h2 className="xxl:text-[35px] xl:text-[30px] text-[24px] sm:leading-[44px] leading-[35px] underline underline-offset-[8px] tracking-[-0.44px] font-semibold pb-[9px] text-primaryAccent">
                     {subtitle}
                 </h2>
-                <p className="xl:text-[19px] text-[14px] leading-[30px] tracking-[-0.26px] text-primaryAccent font-medium">
+                <p className="xxl:text-[19px] xl:text-[17px] text-[14px] leading-[30px] tracking-[-0.26px] text-primaryAccent font-medium">
                     {description}
                 </p>
             </div>
-            <div className="flex md:flex-row flex-col xl:gap-[60px] md:gap-[30px] gap-[64px]">
+            <div className="flex md:flex-row flex-col xxl:gap-[60px] xl:gap-[40px] md:gap-[30px] gap-[64px]">
                 {
                     items?.map((item, index) => {
                         return <div key={index} className="flex-1 md:max-w-[300px]">

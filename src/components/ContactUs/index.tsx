@@ -14,10 +14,10 @@ export const ContactUs: React.FC<ContactUsInterface> = (props) => {
                 <h6 className="text-[12px] leading-[12px] tracking-[1.66px] font-medium pb-[10px] uppercase text-primary">
                     {title}
                 </h6>
-                <h2 className="xl:text-[35px] text-[30px] sm:leading-[44px] leading-[35px] tracking-[-0.97px] font-semibold pb-[9px] text-[#101D2C]">
+                <h2 className="xxl:text-[35px] xl:text-[30px] text-[24px] sm:leading-[44px] leading-[35px] tracking-[-0.97px] font-semibold pb-[9px] text-[#101D2C]">
                     {subtitle}
                 </h2>
-                <p className="xl:text-[19px] text-[14px] leading-[30px] tracking-[-0.16px] text-[#101D2C] font-medium max-w-[395px] mx-auto">
+                <p className="xxl:text-[19px] xl:text-[17px] text-[14px] leading-[30px] tracking-[-0.16px] text-[#101D2C] font-medium max-w-[395px] mx-auto">
                     {description}
                 </p>
             </div>
@@ -71,7 +71,7 @@ export const ContactUs: React.FC<ContactUsInterface> = (props) => {
                         type="button"
                         color="primary"
                         label="Submit Right Now"
-                        className="md:text-[16px] leading-[19.36px] tracking-[-0.21px] font-semibold w-full md:py-[20px]"
+                        className="md:text-[16px] leading-[19.36px] tracking-[-0.21px] font-semibold w-full xxl:h-[53px] sm:h-[50px]"
                     />
                 </div>
             </div>

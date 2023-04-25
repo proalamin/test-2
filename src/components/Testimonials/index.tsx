@@ -19,13 +19,13 @@ export const Testimonials: React.FC<TestimonialsInterface> = (props) => {
         slidesToScroll: 1,
         responsive: [
             {
-                breakpoint:1120,
+                breakpoint: 1120,
                 settings: {
                     centerPadding: '50px',
                 }
             },
             {
-                breakpoint:767,
+                breakpoint: 767,
                 settings: {
                     centerMode: false,
                     slidesToShow: 2,
@@ -52,10 +52,10 @@ export const Testimonials: React.FC<TestimonialsInterface> = (props) => {
                     <h6 className="text-[12px] leading-[12px] tracking-[1.66px] font-medium pb-[10px] uppercase text-primary">
                         {title}
                     </h6>
-                    <h2 className="xl:text-[35px] text-[30px] sm:leading-[44px] leading-[35px] tracking-[-0.44px] font-semibold pb-[9px] text-[#101D2C]">
+                    <h2 className="xxl:text-[35px] xl:text-[30px] text-[24px] sm:leading-[44px] leading-[35px] tracking-[-0.44px] font-semibold pb-[9px] text-[#101D2C]">
                         {subtitle}
                     </h2>
-                    <p className="xl:text-[19px] text-[14px] leading-[30px] tracking-[-0.26px] text-[#101D2C] font-medium">
+                    <p className="xxl:text-[19px] xl:text-[17px] text-[14px] leading-[30px] tracking-[-0.26px] text-[#101D2C] font-medium">
                         {description}
                     </p>
                     <Img

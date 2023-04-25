@@ -26,13 +26,14 @@ export const Banner: React.FC<BannerInterface> = (props) => {
         <div className="md:pt-[56px]  pt-[16px] md:px-[55px] sm:px-[30px] px-[16px] w-full">
             <Header logo={header.logo} button={header.button}/>
         </div>
-        <div className="md:max-w-[1055px] mx-auto flex flex-col items-center justify-center md:pt-[238px] pt-[117px] pb-[71px] md:px-0 px-[29px]">
+        <div
+            className="md:max-w-[1055px] mx-auto flex flex-col items-center justify-center md:pt-[238px] pt-[117px] pb-[71px] md:px-0 px-[29px]">
             <h1
-                className="font-semibold text-[#FFFFFF] xl:text-[53px] md:text-[40px] text-[30px] xl:leading-[53px] leading-[56px] md:tracking-[-1.55px] text-center md:pb-[25px] pb-[18px]"
+                className="font-semibold text-[#FFFFFF] xl:text-[53px] xxl:text-[40px] xl:text-[35px] text-[30px] xl:leading-[53px] leading-[56px] md:tracking-[-1.55px] text-center md:pb-[25px] pb-[18px]"
             >
                 {title}
             </h1>
-            <p className="font-normal text-[#FFFFFF] xl:text-[23px] md:tex-[18px] text-[16px] xl:leading-[36px] leading-[28px] tracking-[-0.68px] text-center pb-[30px] max-w-[667px]">
+            <p className="font-normal text-[#FFFFFF] xl:text-[23px] text-[16px] xl:leading-[36px] leading-[28px] tracking-[-0.68px] text-center pb-[30px] max-w-[667px]">
                 {subtitle}
             </p>
             <div>
@@ -40,7 +41,7 @@ export const Banner: React.FC<BannerInterface> = (props) => {
                     label={button.title}
                     type="button"
                     color="primary"
-                    className="xl:text-[19px] xl:leading-[22.99px] tracking-[-0.25px] font-semibold sm:text-[17px] text-[14px] sm:leading-[20.57px] leading-[14px] xl:w-[238px] w-[200px] xl:h-[63px] h-[48px]"
+                    className="xxl:text-[19px] xxl:leading-[22.99px] tracking-[-0.25px] font-semibold sm:text-[17px] text-[14px] sm:leading-[20.57px] leading-[14px] xxl:w-[238px] w-[200px] xxl:h-[63px] h-[48px]"
                 />
             </div>
         </div>

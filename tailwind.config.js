@@ -10,6 +10,9 @@ module.exports = {
             colors: {
                 primary: '#FF6666',
                 primaryAccent: '#FFF',
+            },
+            screens: {
+                'xxl': '1441px',
             }
         },
     },

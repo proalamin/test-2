@@ -15,7 +15,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                 <div className="grid md:grid-cols-6 grid-cols-2 gap-[100px]">
                     <div className="md:pb-0 pb-[50px]">
                         <h5
-                            className="xl:text-[16px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold pb-[26px] text-[#101D2C]"
+                            className="xxl:text-[16px] xl:text-[15px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold pb-[26px] text-[#101D2C]"
                         >
                             {links.quick.title}
                         </h5>
@@ -25,7 +25,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                                     return <a
                                         key={index}
                                         href={item.href || "#"}
-                                        className="d-block xl:text-[18px] text-[14px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
+                                        className="d-block xxl:text-[18px] xl:text-[15px] text-[14px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
                                     >
                                         {item.title}
                                     </a>
@@ -35,7 +35,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                     </div>
                     <div className="md:pb-0 pb-[50px]">
                         <h5
-                            className="xl:text-[16px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold pb-[26px] text-[#101D2C]"
+                            className="xl:text-[16px] xl:text-[15px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold pb-[26px] text-[#101D2C]"
                         >
                             {links.products.title}
                         </h5>
@@ -45,7 +45,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                                     return <a
                                         key={index}
                                         href={item.href || "#"}
-                                        className="d-block xl:text-[18px] text-[14px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
+                                        className="d-block xxl:text-[18px] xl:text-[15px] text-[14px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
                                     >
                                         {item.title}
                                     </a>
@@ -55,7 +55,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                     </div>
                     <div className="md:pb-0 pb-[50px]">
                         <h5
-                            className="xl:text-[16px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold pb-[26px] text-[#101D2C]"
+                            className="xl:text-[16px] xl:text-[15px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold pb-[26px] text-[#101D2C]"
                         >
                             {links.resources.title}
                         </h5>
@@ -65,7 +65,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                                     return <a
                                         key={index}
                                         href={item.href || "#"}
-                                        className="d-block xl:text-[18px] text-[14px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
+                                        className="d-block xxl:text-[18px] xl:text-[15px] text-[14px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
                                     >
                                         {item.title}
                                     </a>
@@ -75,7 +75,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                     </div>
                     <div className="md:pb-0 pb-[50px]">
                         <h5
-                            className="xl:text-[16px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold pb-[26px] text-[#101D2C]"
+                            className="xl:text-[16px] xl:text-[15px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold pb-[26px] text-[#101D2C]"
                         >
                             {links.services.title}
                         </h5>
@@ -85,7 +85,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                                     return <a
                                         key={index}
                                         href={item.href || "#"}
-                                        className="d-block xl:text-[18px] text-[14px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
+                                        className="d-block xxl:text-[18px] xl:text-[15px] text-[14px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
                                     >
                                         {item.title}
                                     </a>
@@ -95,24 +95,24 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                     </div>
                     <div className="col-span-2 flex flex-col">
                         <h5
-                            className="xl:text-[16px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold pb-[26px] text-[#101D2C]"
+                            className="xxl:text-[16px] xl:text-[15px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold pb-[26px] text-[#101D2C]"
                         >
                             {legal.title}
                         </h5>
                         <p
-                            className="xl:text-[18px] text-[14px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
+                            className="xxl:text-[18px] xl:text-[15px] text-[14px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
                         >
                             {legal.address}
                         </p>
                         <a
                             href={`mailto:${legal.email}`}
-                            className="d-block xl:text-[18px] text-[14px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
+                            className="d-block xxl:text-[18px] xl:text-[15px] text-[14px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
                         >
                             {legal.email}
                         </a>
                         <a
                             href={`tel:${legal.phone_link}`}
-                            className="d-block xl:text-[18px] text-[14px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
+                            className="d-block xxl:text-[18px] xl:text-[15px] text-[14px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
                         >
                             {legal.phone}
                         </a>
@@ -139,7 +139,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                 </div>
                 <div className="flex-1 md:m-0 mt-[29px] mb-[39px]">
                     <p
-                        className="xl:text-[15px] text-[12px] leading-[15px] tracking-[-0.2px] font-normal text-[#101D2C] text-center"
+                        className="xxl:text-[15px] xl:text-[13px] text-[12px] leading-[15px] tracking-[-0.2px] font-normal text-[#101D2C] text-center"
                     >
                         {copyRight}
                     </p>
