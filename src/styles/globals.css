@@ -292,13 +292,19 @@ input:checked::before {
     }
 }
 
-@media screen and (min-width: 1400px) and (max-width: 1450px) {
+@media screen and (min-width: 1400px) and (max-width: 1439px) {
     .track-project-item:nth-child(6) .track-your-project-arrow::after {
         top: 80px;
     }
 
     .why-choose-expert-grid-1 {
         padding-left: 80px !important;
+    }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1500px) {
+    .track-project-item:nth-child(6) .track-your-project-arrow::after {
+        top: 76px;
     }
 }
 
