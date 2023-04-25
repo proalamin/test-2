@@ -338,7 +338,7 @@ input:checked::before {
         content: '';
         position: absolute;
         top: -5px;
-        left: 150px;
+        left: 177px;
     }
 
     .track-project-item .track-your-project-arrow::before {
@@ -347,8 +347,8 @@ input:checked::before {
 
     .track-project-item:nth-child(4) .track-your-project-arrow::before, .track-project-item:nth-child(5) .track-your-project-arrow::before, .track-project-item:nth-child(6) .track-your-project-arrow::before {
         transform: rotate(-90deg);
-        left: -7px;
-        top: 152px;
+        left: -13px;
+        top: 185px;
     }
 
     .track-project-item:nth-child(1) {
@@ -379,7 +379,7 @@ input:checked::before {
         border: 1px dashed #f66;
         content: '';
         position: absolute;
-        left: 153px;
+        left: 180px;
         top: -52px;
         height: 50px;
         width: 1px;
