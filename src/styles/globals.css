@@ -284,7 +284,7 @@ input:checked::before {
 
 @media screen and (min-width: 1350px) and (max-width: 1399px) {
     .track-project-item:nth-child(6) .track-your-project-arrow::after {
-        top: 80px;
+        top: 66px;
     }
 
     .why-choose-expert-grid-1 {
