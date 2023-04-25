@@ -323,7 +323,7 @@ input:checked::before {
     .why-choose-data-section-wrapper {
         background-image: url("/images/why-choose-us-bg.svg");
         background-repeat: no-repeat;
-        background-size: 160% auto;
+        background-size: 190% auto;
     }
 
     .why-choose-data-overlay {
@@ -338,7 +338,7 @@ input:checked::before {
         content: '';
         position: absolute;
         top: -5px;
-        left: 177px;
+        left: 167px;
     }
 
     .track-project-item .track-your-project-arrow::before {
@@ -347,8 +347,8 @@ input:checked::before {
 
     .track-project-item:nth-child(4) .track-your-project-arrow::before, .track-project-item:nth-child(5) .track-your-project-arrow::before, .track-project-item:nth-child(6) .track-your-project-arrow::before {
         transform: rotate(-90deg);
-        left: -13px;
-        top: 185px;
+        left: -12px;
+        top: 174px;
     }
 
     .track-project-item:nth-child(1) {
@@ -379,7 +379,7 @@ input:checked::before {
         border: 1px dashed #f66;
         content: '';
         position: absolute;
-        left: 180px;
+        left: 170px;
         top: -52px;
         height: 50px;
         width: 1px;
