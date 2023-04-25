@@ -31,7 +31,7 @@ export const HowItWorks: React.FC<HowItWorksInterface> = (props) => {
             <div className="flex md:flex-row flex-col xxl:gap-[60px] xl:gap-[40px] md:gap-[30px] gap-[64px]">
                 {
                     items?.map((item, index) => {
-                        return <div key={index} className="flex-1 md:max-w-[300px]">
+                        return <div key={index} className="flex-1 max-w-[300px] mx-auto">
                             <Card icon={item.icon} position={index + 1} title={item.title}
                                   description={item.description} type="how-it-works"/>
                         </div>
