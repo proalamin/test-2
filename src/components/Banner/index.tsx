@@ -10,6 +10,8 @@ export const Banner: React.FC<BannerInterface> = (props) => {
 
     const settings = {
         dots: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
         infinite: true,
         arrows: false,
         speed: 500,
@@ -21,18 +23,16 @@ export const Banner: React.FC<BannerInterface> = (props) => {
         style={{ backgroundImage: `url(${image})` }}
         className="bg-cover bg-center bg-no-repeat relative md:pb-[248px]"
     >
-        <div className="md:pt-[40px]  pt-[16px] md:px-[55px] sm:px-[30px] px-[16px] w-full">
+        <div className="md:pt-[56px]  pt-[16px] md:px-[55px] sm:px-[30px] px-[16px] w-full">
             <Header logo={header.logo} button={header.button}/>
         </div>
-        <div className="flex flex-col items-center justify-center pt-[117px] pb-[71px] px-[29px]">
+        <div className="md:max-w-[1055px] mx-auto flex flex-col items-center justify-center md:pt-[238px] pt-[117px] pb-[71px] md:px-0 px-[29px]">
             <h1
-                className="font-semibold text-[#FFFFFF] sm:text-[53px] text-[30px] md:leading-[53px] leading-[56px] md:tracking-[-1.55px] text-center md:pb-[11px] pb-[18px]"
+                className="font-semibold text-[#FFFFFF] sm:text-[53px] text-[30px] md:leading-[53px] leading-[56px] md:tracking-[-1.55px] text-center md:pb-[25px] pb-[18px]"
             >
                 {title}
             </h1>
-            <p
-                className="font-normal text-[#FFFFFF] sm:text-[23px] text-[16px] sm:leading-[36px] leading-[28px] tracking-[-0.68px] text-center pb-[30px] max-w-[667px]"
-            >
+            <p className="font-normal text-[#FFFFFF] sm:text-[23px] text-[16px] sm:leading-[36px] leading-[28px] tracking-[-0.68px] text-center pb-[30px] max-w-[667px]">
                 {subtitle}
             </p>
             <div>
@@ -40,12 +40,12 @@ export const Banner: React.FC<BannerInterface> = (props) => {
                     label={button.title}
                     type="button"
                     color="primary"
-                    className="md:text-[19px] md:leading-[22.99px] tracking-[-0.25px] font-semibold sm:text-[17px] text-[14px] sm:leading-[20.57px] leading-[14px]"
+                    className="md:text-[19px] md:leading-[22.99px] tracking-[-0.25px] font-semibold sm:text-[17px] text-[14px] sm:leading-[20.57px] leading-[14px] w-[238px] h-[63px]"
                 />
             </div>
         </div>
         <div
-            className="flex md:flex-row flex-col md:gap-[67px] gap-[56px] pb-[121px] md:max-w-[923px] max-w-[498.83px] sm:p-[0] px-[40px] mx-auto">
+            className="flex md:flex-row flex-col md:gap-[67px] gap-[56px] pb-[121px] md:max-w-[865px] max-w-[498.83px] sm:p-[0] px-[40px] mx-auto">
             <div className="flex-1 w-full md:max-w-[50%]">
                 <div className="flex flex-col">
                     <h2

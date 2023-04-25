@@ -11,8 +11,8 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                 borderBottom: "0.4px solid rgba(75, 90, 105, 0.4)"
             }}
         >
-            <div className="max-w-[1260px] mx-auto">
-                <div className="grid md:grid-cols-6 grid-cols-2">
+            <div className="max-w-[1263px] mx-auto">
+                <div className="grid md:grid-cols-6 grid-cols-2 gap-[100px]">
                     <div className="md:pb-0 pb-[50px]">
                         <h5
                             className="md:text-[16px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold pb-[26px] text-[#101D2C]"

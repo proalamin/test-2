@@ -27,7 +27,7 @@ export const About: React.FC = () => {
                         label="Contact Us"
                         type="button"
                         color="primary"
-                        className="text-[14px] leading-[16.94px] tracking-[-0.09px] py-[12px] px-[20px]"
+                        className="text-[14px] leading-[16.94px] tracking-[-0.09px] w-[114px] h-[36px]"
                     />
                 </div>
             </div>

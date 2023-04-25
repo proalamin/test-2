@@ -8,6 +8,8 @@ export const Testimonials: React.FC<TestimonialsInterface> = (props) => {
     const { title, subtitle, description, items } = props;
     const settings = {
         centerMode: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
         centerPadding: '200px',
         dots: true,
         infinite: true,
@@ -18,6 +20,8 @@ export const Testimonials: React.FC<TestimonialsInterface> = (props) => {
     };
     const mobileSettings = {
         dots: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
         infinite: true,
         vertical: true,
         arrows: false,

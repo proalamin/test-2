@@ -14,7 +14,7 @@ export const Button: React.FC<ButtonInterface> = ({ label, onClick, className, c
         type === "button" ?
             <button
                 onClick={onClick}
-                className={`sm:py-[19px] py-[12px] sm:px-[40px] px-[20px] border border-primary border-[2px] transition-all ease-linear bg-primary hover:bg-transparent text-primaryAccent hover:text-primary rounded-[31.5px] ${className || null}`}
+                className={`border border-primary border-[2px] transition-all ease-linear bg-primary hover:bg-transparent text-primaryAccent hover:text-primary rounded-[31.5px] ${className || null}`}
             >
                 {label}
             </button> : <button

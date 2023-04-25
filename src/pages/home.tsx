@@ -25,7 +25,7 @@ const Home: React.FC = () => {
 
     const BannerData: BannerInterface = {
         image: "/images/banner.webp",
-        title: "Find Your Perfect Digital Marketing Partner",
+        title: "Empowering Businesses For a Digital Future",
         subtitle: "Search My Expert is The One-Stop Solution for Businesses Searching for Digital Services.",
         button: {
             title: "Let`s Get Started",

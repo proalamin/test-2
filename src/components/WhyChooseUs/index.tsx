@@ -5,7 +5,7 @@ import { Img } from "@/utils/Img";
 export const WhyChooseUs: React.FC<WhyChooseUsInterface> = (props) => {
     const { title, subtitle, description, items } = props;
     return <div
-        className="relative md:px-[100px] px-[50px] py-[100px] bg-[#F5F9FF] why-choose-data-section-wrapper"
+        className="relative md:px-[100px] px-[50px] pt-[139px] pb-[141px] bg-[#F5F9FF] why-choose-data-section-wrapper"
     >
         <div className="why-choose-data-overlay">
             <svg className="svg">
@@ -15,7 +15,7 @@ export const WhyChooseUs: React.FC<WhyChooseUsInterface> = (props) => {
                 </clipPath>
             </svg>
         </div>
-        <div className="max-w-[1440px] mx-auto why-choose-data-section relative">
+        <div className="max-w-[1385px] mx-auto why-choose-data-section relative">
             <div className="flex md:flex-row flex-col">
                 <div className="md:max-w-[320px] md:m-0 mb-[50px]">
                     <h6 className="text-[12px] leading-[12px] tracking-[1.66px] font-medium pb-[10px] uppercase text-primaryAccent">
@@ -29,55 +29,89 @@ export const WhyChooseUs: React.FC<WhyChooseUsInterface> = (props) => {
                     </p>
                 </div>
                 <div className="flex-1">
-                    <div
-                        className="why-choose-expert-grid-1 grid sm:grid-cols-2 grid-rows-2 sm:grid-rows-none md:gap-[30px] gap-[50px] max-w-[775px] ml-auto pb-[30px] sm:pl-[40px]">
-                        {
-                            items?.slice(0, 2)?.map((item, index) => {
-                                return <div
-                                    key={index}
-                                    className="max-w-[299px] flex flex-col md:items-start items-center"
-                                >
-                                    <div
-                                        className="md:m-0 mb-[16px] sm:py-[42px] py-[32px] sm:px-[39px] px-[29px] sm:w-[135px] w-[100px] sm:h-[135px] h-[100px] rounded-full flex items-center justify-center"
-                                        style={{ background: "linear-gradient(130.86deg, #FFFFFF 18.78%, #F5F9FF 81.48%)" }}
-                                    >
-                                        <Img src={item.icon} alt={item.title} className="w-auto h-auto"/>
-                                    </div>
-                                    <div className="md:pl-[35px]">
-                                        <h3 className="sm:text-[20px] text-[16px] sm:leading-[24px] leading-[20px] tracking-[-0.06px] text-[#101D2C] md:text-left text-center font-semibold pb-[10px]">
-                                            {item.title}
-                                        </h3>
-                                        <p className="sm:text-[17px] text-[14px] sm:leading-[27px] leading-[21px] font-light text-[#101D2C] md:text-left text-center ">
-                                            {item.description}
-                                        </p>
-                                    </div>
-                                </div>
-                            })
-                        }
+                    <div className="why-choose-expert-grid-1 grid sm:grid-cols-2 grid-rows-2 sm:grid-rows-none md:gap-[30px] gap-[50px] max-w-[775px] ml-[220px] pb-[33px]">
+                        <div className="max-w-[299px] flex flex-col md:items-start items-center">
+                            <div
+                                className="md:m-0 mb-[16px] sm:py-[42px] py-[32px] sm:px-[39px] px-[29px] sm:w-[135px] w-[100px] sm:h-[135px] h-[100px] rounded-full flex items-center justify-center"
+                                style={{ background: "linear-gradient(130.86deg, #FFFFFF 18.78%, #F5F9FF 81.48%)" }}
+                            >
+                                <Img src={items[0].icon} alt={items[0].title} className="w-auto h-auto"/>
+                            </div>
+                            <div className="md:pl-[35px]">
+                                <h3 className="sm:text-[20px] text-[16px] sm:leading-[24px] leading-[20px] tracking-[-0.06px] text-[#101D2C] md:text-left text-center font-semibold pb-[10px]">
+                                    {items[0].title}
+                                </h3>
+                                <p className="sm:text-[17px] text-[14px] sm:leading-[27px] leading-[21px] font-light text-[#101D2C] md:text-left text-center ">
+                                    {items[0].description}
+                                </p>
+                            </div>
+                        </div>
+                        <div className="max-w-[377px] flex flex-col md:items-start items-center">
+                            <div
+                                className="md:m-0 mb-[16px] sm:py-[42px] py-[32px] sm:px-[39px] px-[29px] sm:w-[135px] w-[100px] sm:h-[135px] h-[100px] rounded-full flex items-center justify-center"
+                                style={{ background: "linear-gradient(130.86deg, #FFFFFF 18.78%, #F5F9FF 81.48%)" }}
+                            >
+                                <Img src={items[1].icon} alt={items[1].title} className="w-auto h-auto"/>
+                            </div>
+                            <div className="md:pl-[35px]">
+                                <h3 className="sm:text-[20px] text-[16px] sm:leading-[24px] leading-[20px] tracking-[-0.06px] text-[#101D2C] md:text-left text-center font-semibold pb-[10px]">
+                                    {items[1].title}
+                                </h3>
+                                <p className="sm:text-[17px] text-[14px] sm:leading-[27px] leading-[21px] font-light text-[#101D2C] md:text-left text-center ">
+                                    {items[1].description}
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div
-                        className="why-choose-expert-grid-2 grid sm:grid-cols-3 grid-rows-3 sm:grid-rows-none md:gap-[30px] gap-[50px] max-w-[1021px] ml-auto">
-                        {
-                            items?.slice(2, 5)?.map((item, index) => {
-                                return <div key={index}
-                                            className="max-w-[299px] flex flex-col md:items-start items-center">
-                                    <div
-                                        className="md:m-0 mb-[16px] sm:py-[42px] py-[32px] sm:px-[39px] px-[29px] sm:w-[135px] w-[100px] sm:h-[135px] h-[100px] rounded-full flex items-center justify-center"
-                                        style={{ background: "linear-gradient(130.86deg, #FFFFFF 18.78%, #F5F9FF 81.48%)" }}
-                                    >
-                                        <Img src={item.icon} alt={item.title} className="w-auto h-auto"/>
-                                    </div>
-                                    <div className="md:pl-[35px]">
-                                        <h3 className="sm:text-[20px] text-[16px] sm:leading-[24px] leading-[20px] tracking-[-0.06px] text-[#101D2C] md:text-left text-center font-semibold pb-[10px]">
-                                            {item.title}
-                                        </h3>
-                                        <p className="sm:text-[17px] text-[14px] sm:leading-[27px] leading-[21px] font-light text-[#101D2C] md:text-left text-center ">
-                                            {item.description}
-                                        </p>
-                                    </div>
-                                </div>
-                            })
-                        }
+                    <div className="why-choose-expert-grid-2 grid sm:grid-cols-3 grid-rows-3 sm:grid-rows-none md:gap-[69px] gap-[50px] max-w-[1091px] ml-auto">
+                        <div className="max-w-[303px] flex flex-col md:items-start items-center">
+                            <div
+                                className="md:m-0 mb-[16px] sm:py-[42px] py-[32px] sm:px-[39px] px-[29px] sm:w-[135px] w-[100px] sm:h-[135px] h-[100px] rounded-full flex items-center justify-center"
+                                style={{ background: "linear-gradient(130.86deg, #FFFFFF 18.78%, #F5F9FF 81.48%)" }}
+                            >
+                                <Img src={items[2].icon} alt={items[2].title} className="w-auto h-auto"/>
+                            </div>
+                            <div className="md:pl-[35px]">
+                                <h3 className="sm:text-[20px] text-[16px] sm:leading-[24px] leading-[20px] tracking-[-0.06px] text-[#101D2C] md:text-left text-center font-semibold pb-[10px]">
+                                    {items[2].title}
+                                </h3>
+                                <p className="sm:text-[17px] text-[14px] sm:leading-[27px] leading-[21px] font-light text-[#101D2C] md:text-left text-center ">
+                                    {items[2].description}
+                                </p>
+                            </div>
+                        </div>
+                        <div className="max-w-[354px] flex flex-col md:items-start items-center">
+                            <div
+                                className="md:m-0 mb-[16px] sm:py-[42px] py-[32px] sm:px-[39px] px-[29px] sm:w-[135px] w-[100px] sm:h-[135px] h-[100px] rounded-full flex items-center justify-center"
+                                style={{ background: "linear-gradient(130.86deg, #FFFFFF 18.78%, #F5F9FF 81.48%)" }}
+                            >
+                                <Img src={items[3].icon} alt={items[3].title} className="w-auto h-auto"/>
+                            </div>
+                            <div className="md:pl-[35px]">
+                                <h3 className="sm:text-[20px] text-[16px] sm:leading-[24px] leading-[20px] tracking-[-0.06px] text-[#101D2C] md:text-left text-center font-semibold pb-[10px]">
+                                    {items[3].title}
+                                </h3>
+                                <p className="sm:text-[17px] text-[14px] sm:leading-[27px] leading-[21px] font-light text-[#101D2C] md:text-left text-center ">
+                                    {items[3].description}
+                                </p>
+                            </div>
+                        </div>
+                        <div className="max-w-[299px] flex flex-col md:items-start items-center">
+                            <div
+                                className="md:m-0 mb-[16px] sm:py-[42px] py-[32px] sm:px-[39px] px-[29px] sm:w-[135px] w-[100px] sm:h-[135px] h-[100px] rounded-full flex items-center justify-center"
+                                style={{ background: "linear-gradient(130.86deg, #FFFFFF 18.78%, #F5F9FF 81.48%)" }}
+                            >
+                                <Img src={items[4].icon} alt={items[4].title} className="w-auto h-auto"/>
+                            </div>
+                            <div className="md:pl-[35px]">
+                                <h3 className="sm:text-[20px] text-[16px] sm:leading-[24px] leading-[20px] tracking-[-0.06px] text-[#101D2C] md:text-left text-center font-semibold pb-[10px]">
+                                    {items[4].title}
+                                </h3>
+                                <p className="sm:text-[17px] text-[14px] sm:leading-[27px] leading-[21px] font-light text-[#101D2C] md:text-left text-center ">
+                                    {items[4].description}
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

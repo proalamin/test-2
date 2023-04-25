@@ -5,8 +5,8 @@ import { Card } from "@/components/Comman/Card";
 export const TrackYourProject: React.FC<TrackYourProjectInterface> = (props) => {
     const { title, subtitle, description, items } = props;
     return <div
-        className="track-your-project-bg relative md:px-[140px] px-[50px] pt-[77px] md:pb-[140px] pb-[100px]">
-        <div className="max-w-[1380px] mx-auto">
+        className="md:px-[140px] px-[50px] pt-[77px] md:pb-[140px] pb-[100px]">
+        <div className="max-w-[1020px] mx-auto track-your-project-bg relative ">
             <div className="max-w-[471px] mx-auto text-center mb-[52px]">
                 <h6 className="text-[12px] leading-[12px] tracking-[1.66px] font-medium pb-[10px] uppercase text-primary">
                     {title}

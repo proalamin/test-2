@@ -196,11 +196,11 @@ input:checked::before {
 
 .track-your-project-bg::before {
     content: '';
-    top: 350px;
-    left: 290px;
+    top: 273px;
+    left: 300px;
     height: 470px;
     position: absolute;
-    width: calc(100% - 305px);
+    width: calc(100% - 128px);
     border: 1px dashed #f66;
     border-radius: 0 230px 241px 0;
     border-left-width: 0;
@@ -319,9 +319,9 @@ input:checked::before {
 }
 
 
-@media screen and (min-width: 1750px) and (max-width: 1900px) {
+@media screen and (min-width: 1750px) and (max-width: 2200px) {
     .why-choose-data-overlay {
-        width: 1140px;
+        width: 1037px;
     }
 }
 
@@ -401,7 +401,7 @@ input:checked::before {
     }
 }
 
-@media screen and (min-width: 1550px) {
+@media screen and (min-width: 1550px) and (max-width: 1800px) {
     .why-choose-expert-grid-2 {
         padding-left: 50px;
     }
