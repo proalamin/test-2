@@ -14,10 +14,10 @@ export const ContactUs: React.FC<ContactUsInterface> = (props) => {
                 <h6 className="text-[12px] leading-[12px] tracking-[1.66px] font-medium pb-[10px] uppercase text-primary">
                     {title}
                 </h6>
-                <h2 className="sm:text-[35px] text-[30px] sm:leading-[44px] leading-[35px] tracking-[-0.97px] font-semibold pb-[9px] text-[#101D2C]">
+                <h2 className="xl:text-[35px] text-[30px] sm:leading-[44px] leading-[35px] tracking-[-0.97px] font-semibold pb-[9px] text-[#101D2C]">
                     {subtitle}
                 </h2>
-                <p className="md:text-[19px] text-[14px] leading-[30px] tracking-[-0.16px] text-[#101D2C] font-medium max-w-[395px] mx-auto">
+                <p className="xl:text-[19px] text-[14px] leading-[30px] tracking-[-0.16px] text-[#101D2C] font-medium max-w-[395px] mx-auto">
                     {description}
                 </p>
             </div>

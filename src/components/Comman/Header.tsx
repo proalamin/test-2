@@ -10,7 +10,7 @@ export const Header: React.FC<HeaderInterface> = (props) => {
         <div className="flex items-center">
             <div>
                 <Img src={logo || ""} alt="Header Logo"
-                     className="md:w-[323px] sm:w-[291.6px] w-[150px] md:h-[41px] sm:h-[37.67px] h-[20px]"/>
+                     className="xl:w-[323px] sm:w-[291.6px] w-[150px] xl:h-[41px] sm:h-[37.67px] h-[20px]"/>
             </div>
             <div className="flex-1 md:pl-[34px] sm:pl-[17px] pl-[16px]">
                 <div className="flex">
@@ -27,7 +27,7 @@ export const Header: React.FC<HeaderInterface> = (props) => {
                     label={button.title}
                     type="button"
                     color="primary"
-                    className="md:text-[19px] md:leading-[22.99px] font-semibold sm:text-[17px] text-[14px] sm:leading-[20.57px] leading-[14px] tracking-[-0.22px] w-[145px] h-[44px]"
+                    className="xl:text-[19px] xl:leading-[22.99px] font-semibold sm:text-[17px] text-[14px] sm:leading-[20.57px] leading-[14px] tracking-[-0.22px] w-[145px] xl:h-[44px] h-[38px]"
                 />
             </div>
         </div>

@@ -49,20 +49,20 @@ export const TestimonialCard: React.FC<TestimonialsItemInterface> = (props) => {
                     })
                 }
             </div>
-            <p className="text-[#202224] text-[14px] leading-[16.94px] font-medium text-right">
+            <p className="text-[#202224] xl:text-[14px] sm:text-[12px] text-[14px] leading-[16.94px] font-medium text-right">
                 {daysAgo} days ago
             </p>
         </div>
-        <p className="text-[14px] leading-[16.94px] text-[#202224] font-medium pb-[20px]">
+        <p className="xl:text-[14px] sm:text-[12px] text-[14px] leading-[16.94px] text-[#202224] font-medium pb-[20px]">
             {author.name}
         </p>
-        <p className="text-[17px] leading-[20.57px] text-[#202224] pb-[10px] font-medium">
+        <p className="xl:text-[17px] sm:text-[14px] text-[17px] leading-[20.57px] text-[#202224] pb-[10px] font-medium">
             {title}
         </p>
-        <p className="text-[17px] leading-[26px] text-[#202224] pb-[13px] font-normal min-h-[200px]">
+        <p className="xl:text-[17px] sm:text-[14px] text-[17px] leading-[26px] text-[#202224] pb-[13px] font-normal min-h-[200px]">
             {description}
         </p>
-        <p className="text-[14px] leading-[16.94px] text-[#202224] font-medium">
+        <p className="xl:text-[14px] sm:text-[12px] text-[14px] leading-[16.94px] text-[#202224] font-medium">
             Date of experience: <span
             className="font-normal">{new Date(date_of_experience).toLocaleDateString('en-US', {
             month: 'long',

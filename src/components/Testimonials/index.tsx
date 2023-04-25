@@ -17,6 +17,21 @@ export const Testimonials: React.FC<TestimonialsInterface> = (props) => {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint:1120,
+                settings: {
+                    centerPadding: '50px',
+                }
+            },
+            {
+                breakpoint:767,
+                settings: {
+                    centerMode: false,
+                    slidesToShow: 2,
+                }
+            }
+        ]
     };
     const mobileSettings = {
         dots: true,
@@ -37,16 +52,16 @@ export const Testimonials: React.FC<TestimonialsInterface> = (props) => {
                     <h6 className="text-[12px] leading-[12px] tracking-[1.66px] font-medium pb-[10px] uppercase text-primary">
                         {title}
                     </h6>
-                    <h2 className="sm:text-[35px] text-[30px] sm:leading-[44px] leading-[35px] tracking-[-0.44px] font-semibold pb-[9px] text-[#101D2C]">
+                    <h2 className="xl:text-[35px] text-[30px] sm:leading-[44px] leading-[35px] tracking-[-0.44px] font-semibold pb-[9px] text-[#101D2C]">
                         {subtitle}
                     </h2>
-                    <p className="md:text-[19px] text-[14px] leading-[30px] tracking-[-0.26px] text-[#101D2C] font-medium">
+                    <p className="xl:text-[19px] text-[14px] leading-[30px] tracking-[-0.26px] text-[#101D2C] font-medium">
                         {description}
                     </p>
                     <Img
                         src="/images/trustpilot-logo.svg"
                         alt={`Trust Pilot - ${title}`}
-                        className="w-[181px] h-[106px] md:px-0 px-[24px] mx-auto"
+                        className="xl:w-[181px] w-[140px] xl:h-[106px] h-[80px] md:px-0 px-[24px] mx-auto"
                     />
                 </div>
             </div>
