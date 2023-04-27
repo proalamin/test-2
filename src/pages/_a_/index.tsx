@@ -279,7 +279,7 @@ const Admin: React.FC = () => {
                                                 return <div key={index} className="bg-[#000] p-[12px] rounded">
                                                     <Img
                                                         src={item.image}
-                                                        alt={index + 1}
+                                                        alt="Image"
                                                         className="w-full"
                                                     />
                                                 </div>
