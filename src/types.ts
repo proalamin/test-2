@@ -203,7 +203,7 @@ export interface CardInterface {
 export interface homePageInterface {
     bannerData: BannerInterface;
     serviceData: ServicesInterface;
-    whyChooseUsData: WhyChooseUsInterface;
+    whyChooseData: WhyChooseUsInterface;
     howItWorksData: HowItWorksInterface;
     trackYourProjectData: TrackYourProjectInterface;
     stayOnTopData: StayOnTopInterface;

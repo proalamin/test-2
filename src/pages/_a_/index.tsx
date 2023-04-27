@@ -85,6 +85,7 @@ const Admin: React.FC = () => {
         contactUs: false,
     });
     const [previewImage, setPreviewImage] = useState<string | ArrayBuffer | null>(null);
+    const router = useRouter();
 
     const setAccordionParam = (key: string) => {
         setAccordionParams({
@@ -92,8 +93,6 @@ const Admin: React.FC = () => {
             [key]: !accordionParams[key]
         });
     };
-
-    const router = useRouter();
 
     const logout = () => {
         localStorage.removeItem('token');
