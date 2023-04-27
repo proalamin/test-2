@@ -61,7 +61,8 @@ const Admin: React.FC = () => {
             title: data.contactUsData.title,
             subtitle: data.contactUsData.subtitle,
             description: data.contactUsData.description,
-            form: data.contactUsData.form
+            form: data.contactUsData.form,
+            countries: data.contactUsData.countries
         },
         footerData: {
             logo: data.footerData.logo,
