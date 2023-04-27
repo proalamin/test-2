@@ -73,26 +73,18 @@ const Admin: React.FC = () => {
         }
     });
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [accordionParams, setAccordionParams] = useState({
-        banner: false,
-        service: false,
-        aboutUs: false,
-        whyChoose: false,
-        howItWorks: false,
-        trackYourProject: false,
-        stayOnTop: false,
-        testimonial: false,
-        contactUs: false,
-    });
-    const [previewImage, setPreviewImage] = useState<string | ArrayBuffer | null>(null);
+    // const [accordionParams, setAccordionParams] = useState({
+    //     banner: false,
+    //     service: false,
+    //     aboutUs: false,
+    //     whyChoose: false,
+    //     howItWorks: false,
+    //     trackYourProject: false,
+    //     stayOnTop: false,
+    //     testimonial: false,
+    //     contactUs: false,
+    // });
     const router = useRouter();
-
-    const setAccordionParam = (key: string) => {
-        setAccordionParams({
-            ...accordionParams,
-            [key]: !accordionParams[key]
-        });
-    };
 
     const logout = () => {
         localStorage.removeItem('token');
