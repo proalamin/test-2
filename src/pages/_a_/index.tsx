@@ -484,16 +484,6 @@ const Admin: React.FC = () => {
                                             className="rounded admin-input"
                                         />
                                     </div>
-                                    <div className="p-[10px]">
-                                        <TextArea
-                                            rows={3}
-                                            label="Description"
-                                            placeholder="Description"
-                                            value={params.stayOnTopData.description}
-                                            onChange={() => null}
-                                            className="rounded admin-input"
-                                        />
-                                    </div>
                                 </div>
                             </div>
 
