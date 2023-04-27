@@ -10,7 +10,7 @@ interface InputInterface {
     error?: string
     placeholder?: string
     className?: string
-    prefix?: unknown
+    prefix?: any
 }
 
 export const Input: React.FC<InputInterface> = (
