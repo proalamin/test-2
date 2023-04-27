@@ -199,3 +199,20 @@ export interface CardInterface {
     description: string;
     type: "how-it-works" | "track-your-project";
 }
+
+export interface homePageInterface {
+    bannerData: BannerInterface;
+    serviceData: ServicesInterface;
+    whyChooseUsData: WhyChooseUsInterface;
+    howItWorksData: HowItWorksInterface;
+    trackYourProjectData: TrackYourProjectInterface;
+    stayOnTopData: StayOnTopInterface;
+    testimonialsData: TestimonialsInterface;
+    contactUsData: ContactUsInterface;
+    footerData: FooterInterface;
+}
+
+export interface LoginInterface {
+    username: string;
+    password: string;
+}

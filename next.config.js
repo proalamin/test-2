@@ -11,4 +11,10 @@ module.exports = withBundleAnalyzer(withPWA({
         dest: 'public',
         runtimeCaching: prod ? runtimeCaching : undefined,
     },
+    webpack: (config, {isServer}) => {
+        if (!isServer) {
+            config.resolve.fallback.fs = false;
+        }
+        return config;
+    }
 }))
