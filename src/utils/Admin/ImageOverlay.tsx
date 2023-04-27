@@ -31,21 +31,17 @@ export const ImageOverlay: React.FC<ImageOverlayInterface> = (props) => {
         const formData = new FormData();
         formData.append('file', file);
 
-        try {
-            const response = await fetch('/api/upload', {
-                method: 'POST',
-                body: formData,
-            });
+        const response = await fetch('/api/upload', {
+            method: 'POST',
+            body: formData,
+        });
 
-            const data = await response.json();
+        const data = await response.json();
 
-            if (data.success) {
-                onUploadSuccess(data.filePath);
-            } else {
-                alert('Error uploading file: ' + data.message);
-            }
-        } catch (error) {
-            alert('Error uploading file: ' + error.message);
+        if (data.success) {
+            onUploadSuccess(data.filePath);
+        } else {
+            alert('Error uploading file: ' + data.message);
         }
     }
 
