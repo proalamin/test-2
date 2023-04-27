@@ -88,14 +88,14 @@ const Admin: React.FC = () => {
 
     const logout = () => {
         localStorage.removeItem('token');
-        router.push('/_l_');
+        router.push('/login');
     }
 
     useEffect(() => {
         if (sessionStorage.getItem('isLoggedIn') === 'true') {
             setIsLoggedIn(true);
         } else {
-            router.push('/_l_');
+            router.push('/login');
         }
     }, []);
 
@@ -608,4 +608,4 @@ const Admin: React.FC = () => {
     </>
 }
 
-export default Admin as _a_;
+export default Admin

@@ -35,7 +35,7 @@ const Login = () => {
 
         if (response.status === 200) {
             sessionStorage.setItem('isLoggedIn', 'true');
-            router.push('/_a_');
+            router.push('/admin');
         } else {
             const data = await response.json();
             setErrorMessage(data.message);
@@ -100,4 +100,4 @@ const Login = () => {
     </>
 }
 
-export default Login as _l_;
+export default Login
