@@ -100,24 +100,20 @@ const Admin: React.FC = () => {
     }, []);
 
     const save = async () => {
-        try {
-            const response = await fetch('/api/save', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(params),
-            });
+        const response = await fetch('/api/save', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(params),
+        });
 
-            const data = await response.json();
+        const data = await response.json();
 
-            if (data.success) {
-                alert('Changes saved successfully!');
-            } else {
-                alert('Error saving changes: ' + data.message);
-            }
-        } catch (error: unknown) {
-            alert('Error saving changes: ' + error.message);
+        if (data.success) {
+            alert('Changes saved successfully!');
+        } else {
+            alert('Error saving changes: ' + data.message);
         }
     };
 
