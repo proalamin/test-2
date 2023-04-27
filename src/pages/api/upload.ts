@@ -11,10 +11,10 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 const uploadMiddleware = (req: any, res: any) => {
-    return new Promise((resolve, reject) => {
+    return new Promise<void>((resolve, reject) => {
         upload.single('file')(req, res, (err) => {
             if (err) reject(err);
-            resolve();
+            resolve(undefined);
         });
     });
 };
