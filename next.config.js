@@ -5,16 +5,11 @@ const prod = process.env.NODE_ENV === 'production'
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
     enabled: process.env.ANALYZE === 'true'
 })
-module.exports = withBundleAnalyzer(withPWA({
-    pwa: {
-        disable: prod ? false : true,
-        dest: 'public',
-        runtimeCaching: prod ? runtimeCaching : undefined,
-    },
+module.exports = withBundleAnalyzer({
     webpack: (config, {isServer}) => {
         if (!isServer) {
             config.resolve.fallback.fs = false;
         }
         return config;
     }
-}))
+})
