@@ -151,7 +151,7 @@ const Admin: React.FC = () => {
                                             label="Title"
                                             placeholder="Title"
                                             value={params.bannerData.title}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -161,7 +161,7 @@ const Admin: React.FC = () => {
                                             label="Sub Title"
                                             placeholder="Sub Title"
                                             value={params.bannerData.subtitle}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -175,7 +175,7 @@ const Admin: React.FC = () => {
                                             label="Title"
                                             placeholder="Title"
                                             value={params.bannerData.ourClients.title}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -206,7 +206,7 @@ const Admin: React.FC = () => {
                                             label="Title"
                                             placeholder="Title"
                                             value={params.bannerData.awesomeNumbers.title}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -218,7 +218,7 @@ const Admin: React.FC = () => {
                                                         label={`${item.title} - Title`}
                                                         placeholder={`${item.title} - Title`}
                                                         value={item.title}
-                                                        onChange={null}
+                                                        onChange={() => null}
                                                         className="rounded admin-input"
                                                     />
                                                 </div>
@@ -227,7 +227,7 @@ const Admin: React.FC = () => {
                                                         label={`${item.title} - Value`}
                                                         placeholder={`${item.title} - Value`}
                                                         value={item.number}
-                                                        onChange={null}
+                                                        onChange={() => null}
                                                         className="rounded admin-input"
                                                     />
                                                 </div>
@@ -245,7 +245,7 @@ const Admin: React.FC = () => {
                                             label="Title"
                                             placeholder="Title"
                                             value={params.serviceData.title}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -254,7 +254,7 @@ const Admin: React.FC = () => {
                                             label="Title"
                                             placeholder="Title"
                                             value={params.serviceData.subtitle}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -264,7 +264,7 @@ const Admin: React.FC = () => {
                                             label="Description"
                                             placeholder="Description"
                                             value={params.serviceData.description}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -296,7 +296,7 @@ const Admin: React.FC = () => {
                                             label="Title"
                                             placeholder="Title"
                                             value={params.bannerData.awesomeNumbers.title}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -308,7 +308,7 @@ const Admin: React.FC = () => {
                                                         label={`${item.title} - Title`}
                                                         placeholder={`${item.title} - Title`}
                                                         value={item.title}
-                                                        onChange={null}
+                                                        onChange={() => null}
                                                         className="rounded admin-input"
                                                     />
                                                 </div>
@@ -317,7 +317,7 @@ const Admin: React.FC = () => {
                                                         label={`${item.title} - Value`}
                                                         placeholder={`${item.title} - Value`}
                                                         value={item.number}
-                                                        onChange={null}
+                                                        onChange={() => null}
                                                         className="rounded admin-input"
                                                     />
                                                 </div>
@@ -335,7 +335,7 @@ const Admin: React.FC = () => {
                                             label="Title"
                                             placeholder="Title"
                                             value={params.serviceData.title}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -344,7 +344,7 @@ const Admin: React.FC = () => {
                                             label="Title"
                                             placeholder="Title"
                                             value={params.serviceData.subtitle}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -354,7 +354,7 @@ const Admin: React.FC = () => {
                                             label="Description"
                                             placeholder="Description"
                                             value={params.serviceData.description}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -369,7 +369,7 @@ const Admin: React.FC = () => {
                                             label="Title"
                                             placeholder="Title"
                                             value={params.whyChooseData.title}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -378,7 +378,7 @@ const Admin: React.FC = () => {
                                             label="Title"
                                             placeholder="Title"
                                             value={params.whyChooseData.subtitle}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -388,7 +388,7 @@ const Admin: React.FC = () => {
                                             label="Description"
                                             placeholder="Description"
                                             value={params.whyChooseData.description}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -403,7 +403,7 @@ const Admin: React.FC = () => {
                                             label="Title"
                                             placeholder="Title"
                                             value={params.howItWorksData.title}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -412,7 +412,7 @@ const Admin: React.FC = () => {
                                             label="Title"
                                             placeholder="Title"
                                             value={params.howItWorksData.subtitle}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -422,7 +422,7 @@ const Admin: React.FC = () => {
                                             label="Description"
                                             placeholder="Description"
                                             value={params.howItWorksData.description}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -437,7 +437,7 @@ const Admin: React.FC = () => {
                                             label="Title"
                                             placeholder="Title"
                                             value={params.trackYourProjectData.title}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -446,7 +446,7 @@ const Admin: React.FC = () => {
                                             label="Sub Title"
                                             placeholder="Sub Title"
                                             value={params.trackYourProjectData.subtitle}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -456,7 +456,7 @@ const Admin: React.FC = () => {
                                             label="Description"
                                             placeholder="Description"
                                             value={params.trackYourProjectData.description}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -471,7 +471,7 @@ const Admin: React.FC = () => {
                                             label="Title"
                                             placeholder="Title"
                                             value={params.stayOnTopData.title}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -480,7 +480,7 @@ const Admin: React.FC = () => {
                                             label="Sub Title"
                                             placeholder="Sub Title"
                                             value={params.stayOnTopData.subtitle}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -490,7 +490,7 @@ const Admin: React.FC = () => {
                                             label="Description"
                                             placeholder="Description"
                                             value={params.stayOnTopData.description}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -505,7 +505,7 @@ const Admin: React.FC = () => {
                                             label="Title"
                                             placeholder="Title"
                                             value={params.testimonialsData.title}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -514,7 +514,7 @@ const Admin: React.FC = () => {
                                             label="Sub Title"
                                             placeholder="Sub Title"
                                             value={params.testimonialsData.subtitle}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -524,7 +524,7 @@ const Admin: React.FC = () => {
                                             label="Description"
                                             placeholder="Description"
                                             value={params.testimonialsData.description}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -539,7 +539,7 @@ const Admin: React.FC = () => {
                                             label="Title"
                                             placeholder="Title"
                                             value={params.contactUsData.title}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -548,7 +548,7 @@ const Admin: React.FC = () => {
                                             label="Sub Title"
                                             placeholder="Sub Title"
                                             value={params.contactUsData.subtitle}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -558,7 +558,7 @@ const Admin: React.FC = () => {
                                             label="Description"
                                             placeholder="Description"
                                             value={params.contactUsData.description}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -573,7 +573,7 @@ const Admin: React.FC = () => {
                                             label="Address"
                                             placeholder="Address"
                                             value={params.footerData.legal.address}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -582,7 +582,7 @@ const Admin: React.FC = () => {
                                             label="Email"
                                             placeholder="Email"
                                             value={params.footerData.legal.email}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -591,7 +591,7 @@ const Admin: React.FC = () => {
                                             label="Phone No."
                                             placeholder="Phone No."
                                             value={params.footerData.legal.phone}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
@@ -600,7 +600,7 @@ const Admin: React.FC = () => {
                                             label="Copyright"
                                             placeholder="Copyright"
                                             value={params.footerData.copyRight}
-                                            onChange={null}
+                                            onChange={() => null}
                                             className="rounded admin-input"
                                         />
                                     </div>
