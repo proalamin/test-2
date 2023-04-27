@@ -10,7 +10,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-const uploadMiddleware = (req, res) => {
+const uploadMiddleware = (req: any, res: any) => {
     return new Promise((resolve, reject) => {
         upload.single('file')(req, res, (err) => {
             if (err) reject(err);
@@ -19,7 +19,7 @@ const uploadMiddleware = (req, res) => {
     });
 };
 
-const handler = async (req, res) => {
+const handler = async (req: any, res: any) => {
     if (req.method === 'POST') {
         try {
             await uploadMiddleware(req, res);
