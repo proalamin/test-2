@@ -116,7 +116,7 @@ const Admin: React.FC = () => {
             } else {
                 alert('Error saving changes: ' + data.message);
             }
-        } catch (error) {
+        } catch (error: unknown) {
             alert('Error saving changes: ' + error.message);
         }
     };
