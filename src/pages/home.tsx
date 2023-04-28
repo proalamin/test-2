@@ -12,7 +12,6 @@ import { Services } from "@/components/Services";
 import data from '@/data/homepage.json';
 
 const Home: React.FC = () => {
-
     return <div>
         <Banner
             header={data.bannerData.header}

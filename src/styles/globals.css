@@ -402,6 +402,11 @@ input:checked::before {
 }
 
 .admin-input {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
+    padding: 10px !important;
+    font-size: 13px;
+}
+
+.main-admin-container {
+    overflow-y: auto;
+    max-height: calc(100vh - 56px);
 }

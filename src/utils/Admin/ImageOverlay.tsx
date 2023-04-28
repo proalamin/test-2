@@ -3,13 +3,16 @@ import { Img } from "@/utils/Img";
 
 interface ImageOverlayInterface {
     url: string;
-    update: () => any;
+    update?: () => any;
     remove?: () => any;
+    withOverlay?: boolean;
     onUploadSuccess: (url: string) => any;
+    className?: string;
+    wrapperHeightClass?: string;
 }
 
 export const ImageOverlay: React.FC<ImageOverlayInterface> = (props) => {
-    const { url, update, remove, onUploadSuccess } = props;
+    const { url, update, remove, withOverlay, onUploadSuccess, className, wrapperHeightClass } = props;
 
     const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
         if (!e.target.files || e.target.files.length === 0) return;
@@ -45,11 +48,12 @@ export const ImageOverlay: React.FC<ImageOverlayInterface> = (props) => {
         }
     }
 
-    return <div className="w-[150px] flex items-center justify-center h-[150px] bg-[#7f7f7f] p-[12px] rounded relative">
+    return <div
+        className={`flex items-center justify-center ${withOverlay ? 'bg-[#7f7f7f] p-[12px]' : ''} ${wrapperHeightClass} rounded relative`}>
         <Img
             src={url}
             alt="Image"
-            className="w-full"
+            className={`w-full ${className ? className : ''}`}
         />
         <div className="absolute top-0 left-0 flex justify-end w-full p-2">
             <label htmlFor="uploadImage" className="cursor-pointer">
