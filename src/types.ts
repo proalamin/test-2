@@ -47,6 +47,23 @@ export interface ServiceInterface {
     description: string;
 }
 
+export interface AboutUsInterface {
+    image: string;
+    title: string;
+    subtitle: string;
+    description: string;
+    featured_1: AboutUsFeaturedInterface;
+}
+
+export interface AboutUsFeaturedInterface {
+    content_1: {
+        bold: string;
+        normal?: string;
+    }
+    content_2: string
+
+}
+
 export interface WhyChooseUsInterface {
     title: string;
     subtitle: string;
@@ -201,18 +218,31 @@ export interface CardInterface {
 }
 
 export interface homePageInterface {
-    bannerData: BannerInterface;
-    serviceData: ServicesInterface;
-    whyChooseData: WhyChooseUsInterface;
-    howItWorksData: HowItWorksInterface;
-    trackYourProjectData: TrackYourProjectInterface;
-    stayOnTopData: StayOnTopInterface;
-    testimonialsData: TestimonialsInterface;
-    contactUsData: ContactUsInterface;
-    footerData: FooterInterface;
+    bannerData?: BannerInterface;
+    serviceData?: ServicesInterface;
+    whyChooseData?: WhyChooseUsInterface;
+    howItWorksData?: HowItWorksInterface;
+    trackYourProjectData?: TrackYourProjectInterface;
+    stayOnTopData?: StayOnTopInterface;
+    testimonialsData?: TestimonialsInterface;
+    contactUsData?: ContactUsInterface;
+    footerData?: FooterInterface;
 }
 
 export interface LoginInterface {
     username: string;
     password: string;
+}
+
+export interface AdminLinksInterface {
+    label: string;
+    href?: string;
+    icon?: string;
+    active?: boolean;
+    subLinks?: {
+        label: string;
+        href: string;
+        icon?: string;
+        active?: boolean;
+    }
 }
