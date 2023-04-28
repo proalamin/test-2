@@ -2,12 +2,17 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
+interface RequestBody {
+    fileUrl: string;
+    updatedContent: string;
+}
+
 const handler = (req: NextApiRequest, res: NextApiResponse) => {
     if (req.method === 'POST') {
-        const updatedContent = req.body;
+        const { fileUrl, updatedContent }: RequestBody = req.body;
 
         try {
-            fs.writeFileSync(path.join(process.cwd(), 'public', 'data.json'), JSON.stringify(updatedContent));
+            fs.writeFileSync(path.join(process.cwd(), 'src/data', fileUrl), updatedContent);
             res.status(200).json({ success: true });
         } catch (error) {
             res.status(500).json({ success: false, message: 'Error writing to file' });

@@ -6,7 +6,7 @@ interface ButtonInterface {
     href?: string
     onClick?: () => any
     className?: string
-    color: "primary" | "secondary" | "accent"
+    color?: "primary" | "secondary" | "accent"
 }
 
 export const Button: React.FC<ButtonInterface> = ({ label, onClick, className, color, type }) => {
