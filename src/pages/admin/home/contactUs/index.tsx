@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { Input, TextArea } from "@/utils/Input";
 import PrivateLayout from "@/components/Layout/privateLayout";
-import { homePageInterface } from "@/types";
 import data from "@/data/homepage.json";
 
 const ContactPage = () => {
-    const [params, setParams] = useState<homePageInterface>({
+    const [params, setParams] = useState<any>({
         contactUsData: {
             title: data.contactUsData.title,
             subtitle: data.contactUsData.subtitle,

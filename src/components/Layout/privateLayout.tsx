@@ -4,64 +4,89 @@ import { AdminLinksInterface } from "@/types";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
-const PrivateLayout = ({ title, children }) => {
+interface PrivateLayoutInterface {
+    title: string;
+    children: React.ReactNode;
+}
+
+const PrivateLayout: React.FC<PrivateLayoutInterface> = ({ title, children }) => {
     const links: AdminLinksInterface[] = [
         {
             label: 'Dashboard',
             href: '/admin',
+            active: false,
+            subLinks: []
         },
         {
             label: 'Home Page',
+            href: "",
+            active: false,
             subLinks: [
                 {
                     label: 'Banner',
                     href: '/admin/home/banner',
+                    active: false
                 },
                 {
                     label: 'About',
                     href: '/admin/home/about',
+                    active: false
                 },
                 {
                     label: 'Why Us',
                     href: '/admin/home/whyUs',
+                    active: false
                 },
                 {
                     label: 'How It Works',
                     href: '/admin/home/howItWorks',
+                    active: false
                 },
                 {
                     label: 'Track Your Project',
                     href: '/admin/home/trackYourProject',
+                    active: false
                 },
                 {
                     label: 'Stay On Top',
                     href: '/admin/home/stayOnTop',
+                    active: false
                 },
                 {
                     label: 'Testimonials',
                     href: '/admin/home/testimonial',
+                    active: false
                 },
                 {
                     label: 'Contact Us',
                     href: '/admin/home/contactUs',
+                    active: false
                 }
             ]
         },
         {
             label: 'Clients',
             href: '/admin/clients',
+            active: false,
+            subLinks: []
         },
         {
             label: 'Awesome Numbers',
             href: '/admin/awesomeNumbers',
+            active: false,
+            subLinks: []
         },
         {
             label: 'Services',
             href: '/admin/services',
+            active: false,
+            subLinks: []
         },
         {
             label: 'Testimonials',
             href: '/admin/testimonials',
+            active: false,
+            subLinks: []
         },
     ];
     const [isLoggedIn, setIsLoggedIn] = useState(false);

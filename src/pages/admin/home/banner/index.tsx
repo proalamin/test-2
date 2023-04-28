@@ -1,27 +1,24 @@
 import React, { useState } from "react";
 import { Input, TextArea } from "@/utils/Input";
 import PrivateLayout from "@/components/Layout/privateLayout";
-import { homePageInterface } from "@/types";
 import pageData from "@/data/homepage.json";
 import { ImageOverlay } from "@/utils/Admin/ImageOverlay";
-import { Button } from "../../../../utils/Button";
+import { Button } from "@/utils/Button";
 
 const BannerPage = () => {
-    const [params, setParams] = useState<homePageInterface>({
-        bannerData: {
-            title: pageData.bannerData.title,
-            subtitle: pageData.bannerData.subtitle,
-            header: pageData.bannerData.header,
-            image: pageData.bannerData.image,
-            button: pageData.bannerData.button,
-            ourClients: pageData.bannerData.ourClients,
-            awesomeNumbers: pageData.bannerData.awesomeNumbers
-        }
+    const [params, setParams] = useState<any>({
+        title: pageData.bannerData.title,
+        subtitle: pageData.bannerData.subtitle,
+        header: pageData.bannerData.header,
+        image: pageData.bannerData.image,
+        button: pageData.bannerData.button,
+        ourClients: pageData.bannerData.ourClients,
+        awesomeNumbers: pageData.bannerData.awesomeNumbers
     });
 
     const setBannerParams = (key: string, value: string) => {
         const newParams = { ...params };
-        newParams.bannerData[key] = value;
+        newParams[key] = value;
         setParams(newParams);
     }
 
@@ -34,7 +31,7 @@ const BannerPage = () => {
             },
             body: JSON.stringify({
                 fileUrl: 'homepage.json',
-                updatedContent: JSON.stringify({ ...pageData, bannerData: params.bannerData })
+                updatedContent: JSON.stringify({ ...pageData, bannerData: params })
             }),
         });
 
@@ -62,7 +59,7 @@ const BannerPage = () => {
         <div className="flex flex-col gap-[20px]">
             <div className="rounded border bg-white overflow-hidden md:h-[450px]">
                 <ImageOverlay
-                    url={params.bannerData?.image}
+                    url={params.image}
                     onUploadSuccess={(url) => setBannerParams('image', url)}
                     className="object-cover h-full"
                     wrapperHeightClass="h-full"
@@ -74,7 +71,7 @@ const BannerPage = () => {
                     <Input
                         label="Title"
                         placeholder="Title"
-                        value={params.bannerData.title}
+                        value={params.title}
                         onChange={e => setBannerParams('title', e.target.value)}
                         className="rounded admin-input"
                     />
@@ -84,7 +81,7 @@ const BannerPage = () => {
                         rows={3}
                         label="Sub Title"
                         placeholder="Sub Title"
-                        value={params.bannerData.subtitle}
+                        value={params.subtitle}
                         onChange={e => setBannerParams('subtitle', e.target.value)}
                         className="rounded admin-input"
                     />

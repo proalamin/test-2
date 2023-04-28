@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import PrivateLayout from "@/components/Layout/privateLayout";
 import services from "@/data/services.json";
-import { ImageOverlay } from "../../../utils/Admin/ImageOverlay";
-import { Input, TextArea } from "../../../utils/Input";
-import { ServiceInterface } from "../../../types";
-import { Button } from "../../../utils/Button";
+import { ImageOverlay } from "@/utils/Admin/ImageOverlay";
+import { Input, TextArea } from "@/utils/Input";
+import { Button } from "@/utils/Button";
 
 const ServicesPage = () => {
-    const [service, setService] = useState<ServiceInterface[]>(services);
+    const [service, setService] = useState<any[]>(services);
 
     const setParams = (index: number, key: string, value: string) => {
         const newService = [...service];

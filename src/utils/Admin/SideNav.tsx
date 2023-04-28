@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { Img } from "@/utils/Img";
 import Link from "next/link";
-import { AdminLinksInterface } from "@/types";
 
 interface SideNavInterface {
-    links: AdminLinksInterface
+    links: any[];
 }
 
 export const SideNav: React.FC<SideNavInterface> = (props) => {
@@ -24,7 +23,7 @@ export const SideNav: React.FC<SideNavInterface> = (props) => {
                 links.map((link, index) => {
                     return <div key={index} className="w-full">
                         {
-                            link.subLinks ?
+                            link.subLinks.length !== 0 ?
                                 <div>
                                     <div
                                         className="flex items-center gap-[10x] p-[12px] cursor-pointer"
@@ -43,7 +42,7 @@ export const SideNav: React.FC<SideNavInterface> = (props) => {
                                     </div>
                                     <div className={`flex-col pl-[15px] ${show ? 'flex' : 'hidden'}`}>
                                         {
-                                            link.subLinks.map((subLink, index) => {
+                                            link.subLinks.map((subLink: any, index: number) => {
                                                 return <Link key={index} href={subLink.href}>
                                                     <p className={`cursor-pointer font-medium text-[13px] tracking-[1px] p-[12px] ${subLink?.active ? 'text-[#101D2C]' : 'text-[#707070]'}`}>
                                                         {subLink.label}

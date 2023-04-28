@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import { Input, TextArea } from "@/utils/Input";
 import { ImageOverlay } from "@/utils/Admin/ImageOverlay";
 import PrivateLayout from "@/components/Layout/privateLayout";
-import { homePageInterface } from "@/types";
 import data from "@/data/homepage.json";
 
 const HowItWorksPage = () => {
-    const [params, setParams] = useState<homePageInterface>({
+    const [params, setParams] = useState<any>({
         howItWorksData: {
             image: data.howItWorksData.image,
             title: data.howItWorksData.title,

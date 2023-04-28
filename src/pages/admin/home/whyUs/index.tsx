@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { Input, TextArea } from "@/utils/Input";
 import PrivateLayout from "@/components/Layout/privateLayout";
-import { homePageInterface } from "@/types";
 import data from "@/data/homepage.json";
 import { ImageOverlay } from "@/utils/Admin/ImageOverlay";
 
 const WhyUsPage = () => {
-    const [params, setParams] = useState<homePageInterface>({
+    const [params, setParams] = useState<any>({
         whyChooseData: {
             title: data.whyChooseData.title,
             subtitle: data.whyChooseData.subtitle,

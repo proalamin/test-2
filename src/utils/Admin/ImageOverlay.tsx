@@ -2,7 +2,7 @@ import React from "react";
 import { Img } from "@/utils/Img";
 
 interface ImageOverlayInterface {
-    url: string;
+    url: any;
     update?: () => any;
     remove?: () => any;
     withOverlay?: boolean;

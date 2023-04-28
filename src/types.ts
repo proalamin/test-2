@@ -236,13 +236,13 @@ export interface LoginInterface {
 
 export interface AdminLinksInterface {
     label: string;
-    href?: string;
-    icon?: string;
-    active?: boolean;
-    subLinks?: {
-        label: string;
-        href: string;
-        icon?: string;
-        active?: boolean;
-    }
+    href: string;
+    active: boolean;
+    subLinks: SubLinksInterface[]
+}
+
+export interface SubLinksInterface {
+    label: string;
+    href: string;
+    active: boolean;
 }

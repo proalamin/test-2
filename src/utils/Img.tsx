@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 interface ImgInterface {
-    src: string;
+    src: any;
     alt: string;
     width?: number;
     height?: number;
