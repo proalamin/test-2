@@ -1,16 +1,1 @@
-{
-  "data": [
-    {
-      "image": "/images/clients/stryker.svg"
-    } ,
-    {
-      "image": "/images/clients/greenfence.svg"
-    } ,
-    {
-      "image": "/images/clients/corelogic.svg"
-    } ,
-    {
-      "image": "/images/clients/greenfence.svg"
-    }
-  ]
-}
+[{"image":"/images/clients/stryker.svg","alt":"Stryker"},{"image":"/images/clients/greenfence.svg","alt":"Greenfence"},{"image":"/images/1682727962421-corelogic.svg","alt":"Corelogic"},{"image":"/images/clients/greenfence.svg","alt":"Greenfence"},{"image":"/images/1682728039920-greenfence.svg","alt":"New"}]

@@ -3,7 +3,7 @@ import { TestimonialsItemInterface } from "@/types";
 import { Img } from "@/utils/Img";
 
 export const TestimonialCard: React.FC<TestimonialsItemInterface> = (props) => {
-    const { title, description, date, rating, author, date_of_experience } = props;
+    const { title, description, date, rating, author_name, date_of_experience } = props;
 
     const [daysAgo, setDaysAgo] = useState(0);
     const filledStars = Math.round(rating);
@@ -54,7 +54,7 @@ export const TestimonialCard: React.FC<TestimonialsItemInterface> = (props) => {
             </p>
         </div>
         <p className="xl:text-[14px] sm:text-[12px] text-[14px] leading-[16.94px] text-[#202224] font-medium pb-[20px]">
-            {author.name}
+            {author_name}
         </p>
         <p className="xxl:text-[17px] xl:text-[15.5px] sm:text-[14px] text-[17px] leading-[20.57px] text-[#202224] pb-[10px] font-medium">
             {title}
@@ -63,12 +63,7 @@ export const TestimonialCard: React.FC<TestimonialsItemInterface> = (props) => {
             {description}
         </p>
         <p className="xxl:text-[14px] md:text-[13px] sm:text-[12px] text-[14px] leading-[16.94px] text-[#202224] font-medium">
-            Date of experience: <span
-            className="font-normal">{new Date(date_of_experience).toLocaleDateString('en-US', {
-            month: 'long',
-            day: 'numeric',
-            year: 'numeric'
-        })}</span>
+            Date of experience: {date_of_experience}
         </p>
     </div>
 }

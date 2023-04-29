@@ -61,6 +61,11 @@ const PrivateLayout: React.FC<PrivateLayoutInterface> = ({ title, children }) =>
                     label: 'Contact Us',
                     href: '/admin/home/contactUs',
                     active: false
+                },
+                {
+                    label: 'Footer',
+                    href: '/admin/home/footer',
+                    active: false
                 }
             ]
         },

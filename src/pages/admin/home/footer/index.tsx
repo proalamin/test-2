@@ -6,11 +6,12 @@ import pageData from "@/data/homepage.json";
 import { Button } from "@/utils/Button";
 import toast from "react-hot-toast";
 
-const ContactPage = () => {
+const FooterPage = () => {
     const [params, setParams] = useState<any>({
-        title: data.contactUsData.title,
-        subtitle: data.contactUsData.subtitle,
-        description: data.contactUsData.description
+        email: data.footerData.legal.email,
+        phone: data.footerData.legal.phone,
+        address: data.footerData.legal.address,
+        copyRight: data.footerData.copyRight,
     });
 
     const setParam = (key: string, value: any) => {
@@ -30,7 +31,16 @@ const ContactPage = () => {
                 fileUrl: 'homepage.json',
                 updatedContent: JSON.stringify({
                     ...pageData,
-                    contactUsData: { ...pageData.contactUsData, ...params }
+                    footerData: {
+                        ...pageData.footerData,
+                        legal: {
+                            ...pageData.footerData.legal,
+                            email: params.email,
+                            phone: params.phone,
+                            address: params.address,
+                        },
+                        copyRight: params.copyRight
+                    }
                 })
             }),
         });
@@ -43,11 +53,11 @@ const ContactPage = () => {
             toast.error(`Error saving changes: ${data.message}`);
         }
     };
-    return <PrivateLayout title="Search My Expert - Contact Us Section">
+    return <PrivateLayout title="Search My Expert - Home Page Banner Section">
         <div className="flex flex-col gap-[16px]">
             <div className="flex items-center gap-[16px]">
                 <h3 className="flex-1 text-[21px] tracking-[1.2px] font-semibold text-[#101D2C]">
-                    Contact Us Section
+                    Footer Section
                 </h3>
                 <Button
                     label="Save"
@@ -60,29 +70,38 @@ const ContactPage = () => {
                 <div className="rounded border bg-white p-[10px]">
                     <div className="p-[10px]">
                         <Input
-                            label="Title"
-                            placeholder="Title"
-                            value={params.title}
-                            onChange={e => setParam('title', e.target.value)}
+                            label="Address"
+                            placeholder="Address"
+                            value={params.address}
+                            onChange={e => setParam("address", e.target.value)}
                             className="rounded admin-input"
                         />
                     </div>
                     <div className="p-[10px]">
                         <Input
-                            label="Subtitle"
-                            placeholder="Subtitle"
-                            value={params.subtitle}
-                            onChange={e => setParam('subtitle', e.target.value)}
+                            label="Email"
+                            placeholder="Email"
+                            value={params.email}
+                            onChange={e => setParam("email", e.target.value)}
+                            className="rounded admin-input"
+                        />
+                    </div>
+                    <div className="p-[10px]">
+                        <Input
+                            label="Phone"
+                            placeholder="Phone"
+                            value={params.phone}
+                            onChange={e => setParam("phone", e.target.value)}
                             className="rounded admin-input"
                         />
                     </div>
                     <div className="p-[10px]">
                         <TextArea
                             rows={3}
-                            label="Description"
-                            placeholder="Description"
-                            value={params.description}
-                            onChange={e => setParam('description', e.target.value)}
+                            label="Copy Right"
+                            placeholder="Copy Right"
+                            value={params.copyRight}
+                            onChange={e => setParam("copyRight", e.target.value)}
                             className="rounded admin-input"
                         />
                     </div>
@@ -92,4 +111,4 @@ const ContactPage = () => {
     </PrivateLayout>
 }
 
-export default ContactPage
+export default FooterPage

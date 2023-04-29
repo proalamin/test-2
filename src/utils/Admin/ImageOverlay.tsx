@@ -55,15 +55,28 @@ export const ImageOverlay: React.FC<ImageOverlayInterface> = (props) => {
             alt="Image"
             className={`w-full ${className ? className : ''}`}
         />
-        <div className="absolute top-0 left-0 flex justify-end w-full p-2">
-            <label htmlFor="uploadImage" className="cursor-pointer">
-                <Img
-                    src="/images/upload.svg"
-                    alt="upload"
-                    className="w-[35px] h-[35px] bg-white rounded-full p-2"
-                />
-                <input className="hidden" type="file" id="uploadImage" onChange={handleImageUpload}/>
-            </label>
+        <div className="absolute top-0 left-0 flex justify-end w-full">
+            <div className="p-2">
+                <label htmlFor="uploadImage" className="cursor-pointer">
+                    <Img
+                        src="/images/upload.svg"
+                        alt="upload"
+                        className="w-[35px] h-[35px] bg-white rounded-full p-2"
+                    />
+                    <input className="hidden" type="file" id="uploadImage" onChange={handleImageUpload}/>
+                </label>
+            </div>
+            {
+                remove && <div className="p-2">
+                    <div className="cursor-pointer" onClick={remove}>
+                        <Img
+                            src="/images/remove.svg"
+                            alt="upload"
+                            className="w-[35px] h-[35px] bg-white rounded-full p-2"
+                        />
+                    </div>
+                </div>
+            }
         </div>
     </div>
 }

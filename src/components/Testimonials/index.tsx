@@ -77,7 +77,7 @@ export const Testimonials: React.FC<TestimonialsInterface> = (props) => {
                                 description={item.description}
                                 date={item.date}
                                 rating={item.rating}
-                                author={item.author}
+                                author_name={item.author_name}
                                 date_of_experience={item.date_of_experience}
                             />
                         </div>
@@ -95,7 +95,7 @@ export const Testimonials: React.FC<TestimonialsInterface> = (props) => {
                                 description={item.description}
                                 date={item.date}
                                 rating={item.rating}
-                                author={item.author}
+                                author_name={item.author_name}
                                 date_of_experience={item.date_of_experience}
                             />
                         </div>

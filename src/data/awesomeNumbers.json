@@ -1,20 +1,18 @@
-{
-  "data": [
-    {
-      "number": "3,455" ,
-      "title": "Projects Started"
-    } ,
-    {
-      "number": "2,145" ,
-      "title": "Happy Clients"
-    } ,
-    {
-      "number": "1,512" ,
-      "title": "Agencies"
-    } ,
-    {
-      "number": "2,145" ,
-      "title": "Happy Clients"
-    }
-  ]
-}
+[
+  {
+    "number": "3,455" ,
+    "title": "Projects Started"
+  } ,
+  {
+    "number": "2,145" ,
+    "title": "Happy Clients"
+  } ,
+  {
+    "number": "1,512" ,
+    "title": "Agencies"
+  } ,
+  {
+    "number": "2,145" ,
+    "title": "Happy Clients"
+  }
+]

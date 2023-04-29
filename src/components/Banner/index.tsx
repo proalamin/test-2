@@ -52,12 +52,12 @@ export const Banner: React.FC<BannerInterface> = (props) => {
                     <h2
                         className="font-semibold text-[#FFFFFF] text-[17px] leading-[27px] tracking-[-0.24px] pb-[24px] md:text-left text-center"
                     >
-                        {ourClients.title}
+                        Clients that Trust Us
                     </h2>
                     <div className="flex">
                         <Slider {...settings}>
                             {
-                                ourClients.data?.map((row, index) => {
+                                ourClients.map((row, index) => {
                                     return <div key={index}>
                                         <Img src={row.image || ""} alt="client" className="w-auto h-[35px] pr-[20px]"/>
                                     </div>
@@ -72,12 +72,12 @@ export const Banner: React.FC<BannerInterface> = (props) => {
                     <h2
                         className="font-semibold text-[#FFFFFF] text-[17px] leading-[27px] tracking-[-0.24px] pb-[24px] md:text-left text-center"
                     >
-                        {awesomeNumbers.title}
+                        Our Awesome Numbers
                     </h2>
                     <div className="flex awesome-number">
                         <Slider {...settings}>
                             {
-                                awesomeNumbers.data?.map((awesomeNumber, index) => {
+                                awesomeNumbers.map((awesomeNumber, index) => {
                                     return <div key={index}>
                                         <h3 className="font-bold sm:text-[29px] text-[24px] leading-[27px] tracking-[-0.88px] text-primaryAccent">
                                             {awesomeNumber.number}

@@ -111,7 +111,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                             {legal.email}
                         </a>
                         <a
-                            href={`tel:${legal.phone_link}`}
+                            href={`tel:${legal.phone}`}
                             className="d-block xxl:text-[18px] xl:text-[15px] text-[14px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
                         >
                             {legal.phone}

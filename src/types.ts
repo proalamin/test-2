@@ -7,14 +7,8 @@ export interface BannerInterface {
         title: string;
         link?: string;
     };
-    ourClients: {
-        title: string;
-        data: OurClientInterface[]
-    };
-    awesomeNumbers: {
-        title: string;
-        data: AwesomeNumberInterface[]
-    };
+    ourClients: OurClientInterface[];
+    awesomeNumbers: AwesomeNumberInterface[];
 }
 
 export interface HeaderInterface {
@@ -53,6 +47,7 @@ export interface AboutUsInterface {
     subtitle: string;
     description: string;
     featured_1: AboutUsFeaturedInterface;
+    featured_2: AboutUsFeatured2Interface;
 }
 
 export interface AboutUsFeaturedInterface {
@@ -61,7 +56,12 @@ export interface AboutUsFeaturedInterface {
         normal?: string;
     }
     content_2: string
+}
 
+export interface AboutUsFeatured2Interface {
+    content_1: { bold: string }
+    content_2: string
+    content_3: string
 }
 
 export interface WhyChooseUsInterface {
@@ -131,13 +131,8 @@ export interface TestimonialsItemInterface {
     rating: number;
     title: string;
     description: string;
-    author: AuthorInterface;
+    author_name: string;
     date_of_experience: string;
-}
-
-export interface AuthorInterface {
-    name: string;
-    image?: string;
 }
 
 export interface ContactUsInterface {
@@ -187,7 +182,6 @@ export interface FooterInterface {
         address: string;
         email: string;
         phone: string;
-        phone_link: string;
         social_media: SocialMediaInterface[];
     };
     copyRight: string;
@@ -215,18 +209,6 @@ export interface CardInterface {
     title: string;
     description: string;
     type: "how-it-works" | "track-your-project";
-}
-
-export interface homePageInterface {
-    bannerData?: BannerInterface;
-    serviceData?: ServicesInterface;
-    whyChooseData?: WhyChooseUsInterface;
-    howItWorksData?: HowItWorksInterface;
-    trackYourProjectData?: TrackYourProjectInterface;
-    stayOnTopData?: StayOnTopInterface;
-    testimonialsData?: TestimonialsInterface;
-    contactUsData?: ContactUsInterface;
-    footerData?: FooterInterface;
 }
 
 export interface LoginInterface {

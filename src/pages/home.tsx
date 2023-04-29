@@ -10,6 +10,10 @@ import { ContactUs } from "@/components/ContactUs";
 import { Footer } from "@/components/Comman/Footer";
 import { Services } from "@/components/Services";
 import data from '@/data/homepage.json';
+import services from '@/data/services.json';
+import ourClientData from '@/data/clients.json';
+import awesomeNumberData from '@/data/awesomeNumbers.json';
+import testimonials from '@/data/testimonials.json';
 
 const Home: React.FC = () => {
     return <div>
@@ -19,18 +23,25 @@ const Home: React.FC = () => {
             title={data.bannerData.title}
             subtitle={data.bannerData.subtitle}
             button={data.bannerData.button}
-            ourClients={data.bannerData.ourClients}
-            awesomeNumbers={data.bannerData.awesomeNumbers}
+            ourClients={ourClientData}
+            awesomeNumbers={awesomeNumberData}
         />
 
         <Services
             title={data.serviceData.title}
             subtitle={data.serviceData.subtitle}
             description={data.serviceData.description}
-            data={data.serviceData.data}
+            data={services}
         />
 
-        <About/>
+        <About
+            image={data.aboutData.image}
+            title={data.aboutData.title}
+            subtitle={data.aboutData.subtitle}
+            description={data.aboutData.description}
+            featured_1={data.aboutData.featured_1}
+            featured_2={data.aboutData.featured_2}
+        />
 
         <WhyChooseUs
             title={data.whyChooseData.title}
@@ -66,7 +77,7 @@ const Home: React.FC = () => {
             title={data.testimonialData.title}
             subtitle={data.testimonialData.subtitle}
             description={data.testimonialData.description}
-            items={data.testimonialData.items}
+            items={testimonials}
         />
 
         <div
