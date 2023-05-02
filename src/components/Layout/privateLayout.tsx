@@ -3,7 +3,6 @@ import { SideNav } from "@/utils/Admin/SideNav";
 import { AdminLinksInterface } from "@/types";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import Toaster from "react-hot-toast";
 
 interface PrivateLayoutInterface {
     title: string;
@@ -154,10 +153,6 @@ const PrivateLayout: React.FC<PrivateLayoutInterface> = ({ title, children }) =>
                 </div>
             </div>
         </div>
-        {
-            // @ts-ignore
-            <Toaster/>
-        }
     </>
 }
 
