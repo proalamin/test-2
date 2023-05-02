@@ -23,6 +23,11 @@ const PrivateLayout: React.FC<PrivateLayoutInterface> = ({ title, children }) =>
             active: false,
             subLinks: [
                 {
+                    label: 'SEO',
+                    href: '/admin/home/seo',
+                    active: false
+                },
+                {
                     label: 'Banner',
                     href: '/admin/home/banner',
                     active: false

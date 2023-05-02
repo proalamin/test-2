@@ -48,9 +48,12 @@ export const Input: React.FC<InputInterface> = (
                         borderColor: 'rgba(75, 90, 105, .62)'
                     }}
                 />
-                <div className="absolute top-0 right-0 h-[100%] w-[50px] flex items-center justify-center">
-                    {prefix}
-                </div>
+                {
+                    prefix &&
+                    <div className="absolute top-0 right-0 h-[100%] w-[50px] flex items-center justify-center">
+                        {prefix}
+                    </div>
+                }
             </div>
             {error && <p className="error">{error}</p>}
         </div>

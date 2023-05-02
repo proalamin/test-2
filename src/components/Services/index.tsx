@@ -10,8 +10,13 @@ export const Services: React.FC<ServicesInterface> = (props) => {
             <h6 className="text-[12px] leading-[12px] tracking-[1.66px] font-medium pb-[10px] uppercase text-primary">
                 {title}
             </h6>
-            <h2 className="xxl:text-[35px] xl:text-[30px] text-[24px] sm:leading-[44px] leading-[35px] tracking-[-0.44px] underline underline-offset-[8px] font-semibold pb-[18px] text-primary">
+            <h2 className="relative inline-block xxl:text-[35px] xl:text-[30px] text-[24px] sm:leading-[44px] leading-[35px] tracking-[-0.44px] font-semibold mb-[18px] text-primary">
                 {subtitle}
+                <Img
+                    src="/images/underline-dark.svg"
+                    alt="underline"
+                    className="absolute bottom-[8%] left-0 w-full"
+                />
             </h2>
             <p className="xxl:text-[19px] xl:text-[17px] text-[14px] leading-[30px] tracking-[-0.26px] text-[#101D2C] font-medium">
                 {description}

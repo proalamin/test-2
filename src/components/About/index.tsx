@@ -13,7 +13,14 @@ export const About: React.FC<AboutUsInterface> = (props) => {
                     {title}
                 </h6>
                 <h2 className="xxl:text-[35px] xl:text-[30px] text-[24px] md:text-left text-center leading-[44px] tracking-[-0.47px] font-semibold text-[#101D2C] mb-[20px]">
-                    About <span className="text-primary underline underline-offset-[8px]">SearchMyExpert</span>
+                    About <span className="text-primary relative">
+                    SearchMyExpert
+                    <Img
+                        src="/images/underline-dark.svg"
+                        alt="underline"
+                        className="absolute bottom-[0] left-0 w-full"
+                    />
+                </span>
                 </h2>
                 <p className="xxl:text-[19px] xl:text-[17px] text-[14px] leading-[30px] pb-[8px] md:text-left text-center font-semibold text-[#111B35]">
                     {subtitle}
