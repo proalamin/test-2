@@ -54,7 +54,7 @@ const GetStarted: React.FC = () => {
 
     return <div className="bg-[#F5F8FD] min-h-[100vh]">
         <div className="pt-[15px] pb-[40px] md:px-[60px] sm:px-[30px] px-[16px] w-full">
-            <div onClick={() => router.push("/")}>
+            <div onClick={() => setOpen(true)}>
                 <Img src={data.logos.dark} alt="Header Logo"
                      className="xxl:w-[323px] xl:w-[300px] sm:w-[291.6px] w-[200px] h-[41px] cursor-pointer"/>
             </div>
