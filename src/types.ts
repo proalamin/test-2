@@ -157,7 +157,6 @@ export interface FormValuesInterface {
 }
 
 export interface FooterInterface {
-    logo: string;
     countries: CountryInterface[];
     links: {
         quick: {

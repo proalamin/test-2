@@ -37,7 +37,7 @@ export const About: React.FC<AboutUsInterface> = (props) => {
                     />
                 </div>
             </div>
-            <div className="xxl:w-[839px] xl:w-[690px] md:w-[500px] sm:w-full">
+            <div className="xxl:w-[745px] xl:w-[690px] md:w-[500px] sm:w-full">
                 <Img src="/images/about-featured.webp" alt="About Featured" className="w-[100%] h-auto md:flex hidden"/>
                 <Img
                     src="/images/about-featured-mobile.webp"

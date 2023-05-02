@@ -1,16 +1,16 @@
 import React, { useContext, useState } from "react";
-import { Input, TextArea } from "@/utils/Input";
 import PrivateLayout from "@/components/Layout/privateLayout";
-import pageData from "@/data/homepage.json";
 import { Button } from "@/utils/Button";
-import toast from "react-hot-toast";
 import { LoaderContext } from "@/context/LoaderContext";
+import pageData from "@/data/config.json";
+import toast from "react-hot-toast";
+import { ImageOverlay } from "@/utils/Admin/ImageOverlay";
 
-const SeoPage = () => {
+const LogoConfig: React.FC = () => {
     const { setIsLoading } = useContext(LoaderContext);
     const [params, setParams] = useState<any>({
-        title: pageData.seoData?.title,
-        description: pageData.seoData?.description
+        light: pageData.logos.light,
+        dark: pageData.logos.dark
     });
 
     const setParam = (key: string, value: any) => {
@@ -28,10 +28,10 @@ const SeoPage = () => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                fileUrl: 'homepage.json',
+                fileUrl: 'config.json',
                 updatedContent: JSON.stringify({
                     ...pageData,
-                    seoData: params
+                    logos: params
                 })
             }),
         });
@@ -45,11 +45,12 @@ const SeoPage = () => {
         }
         setIsLoading(false);
     };
-    return <PrivateLayout title="Search My Expert - Home Page Banner Section">
+
+    return <PrivateLayout title="Config Page">
         <div className="flex flex-col gap-[16px]">
             <div className="flex items-center gap-[16px]">
                 <h3 className="flex-1 text-[21px] tracking-[1.2px] font-semibold text-[#101D2C]">
-                    Meta Title & Description Section
+                    Logos Config
                 </h3>
                 <Button
                     label="Save"
@@ -58,25 +59,26 @@ const SeoPage = () => {
                     onClick={save}
                 />
             </div>
-            <div className="flex flex-col gap-[16px]">
-                <div className="rounded border bg-white p-[10px]">
-                    <div className="p-[10px]">
-                        <Input
-                            label="Title"
-                            placeholder="Title"
-                            value={params.title}
-                            onChange={e => setParam("title", e.target.value)}
-                            className="rounded admin-input"
+            <div className="flex gap-[16px]">
+                <div className="flex-1">
+                    <div className="rounded border bg-white p-[10px]">
+                        <ImageOverlay
+                            url={params.light}
+                            withOverlay
+                            onUploadSuccess={(url) => setParam("light", url)}
+                            className="object-contain h-full p-[10px]"
+                            wrapperHeightClass="h-full"
                         />
                     </div>
-                    <div className="p-[10px]">
-                        <TextArea
-                            rows={3}
-                            label="Description"
-                            placeholder="Description"
-                            value={params.description}
-                            onChange={e => setParam("description", e.target.value)}
-                            className="rounded admin-input"
+                </div>
+                <div className="flex-1">
+                    <div className="rounded border bg-white p-[10px]">
+                        <ImageOverlay
+                            url={params.dark}
+                            withOverlay
+                            onUploadSuccess={(url) => setParam("dark", url)}
+                            className="object-contain h-full p-[10px]"
+                            wrapperHeightClass="h-full"
                         />
                     </div>
                 </div>
@@ -85,4 +87,4 @@ const SeoPage = () => {
     </PrivateLayout>
 }
 
-export default SeoPage
+export default LogoConfig;

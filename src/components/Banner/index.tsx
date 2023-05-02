@@ -4,6 +4,7 @@ import { Button } from "@/utils/Button";
 import { Img } from "@/utils/Img";
 import Slider from 'react-slick';
 import { Header } from "@/components/Comman/Header";
+import data from "@/data/config.json";
 
 export const Banner: React.FC<BannerInterface> = (props) => {
     const { header, title, subtitle, image, button, ourClients, awesomeNumbers } = props;
@@ -24,7 +25,7 @@ export const Banner: React.FC<BannerInterface> = (props) => {
         className="bg-cover bg-center bg-no-repeat relative md:pb-[248px]"
     >
         <div className="md:pt-[56px]  pt-[16px] md:px-[55px] sm:px-[30px] px-[16px] w-full">
-            <Header logo={header.logo} button={header.button}/>
+            <Header logo={data.logos.light} button={header.button}/>
         </div>
         <div
             className="md:max-w-[1055px] mx-auto flex flex-col items-center justify-center md:pt-[238px] pt-[117px] pb-[71px] md:px-0 px-[20px]">

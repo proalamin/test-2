@@ -444,3 +444,7 @@ input:checked::before {
     border-radius: .3rem;
     outline: 0;
 }
+
+.react-tel-input .selected-flag:hover, .react-tel-input .selected-flag:focus {
+    background-color: transparent !important;
+}

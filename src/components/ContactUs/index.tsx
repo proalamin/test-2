@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { ContactUsInterface } from "@/types";
 import { Input } from "@/utils/Input";
 import PhoneInput from 'react-phone-input-2'
 import { Button } from "@/utils/Button";
 import toast from "react-hot-toast";
+import { LoaderContext } from "@/context/LoaderContext";
 
 export const ContactUs: React.FC<ContactUsInterface> = (props) => {
     const { title, subtitle, description, form, countries } = props;
+    const { setIsLoading } = useContext(LoaderContext);
     const [params, setParams] = React.useState({
         f_name: "",
         l_name: "",
@@ -20,6 +22,7 @@ export const ContactUs: React.FC<ContactUsInterface> = (props) => {
     }
 
     const send = async () => {
+        setIsLoading(true);
         const response = await fetch("/api/sendMail", {
             method: "POST",
             headers: {
@@ -35,6 +38,7 @@ export const ContactUs: React.FC<ContactUsInterface> = (props) => {
         if (data.success) {
             toast.success("Email Send successfully!");
         }
+        setIsLoading(false);
     }
     return <div
         className="md:px-[140px] sm:px-[50px] px-[20px] pt-[134px] pb-[140px]"

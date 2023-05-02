@@ -1,13 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { Img } from "@/utils/Img";
 import { Input } from "@/utils/Input";
 import PhoneInput from "react-phone-input-2";
 import { Button } from "@/utils/Button";
 import { useRouter } from "next/router";
 import toast from "react-hot-toast";
+import { LoaderContext } from "@/context/LoaderContext";
+import data from "@/data/config.json";
 
 const GetStarted: React.FC = () => {
     const router = useRouter();
+    const { setIsLoading } = useContext(LoaderContext);
     const [params, setParams] = React.useState({
         f_name: "",
         l_name: "",
@@ -22,6 +25,7 @@ const GetStarted: React.FC = () => {
     }
 
     const sendEmail = async () => {
+        setIsLoading(true);
         const response = await fetch("/api/sendMail", {
             method: "POST",
             headers: {
@@ -37,6 +41,7 @@ const GetStarted: React.FC = () => {
         if (data.success) {
             toast.success("Email Send successfully!");
         }
+        setIsLoading(false);
     }
 
     useEffect(() => {
@@ -49,8 +54,10 @@ const GetStarted: React.FC = () => {
 
     return <div className="bg-[#F5F8FD] min-h-[100vh]">
         <div className="pt-[15px] pb-[40px] md:px-[60px] sm:px-[30px] px-[16px] w-full">
-            <Img src={"/images/logo_dark.svg" || ""} alt="Header Logo"
-                 className="xxl:w-[323px] xl:w-[300px] sm:w-[291.6px] w-[200px] h-[41px]"/>
+            <div onClick={() => router.push("/")}>
+                <Img src={data.logos.dark} alt="Header Logo"
+                     className="xxl:w-[323px] xl:w-[300px] sm:w-[291.6px] w-[200px] h-[41px] cursor-pointer"/>
+            </div>
         </div>
         <div className="xl:pb-0 md:pb-[50px]">
             <div className="mx-auto bg-white get-started-form">

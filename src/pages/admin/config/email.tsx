@@ -1,26 +1,23 @@
 import React, { useContext, useState } from "react";
-import { Input, TextArea } from "@/utils/Input";
 import PrivateLayout from "@/components/Layout/privateLayout";
-import pageData from "@/data/homepage.json";
-import { ImageOverlay } from "@/utils/Admin/ImageOverlay";
 import { Button } from "@/utils/Button";
-import toast from "react-hot-toast";
+import { Input } from "@/utils/Input";
 import { LoaderContext } from "@/context/LoaderContext";
+import pageData from "@/data/config.json";
+import toast from "react-hot-toast";
 
-const BannerPage = () => {
+const EmailConfig: React.FC = () => {
     const { setIsLoading } = useContext(LoaderContext);
     const [params, setParams] = useState<any>({
-        title: pageData.bannerData.title,
-        subtitle: pageData.bannerData.subtitle,
-        header: pageData.bannerData.header,
-        image: pageData.bannerData.image,
-        button: pageData.bannerData.button
+        api_key: pageData.email.api_key,
+        authorized_sender: pageData.email.authorized_sender
     });
 
-    const setBannerParams = (key: string, value: string) => {
-        const newParams = { ...params };
-        newParams[key] = value;
-        setParams(newParams);
+    const setParam = (key: string, value: any) => {
+        setParams({
+            ...params,
+            [key]: value
+        });
     }
 
     const save = async () => {
@@ -31,13 +28,15 @@ const BannerPage = () => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                fileUrl: 'homepage.json',
-                updatedContent: JSON.stringify({ ...pageData, bannerData: params })
+                fileUrl: 'config.json',
+                updatedContent: JSON.stringify({
+                    ...pageData,
+                    email: params
+                })
             }),
         });
 
         const data = await response.json();
-
 
         if (data.success) {
             toast.success("Changes saved successfully!");
@@ -47,11 +46,11 @@ const BannerPage = () => {
         setIsLoading(false);
     };
 
-    return <PrivateLayout title="Search My Expert - Home Page Banner Section">
+    return <PrivateLayout title="Config Page">
         <div className="flex flex-col gap-[16px]">
             <div className="flex items-center gap-[16px]">
                 <h3 className="flex-1 text-[21px] tracking-[1.2px] font-semibold text-[#101D2C]">
-                    Banner Section
+                    Email Config
                 </h3>
                 <Button
                     label="Save"
@@ -61,32 +60,22 @@ const BannerPage = () => {
                 />
             </div>
             <div className="flex flex-col gap-[16px]">
-                <div className="rounded border bg-white overflow-hidden md:h-[450px]">
-                    <ImageOverlay
-                        url={params.image}
-                        onUploadSuccess={(url) => setBannerParams('image', url)}
-                        className="object-cover h-full"
-                        wrapperHeightClass="h-full"
-                    />
-                </div>
-
                 <div className="rounded border bg-white p-[10px]">
                     <div className="p-[10px]">
                         <Input
-                            label="Title"
-                            placeholder="Title"
-                            value={params.title}
-                            onChange={e => setBannerParams('title', e.target.value)}
+                            label="API KEY"
+                            placeholder="API KEY"
+                            value={params.api_key}
+                            onChange={e => setParam("api_key", e.target.value)}
                             className="rounded admin-input"
                         />
                     </div>
                     <div className="p-[10px]">
-                        <TextArea
-                            rows={3}
-                            label="Sub Title"
-                            placeholder="Sub Title"
-                            value={params.subtitle}
-                            onChange={e => setBannerParams('subtitle', e.target.value)}
+                        <Input
+                            label="Authorized Sender"
+                            placeholder="Authorized Sender"
+                            value={params.authorized_sender}
+                            onChange={e => setParam("authorized_sender", e.target.value)}
                             className="rounded admin-input"
                         />
                     </div>
@@ -96,4 +85,4 @@ const BannerPage = () => {
     </PrivateLayout>
 }
 
-export default BannerPage
+export default EmailConfig;

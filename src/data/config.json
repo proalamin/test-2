@@ -1,0 +1,18 @@
+{
+  "email": {
+    "api_key": "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" ,
+    "authorized_sender": "info@alumeltech.com"
+  } ,
+  "logos": {
+    "light": "/images/logo.svg" ,
+    "dark": "/images/logo_dark.svg"
+  } ,
+  "socialMedia": {
+    "facebook": "" ,
+    "twitter": "" ,
+    "instagram": "" ,
+    "linkedin": "" ,
+    "youtube": "" ,
+    "pintrest": ""
+  }
+}

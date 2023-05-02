@@ -1,14 +1,15 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import sgMail, { MailDataRequired } from "@sendgrid/mail";
+import data from "@/data/config.json";
 
-sgMail.setApiKey("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");
+sgMail.setApiKey(data.email.api_key);
 
 export default async function handler (req: NextApiRequest, res: NextApiResponse) {
     const { to, body } = req.body;
 
     const msg: MailDataRequired = {
         to,
-        from: "info@alumeltech.com",
+        from: data.email.authorized_sender,
         subject: "This Email Coming from Search My Expert",
         text: body,
     };

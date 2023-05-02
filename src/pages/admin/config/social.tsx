@@ -1,19 +1,19 @@
 import React, { useContext, useState } from "react";
-import { Input, TextArea } from "@/utils/Input";
 import PrivateLayout from "@/components/Layout/privateLayout";
-import data from "@/data/homepage.json";
-import pageData from "@/data/homepage.json";
 import { Button } from "@/utils/Button";
-import toast from "react-hot-toast";
+import { Input } from "@/utils/Input";
 import { LoaderContext } from "@/context/LoaderContext";
+import pageData from "@/data/config.json";
+import toast from "react-hot-toast";
 
-const FooterPage = () => {
+const SocialConfig: React.FC = () => {
     const { setIsLoading } = useContext(LoaderContext);
     const [params, setParams] = useState<any>({
-        email: data.footerData.legal.email,
-        phone: data.footerData.legal.phone,
-        address: data.footerData.legal.address,
-        copyRight: data.footerData.copyRight,
+        facebook: pageData.socialMedia.facebook,
+        twitter: pageData.socialMedia.twitter,
+        instagram: pageData.socialMedia.instagram,
+        linkedin: pageData.socialMedia.linkedin,
+        youtube: pageData.socialMedia.youtube
     });
 
     const setParam = (key: string, value: any) => {
@@ -31,19 +31,10 @@ const FooterPage = () => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                fileUrl: 'homepage.json',
+                fileUrl: 'config.json',
                 updatedContent: JSON.stringify({
                     ...pageData,
-                    footerData: {
-                        ...pageData.footerData,
-                        legal: {
-                            ...pageData.footerData.legal,
-                            email: params.email,
-                            phone: params.phone,
-                            address: params.address,
-                        },
-                        copyRight: params.copyRight
-                    }
+                    socialMedia: params
                 })
             }),
         });
@@ -57,11 +48,12 @@ const FooterPage = () => {
         }
         setIsLoading(false);
     };
-    return <PrivateLayout title="Search My Expert - Home Page Banner Section">
+
+    return <PrivateLayout title="Config Page">
         <div className="flex flex-col gap-[16px]">
             <div className="flex items-center gap-[16px]">
                 <h3 className="flex-1 text-[21px] tracking-[1.2px] font-semibold text-[#101D2C]">
-                    Footer Section
+                    Social Media Config
                 </h3>
                 <Button
                     label="Save"
@@ -74,38 +66,46 @@ const FooterPage = () => {
                 <div className="rounded border bg-white p-[10px]">
                     <div className="p-[10px]">
                         <Input
-                            label="Address"
-                            placeholder="Address"
-                            value={params.address}
-                            onChange={e => setParam("address", e.target.value)}
+                            label="Facebook"
+                            placeholder="Facebook Url"
+                            value={params.facebook}
+                            onChange={e => setParam("facebook", e.target.value)}
                             className="rounded admin-input"
                         />
                     </div>
                     <div className="p-[10px]">
                         <Input
-                            label="Email"
-                            placeholder="Email"
-                            value={params.email}
-                            onChange={e => setParam("email", e.target.value)}
+                            label="Twitter"
+                            placeholder="Twitter Url"
+                            value={params.twitter}
+                            onChange={e => setParam("twitter", e.target.value)}
                             className="rounded admin-input"
                         />
                     </div>
                     <div className="p-[10px]">
                         <Input
-                            label="Phone"
-                            placeholder="Phone"
-                            value={params.phone}
-                            onChange={e => setParam("phone", e.target.value)}
+                            label="Instagram"
+                            placeholder="Instagram Url"
+                            value={params.instagram}
+                            onChange={e => setParam("instagram", e.target.value)}
                             className="rounded admin-input"
                         />
                     </div>
                     <div className="p-[10px]">
-                        <TextArea
-                            rows={3}
-                            label="Copy Right"
-                            placeholder="Copy Right"
-                            value={params.copyRight}
-                            onChange={e => setParam("copyRight", e.target.value)}
+                        <Input
+                            label="Linked In"
+                            placeholder="Linked In Url"
+                            value={params.linkedin}
+                            onChange={e => setParam("linkedin", e.target.value)}
+                            className="rounded admin-input"
+                        />
+                    </div>
+                    <div className="p-[10px]">
+                        <Input
+                            label="Youtube"
+                            placeholder="Youtube Url"
+                            value={params.youtube}
+                            onChange={e => setParam("youtube", e.target.value)}
                             className="rounded admin-input"
                         />
                     </div>
@@ -115,4 +115,4 @@ const FooterPage = () => {
     </PrivateLayout>
 }
 
-export default FooterPage
+export default SocialConfig;

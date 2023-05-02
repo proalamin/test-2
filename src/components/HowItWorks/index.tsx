@@ -10,11 +10,11 @@ export const HowItWorks: React.FC<HowItWorksInterface> = (props) => {
         className="md:bg-[length:100%_100%] bg-cover bg-center how-it-work-bg bg-no-repeat bg-top xl:px-[140px] sm:px-[50px] px-[30px] pt-[70px] xl:pb-[180px] pb-[100px] relative overflow-hidden"
     >
         <div className="max-w-[1380px] mx-auto relative">
-            <div className="absolute top-0 left-0 w-full h-full flex items justify-center pt-[40px]">
+            <div className="absolute top-0 left-0 w-full md:h-full h-[89%] flex items-center justify-center pt-[40px]">
                 <Img
                     src={"/images/how-it-works-bg-start.svg"}
                     alt={title}
-                    className="md:w-[449px] w-[220px] md:h-[470px]"
+                    className="md:w-[449px] w-full h-[470px]"
                 />
             </div>
             <div className="max-w-[395px] mx-auto text-center mb-[52px]">

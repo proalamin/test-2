@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import PrivateLayout from "@/components/Layout/privateLayout";
 import { Button } from "@/utils/Button";
 import testimonialsData from "@/data/testimonials.json";
 import { Input, TextArea } from "@/utils/Input";
 import { Img } from "@/utils/Img";
 import toast from "react-hot-toast";
+import { LoaderContext } from "@/context/LoaderContext";
 
 const TestimonialsPage = () => {
+    const { setIsLoading } = useContext(LoaderContext);
     const [testimonials, setTestimonials] = useState<any[]>(testimonialsData);
 
     const setParams = (index: number, key: string, value: string): void => {
@@ -38,6 +40,7 @@ const TestimonialsPage = () => {
     }
 
     const save = async () => {
+        setIsLoading(true);
         const response = await fetch('/api/save', {
             method: 'POST',
             headers: {
@@ -56,6 +59,7 @@ const TestimonialsPage = () => {
         } else {
             toast.error(`Error saving changes: ${data.message}`);
         }
+        setIsLoading(false);
     };
 
     return <PrivateLayout title="Search My Expert - Testimonials">

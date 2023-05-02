@@ -7,7 +7,7 @@ export const Card: React.FC<CardInterface> = (props) => {
     return <div>
         <div className="flex flex-col items-center relative">
             <div
-                className="md:w-[100%] w-[80%] min-h-[166px] rounded-[10px] flex items-center justify-center track-your-project-arrow"
+                className="md:w-[100%] w-[80%] md:min-h-[166px] min-h-[150px] rounded-[10px] flex items-center justify-center track-your-project-arrow"
                 style={{
                     background: type === "how-it-works" ? 'rgba(255, 255, 255, 0.021498)' : '#F0F6FF',
                     border: type === "how-it-works" ? '1px solid rgba(255, 255, 255, 0.0836975)' : '0.4px solid #B0B9C4',
@@ -22,7 +22,7 @@ export const Card: React.FC<CardInterface> = (props) => {
             </div>
         </div>
         <h6
-            className={`xxl:text-[20px] xl:text-[18px] text-[16px] text-center leading-[24px] tracking-[-0.06px] ${type === "how-it-works" ? 'text-primaryAccent' : 'text-[#101D2C]'} font-medium mt-[17px] max-w-[200px] mx-auto`}
+            className={`xxl:text-[20px] xl:text-[18px] text-[16px] text-center leading-[24px] tracking-[-0.06px] ${type === "how-it-works" ? 'md:w-[158px] text-primaryAccent' : 'text-[#101D2C]'} font-medium mt-[17px] max-w-[200px] mx-auto`}
         >
             {title}
         </h6>

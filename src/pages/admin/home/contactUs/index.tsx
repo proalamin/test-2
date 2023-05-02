@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Input, TextArea } from "@/utils/Input";
 import PrivateLayout from "@/components/Layout/privateLayout";
 import data from "@/data/homepage.json";
 import pageData from "@/data/homepage.json";
 import { Button } from "@/utils/Button";
 import toast from "react-hot-toast";
+import { LoaderContext } from "@/context/LoaderContext";
 
 const ContactPage = () => {
+    const { setIsLoading } = useContext(LoaderContext);
     const [params, setParams] = useState<any>({
         title: data.contactUsData.title,
         subtitle: data.contactUsData.subtitle,
@@ -21,6 +23,7 @@ const ContactPage = () => {
     }
 
     const save = async () => {
+        setIsLoading(true);
         const response = await fetch('/api/save', {
             method: 'POST',
             headers: {
@@ -42,6 +45,7 @@ const ContactPage = () => {
         } else {
             toast.error(`Error saving changes: ${data.message}`);
         }
+        setIsLoading(false);
     };
     return <PrivateLayout title="Search My Expert - Contact Us Section">
         <div className="flex flex-col gap-[16px]">

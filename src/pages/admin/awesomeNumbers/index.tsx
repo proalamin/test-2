@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import PrivateLayout from "@/components/Layout/privateLayout";
 import { Button } from "@/utils/Button";
 import awesomeNumberData from "@/data/awesomeNumbers.json";
 import { Input } from "@/utils/Input";
 import { Img } from "@/utils/Img";
 import toast from "react-hot-toast";
+import { LoaderContext } from "@/context/LoaderContext";
 
 const AwesomeNumberPage = () => {
+    const { setIsLoading } = useContext(LoaderContext);
     const [awesomeNumber, setAwesomeNumber] = useState<any[]>(awesomeNumberData);
-
     const setParams = (index: number, key: string, value: string): void => {
         const updatedItems = [...awesomeNumber];
         updatedItems[index] = {
@@ -34,6 +35,7 @@ const AwesomeNumberPage = () => {
     }
 
     const save = async () => {
+        setIsLoading(true);
         const response = await fetch('/api/save', {
             method: 'POST',
             headers: {
@@ -52,6 +54,7 @@ const AwesomeNumberPage = () => {
         } else {
             toast.error(`Error saving changes: ${data.message}`);
         }
+        setIsLoading(false);
     };
 
     return <PrivateLayout title="Search My Expert - Clients">

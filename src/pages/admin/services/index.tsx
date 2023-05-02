@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import PrivateLayout from "@/components/Layout/privateLayout";
 import services from "@/data/services.json";
 import { Input, TextArea } from "@/utils/Input";
 import { Button } from "@/utils/Button";
 import { Img } from "@/utils/Img";
 import toast from "react-hot-toast";
+import { LoaderContext } from "@/context/LoaderContext";
 
 const ServicesPage = () => {
+    const { setIsLoading } = useContext(LoaderContext);
     const [service, setService] = useState<any[]>(services);
 
     const setParams = (index: number, key: string, value: string): void => {
@@ -24,13 +26,14 @@ const ServicesPage = () => {
 
     const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>, index: any) => {
         if (!e.target.files || e.target.files.length === 0) return;
-
+        setIsLoading(true);
         const file = e.target.files[0];
         const reader = new FileReader();
 
         reader.readAsDataURL(file);
 
         await uploadFile(file, index);
+        setIsLoading(false);
     };
 
     async function uploadFile (file: File, index: any) {
@@ -52,6 +55,7 @@ const ServicesPage = () => {
     }
 
     const save = async () => {
+        setIsLoading(true);
         const response = await fetch('/api/save', {
             method: 'POST',
             headers: {
@@ -70,6 +74,7 @@ const ServicesPage = () => {
         } else {
             toast.error(`Error saving changes: ${data.message}`);
         }
+        setIsLoading(false);
     };
 
     return <PrivateLayout title="Search My Expert - Services">

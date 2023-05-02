@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { SideNav } from "@/utils/Admin/SideNav";
 import { AdminLinksInterface } from "@/types";
-import { useRouter } from "next/router";
 import Head from "next/head";
+import { useAuth } from "@/context/AuthContext";
+import { useRouter } from "next/router";
 
 interface PrivateLayoutInterface {
     title: string;
@@ -98,23 +99,31 @@ const PrivateLayout: React.FC<PrivateLayoutInterface> = ({ title, children }) =>
             active: false,
             subLinks: []
         },
+        {
+            label: 'Config',
+            href: '',
+            active: false,
+            subLinks: [
+                // {
+                //     label: 'Logos',
+                //     href: '/admin/config/logos',
+                //     active: false
+                // },
+                {
+                    label: 'Email',
+                    href: '/admin/config/email',
+                    active: false
+                },
+                {
+                    label: 'Social Media',
+                    href: '/admin/config/social',
+                    active: false
+                }
+            ]
+        },
     ];
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const { logout } = useAuth();
     const router = useRouter();
-
-    useEffect(() => {
-        if (sessionStorage.getItem('isLoggedIn') === 'true') {
-            setIsLoggedIn(true);
-        } else {
-            router.push('/login');
-        }
-    }, []);
-
-    const logout = () => {
-        sessionStorage.removeItem('isLoggedIn');
-        router.push('/login');
-    }
-
     const paths = links.map((p) => (
             {
                 ...p,
@@ -123,35 +132,41 @@ const PrivateLayout: React.FC<PrivateLayoutInterface> = ({ title, children }) =>
             }
         )
     );
+    const { user } = useAuth();
+
 
     return <>
         <Head>
             <title>{title}</title>
         </Head>
         <div className="main bg-[#F5F9FF]">
-            <div className="flex  min-h-[100vh]">
-                <div className="w-[230px] bg-white border-r-2 flex flex-col">
-                    <SideNav links={paths}/>
-                </div>
-                <div className="flex-1 flex-col">
-                    <div className="bg-white flex items-center gap-[20px] p-[20px] border-b-2 h-[56px]">
-                        <div className="flex-1 font-semibold tracking-[1px] text-[15px] text-[#022d72]">
-                            Admin Panel
+            {
+                user ?
+                    <div className="flex  min-h-[100vh]">
+                        <div className="w-[230px] bg-white border-r-2 flex flex-col">
+                            <SideNav links={paths}/>
                         </div>
-                        <div>
-                            <a
-                                onClick={logout}
-                                className="text-[#FF0000] font-semibold text-[14px] cursor-pointer"
-                            >
-                                Logout
-                            </a>
+                        <div className="flex-1 flex-col">
+                            <div className="bg-white flex items-center gap-[20px] p-[20px] border-b-2 h-[56px]">
+                                <div className="flex-1 font-semibold tracking-[1px] text-[15px] text-[#022d72]">
+                                    Admin Panel
+                                </div>
+                                <div>
+                                    <a
+                                        onClick={logout}
+                                        className="text-[#FF0000] font-semibold text-[14px] cursor-pointer"
+                                    >
+                                        Logout
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="flex-1 p-[15px] main-admin-container h-full">
+                                {children}
+                            </div>
                         </div>
                     </div>
-                    <div className="flex-1 p-[15px] main-admin-container h-full">
-                        {children}
-                    </div>
-                </div>
-            </div>
+                    : <div/>
+            }
         </div>
     </>
 }

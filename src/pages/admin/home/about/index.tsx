@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Input, TextArea } from "@/utils/Input";
 import { ImageOverlay } from "@/utils/Admin/ImageOverlay";
 import PrivateLayout from "@/components/Layout/privateLayout";
@@ -7,8 +7,10 @@ import pageData from "@/data/homepage.json";
 import { Title } from "@/utils/Admin/Title";
 import { Button } from "@/utils/Button";
 import toast from "react-hot-toast";
+import { LoaderContext } from "@/context/LoaderContext";
 
 const AboutPage = () => {
+    const { setIsLoading } = useContext(LoaderContext);
     const [params, setParams] = useState<any>({
         image: data.aboutData.image,
         mobileImage: data.aboutData.mobileImage,
@@ -28,6 +30,7 @@ const AboutPage = () => {
 
 
     const save = async () => {
+        setIsLoading(true);
         const response = await fetch('/api/save', {
             method: 'POST',
             headers: {
@@ -47,6 +50,7 @@ const AboutPage = () => {
         } else {
             toast.error(`Error saving changes: ${data.message}`);
         }
+        setIsLoading(false);
     };
 
     return <PrivateLayout title="Search My Expert - About Us Section">

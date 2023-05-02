@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import PrivateLayout from "@/components/Layout/privateLayout";
 import { Button } from "@/utils/Button";
 import clientData from "@/data/clients.json";
 import { Input } from "@/utils/Input";
 import { Img } from "@/utils/Img";
 import toast from "react-hot-toast";
+import { LoaderContext } from "@/context/LoaderContext";
 
 const ClientsPage = () => {
+    const { setIsLoading } = useContext(LoaderContext);
     const [clients, setClients] = useState<any[]>(clientData);
 
     const setParams = (index: number, key: string, value: string): void => {
@@ -39,13 +41,14 @@ const ClientsPage = () => {
 
     const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>, index: any) => {
         if (!e.target.files || e.target.files.length === 0) return;
-
+        setIsLoading(true);
         const file = e.target.files[0];
         const reader = new FileReader();
 
         reader.readAsDataURL(file);
 
         await uploadFile(file, index);
+        setIsLoading(false);
     };
 
     async function uploadFile (file: File, index: any) {
@@ -67,6 +70,7 @@ const ClientsPage = () => {
     }
 
     const save = async () => {
+        setIsLoading(true);
         const response = await fetch('/api/save', {
             method: 'POST',
             headers: {
@@ -86,6 +90,7 @@ const ClientsPage = () => {
         } else {
             toast.error(`Error saving changes: ${data.message}`);
         }
+        setIsLoading(false);
     };
 
     return <PrivateLayout title="Search My Expert - Clients">

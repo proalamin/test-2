@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Img } from "@/utils/Img";
 import Link from "next/link";
+import data from "@/data/config.json"
 
 interface SideNavInterface {
     links: any[];
@@ -8,12 +9,12 @@ interface SideNavInterface {
 
 export const SideNav: React.FC<SideNavInterface> = (props) => {
     const { links } = props;
-    const [show, setShow] = useState<Boolean>(true);
+    const [showDropdownIndex, setShowDropdownIndex] = useState(1);
 
     return <>
         <div className="h-[120px] flex items-center justify-center p-[20px] border-b-2">
             <Img
-                src="/images/logo_dark.svg"
+                src={data.logos.dark}
                 alt="Logo"
                 className="w-full"
             />
@@ -27,7 +28,11 @@ export const SideNav: React.FC<SideNavInterface> = (props) => {
                                 <div>
                                     <div
                                         className="flex items-center gap-[10x] p-[12px] cursor-pointer"
-                                        onClick={() => setShow(!show)}
+                                        onClick={
+                                            () => setShowDropdownIndex(
+                                                showDropdownIndex === index ? -1 : index
+                                            )
+                                        }
                                     >
                                         <p className={`flex-1 font-medium text-[13px] tracking-[1px] ${link?.active ? 'text-[#101D2C]' : 'text-[#707070]'}`}>
                                             {link.label}
@@ -36,11 +41,12 @@ export const SideNav: React.FC<SideNavInterface> = (props) => {
                                             <Img
                                                 src="/images/arrow-down.svg"
                                                 alt="Arrow"
-                                                className={`w-[20px] h-[20px] transition-all ${show ? 'rotate-180' : 'rotate-0'}`}
+                                                className={`w-[20px] h-[20px] transition-all ${showDropdownIndex === index ? 'rotate-180' : 'rotate-0'}`}
                                             />
                                         </div>
                                     </div>
-                                    <div className={`flex-col pl-[15px] ${show ? 'flex' : 'hidden'}`}>
+                                    <div
+                                        className={`flex-col pl-[15px] ${showDropdownIndex === index ? 'flex' : 'hidden'}`}>
                                         {
                                             link.subLinks.map((subLink: any, index: number) => {
                                                 return <Link key={index} href={subLink.href}>

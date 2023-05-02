@@ -1,9 +1,36 @@
 import React from "react";
 import { FooterInterface } from "@/types";
 import { Img } from "@/utils/Img";
+import data from "@/data/config.json";
 
 export const Footer: React.FC<FooterInterface> = (props) => {
-    const { links, legal, logo, copyRight, countries } = props;
+    const { links, legal, copyRight, countries } = props;
+    const socialMediaLinks = [
+        {
+            icon: legal.social_media[0].icon,
+            href: data.socialMedia.facebook
+        },
+        {
+            icon: legal.social_media[1].icon,
+            href: data.socialMedia.instagram
+        },
+        {
+            icon: legal.social_media[2].icon,
+            href: data.socialMedia.linkedin
+        },
+        {
+            icon: legal.social_media[3].icon,
+            href: data.socialMedia.twitter
+        },
+        {
+            icon: legal.social_media[4].icon,
+            href: data.socialMedia.youtube
+        },
+        {
+            icon: legal.social_media[5].icon,
+            href: data.socialMedia.pintrest
+        }
+    ]
     return <div>
         <div
             className="xl:px-[140px] sm:px-[50px] px-[30px] md:pb-[132px] pb-[60px]"
@@ -12,10 +39,10 @@ export const Footer: React.FC<FooterInterface> = (props) => {
             }}
         >
             <div className="max-w-[1263px] mx-auto">
-                <div className="grid md:grid-cols-6 grid-cols-2 md:gap-[100px]">
+                <div className="grid md:grid-cols-6 grid-cols-2 md:gap-[80px]">
                     <div className="md:pb-0 pb-[30px]">
                         <h5
-                            className="xxl:text-[16px] xl:text-[15px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold pb-[26px] text-[#101D2C]"
+                            className="xxl:text-[16px] xl:text-[15px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold md:pb-[26px] pb-[23px] text-[#101D2C]"
                         >
                             {links.quick.title}
                         </h5>
@@ -25,7 +52,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                                     return <a
                                         key={index}
                                         href={item.href || "#"}
-                                        className="d-block xxl:text-[18px] xl:text-[15px] text-[14px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
+                                        className="d-block xxl:text-[17px] xl:text-[15px] text-[14px] md:leading-[36px] leading-[30px] tracking-[-0.32px] font-light text-[#101D2C]"
                                     >
                                         {item.title}
                                     </a>
@@ -35,7 +62,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                     </div>
                     <div className="md:pb-0 pb-[30px]">
                         <h5
-                            className="xl:text-[16px] xl:text-[15px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold pb-[26px] text-[#101D2C]"
+                            className="xl:text-[16px] xl:text-[15px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold md:pb-[26px] pb-[23px] text-[#101D2C]"
                         >
                             {links.products.title}
                         </h5>
@@ -45,7 +72,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                                     return <a
                                         key={index}
                                         href={item.href || "#"}
-                                        className="d-block xxl:text-[18px] xl:text-[15px] text-[14px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
+                                        className="d-block xxl:text-[17px] xl:text-[15px] text-[14px] md:leading-[36px] leading-[30px] tracking-[-0.32px] font-light text-[#101D2C]"
                                     >
                                         {item.title}
                                     </a>
@@ -55,7 +82,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                     </div>
                     <div className="md:pb-0 pb-[30px]">
                         <h5
-                            className="xl:text-[16px] xl:text-[15px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold pb-[26px] text-[#101D2C]"
+                            className="xl:text-[16px] xl:text-[15px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold md:pb-[26px] pb-[23px] text-[#101D2C]"
                         >
                             {links.resources.title}
                         </h5>
@@ -65,7 +92,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                                     return <a
                                         key={index}
                                         href={item.href || "#"}
-                                        className="d-block xxl:text-[18px] xl:text-[15px] text-[14px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
+                                        className="d-block xxl:text-[17px] xl:text-[15px] text-[14px] md:leading-[36px] leading-[30px] tracking-[-0.32px] font-light text-[#101D2C]"
                                     >
                                         {item.title}
                                     </a>
@@ -75,7 +102,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                     </div>
                     <div className="md:pb-0 pb-[30px]">
                         <h5
-                            className="xl:text-[16px] xl:text-[15px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold pb-[26px] text-[#101D2C]"
+                            className="xl:text-[16px] xl:text-[15px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold md:pb-[26px] pb-[23px] text-[#101D2C]"
                         >
                             {links.services.title}
                         </h5>
@@ -85,7 +112,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                                     return <a
                                         key={index}
                                         href={item.href || "#"}
-                                        className="d-block xxl:text-[18px] xl:text-[15px] text-[14px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
+                                        className="d-block xxl:text-[17px] xl:text-[15px] text-[14px] md:leading-[36px] leading-[30px] tracking-[-0.32px] font-light text-[#101D2C]"
                                     >
                                         {item.title}
                                     </a>
@@ -95,7 +122,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                     </div>
                     <div className="col-span-2 flex flex-col">
                         <h5
-                            className="xxl:text-[16px] xl:text-[15px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold pb-[26px] text-[#101D2C]"
+                            className="xxl:text-[16px] xl:text-[15px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold md:pb-[26px] pb-[23px] text-[#101D2C]"
                         >
                             {legal.title}
                         </h5>
@@ -119,7 +146,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                         <div className="mt-[20px]">
                             <div className="flex gap-[10px] items-center">
                                 {
-                                    legal.social_media?.map((item, index) => {
+                                    socialMediaLinks?.map((item, index) => {
                                         return <div key={index}>
                                             <Img src={item.icon} alt={item.name}
                                                  className="w-[23px] h-[23px]"/>
@@ -135,7 +162,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
         <div className="xl:px-[140px] md:py-[34px] p-[30px]">
             <div className="max-w-[1260px] mx-auto flex md:flex-row flex-col items-center">
                 <div>
-                    <Img src={logo || ""} alt="footer-logo" className="md:w-[211px] w-[180px] h-[26px]"/>
+                    <Img src={data.logos.dark} alt="footer-logo" className="md:w-[211px] w-[180px] h-[26px]"/>
                 </div>
                 <div className="flex-1 md:m-0 mt-[29px] mb-[39px]">
                     <p

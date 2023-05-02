@@ -105,7 +105,6 @@ const Home: React.FC = () => {
                 />
 
                 <Footer
-                    logo={data.footerData.logo}
                     links={data.footerData.links}
                     legal={data.footerData.legal}
                     copyRight={data.footerData.copyRight}
