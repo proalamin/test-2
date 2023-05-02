@@ -282,6 +282,14 @@ input:checked::before {
     .why-choose-expert-grid-1 {
         margin-left: 140px !important;
     }
+
+    .track-your-project-bg::before {
+        height: 446px;
+    }
+
+    .track-project-item:nth-child(6) .track-your-project-arrow::after {
+        top: 55px;
+    }
 }
 
 
@@ -330,18 +338,12 @@ input:checked::before {
         display: none;
     }
 
-    .track-your-project-bg::after, .track-your-project-bg::before {
+    .track-your-project-bg::after, .track-your-project-bg::before, .track-project-item:nth-child(6) .track-your-project-arrow::after {
         content: unset;
     }
 
-    .track-project-item .track-your-project-arrow::before, .track-project-item:nth-child(4) .track-your-project-arrow::before, .track-project-item:nth-child(5) .track-your-project-arrow::before, .track-project-item:nth-child(6) .track-your-project-arrow::before {
-        content: '';
-        position: absolute;
-        top: -5px;
-        left: 167px;
-    }
 
-    .track-project-item .track-your-project-arrow::before {
+    .track-project-item .track-your-project-arrow::before, .track-project-item .track-your-project-arrow::after {
         content: unset;
     }
 
@@ -371,17 +373,6 @@ input:checked::before {
 
     .track-project-item:nth-child(6) {
         order: 4;
-    }
-
-    .track-project-item .track-your-project-arrow::after, .track-project-item:nth-child(6) .track-your-project-arrow::after {
-        border: 1px dashed #f66;
-        content: '';
-        position: absolute;
-        left: 162px;
-        top: -52px;
-        height: 50px;
-        width: 1px;
-        transform: none;
     }
 }
 
