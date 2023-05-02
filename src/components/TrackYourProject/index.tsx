@@ -7,11 +7,6 @@ export const TrackYourProject: React.FC<TrackYourProjectInterface> = (props) => 
     const { title, subtitle, description, items } = props;
     return <div
         className="xl:px-[140px] md:px-[100px] sm:px-[50px] px-[20px] pt-[77px] xl:pb-[140px] pb-[100px] relative overflow-hidden">
-        <Img
-            src={"/images/dots.svg"}
-            alt={title}
-            className="absolute top-[-70px] sm:right-0 right-[-190px] xl:w-[274px] w-[138px] md:block hidden"
-        />
         <div>
             <Img
                 src={"/images/track-your-project-start-left.svg"}

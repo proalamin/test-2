@@ -10,6 +10,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
 }
 
 .testimonial-slider .slick-slide {
@@ -326,6 +327,10 @@ input:checked::before {
     .awesome-number .slick-slide {
         display: flex;
         justify-content: center;
+    }
+
+    .how-it-work-bg {
+        background-image: url(/images/howitworksbg-mobile.png) !important;
     }
 
     .why-choose-data-section-wrapper {
