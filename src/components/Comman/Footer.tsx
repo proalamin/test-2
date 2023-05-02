@@ -39,7 +39,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
             }}
         >
             <div className="max-w-[1263px] mx-auto">
-                <div className="grid md:grid-cols-6 grid-cols-2 md:gap-[80px]">
+                <div className="grid md:grid-cols-6 grid-cols-2 xxl:gap-[80px] md:gap-[60px]">
                     <div className="md:pb-0 pb-[30px]">
                         <h5
                             className="xxl:text-[16px] xl:text-[15px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold md:pb-[26px] pb-[23px] text-[#101D2C]"
