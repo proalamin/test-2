@@ -22,7 +22,7 @@ export const Card: React.FC<CardInterface> = (props) => {
             </div>
         </div>
         <h6
-            className={`xxl:text-[20px] xl:text-[18px] text-[16px] text-center leading-[24px] tracking-[-0.06px] ${type === "how-it-works" ? 'text-primaryAccent' : 'text-[#101D2C]'} font-medium mt-[17px] max-w-[200px] md:min-h-[48px] mx-auto`}
+            className={`xxl:text-[20px] xl:text-[18px] text-[16px] text-center leading-[24px] tracking-[-0.06px] ${type === "how-it-works" ? 'text-primaryAccent' : 'text-[#101D2C]'} font-medium mt-[17px] max-w-[200px] mx-auto`}
         >
             {title}
         </h6>
