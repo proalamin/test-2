@@ -14,7 +14,7 @@ export const Header: React.FC<HeaderInterface> = (props) => {
                 <Img src={logo || ""} alt="Header Logo"
                      className="xxl:w-[323px] xl:w-[300px] sm:w-[291.6px] w-[150px] xl:h-[41px] sm:h-[37.67px] h-[20px]"/>
             </div>
-            <div className="flex-1 md:pl-[34px] sm:pl-[17px] pl-[10px]">
+            <div className="flex-1 md:pl-[34px] sm:pl-[17px] pl-[5px]">
                 <div className="flex">
                     <a
                         href="#"
