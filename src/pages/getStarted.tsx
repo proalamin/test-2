@@ -52,7 +52,7 @@ const GetStarted: React.FC = () => {
         setParams({
             first_name: "",
             last_name: "",
-            phone: "+1",
+            phone: "+91",
             email: "",
             is_checked: false
         })
