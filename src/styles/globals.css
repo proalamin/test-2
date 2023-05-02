@@ -112,6 +112,18 @@ body {
     left: 30px;
 }
 
+.react-tel-input .with-get-started {
+    font-size: 17px;
+    font-weight: 400;
+    width: 100%;
+    height: 60px;
+    padding: 13px 20px 13px 55px;
+    color: #72849a;
+    background-color: #f8f8f8;
+    border: 2px solid #f8f8f8;
+    border-radius: 10px;
+}
+
 input:checked::before {
     border: 1px solid white !important;
     content: '';
@@ -207,6 +219,14 @@ input:checked::before {
     border: 1px dashed #f66;
     border-radius: 0 230px 241px 0;
     border-left-width: 0;
+}
+
+.get-started-form {
+    background: white;
+    box-shadow: 0 0 2px 0 rgba(145, 158, 171, 20%), 0 12px 24px -4px rgba(145, 158, 171, 12%);
+    padding: 60px 40px;
+    border-radius: 24px;
+    max-width: 630px;
 }
 
 @media screen and (min-width: 1541px) and (max-width: 1600px) {
@@ -315,6 +335,11 @@ input:checked::before {
 }
 
 @media screen and (max-width: 768px) {
+    .get-started-form {
+        max-width: 90%;
+        padding: 35px 20px;
+    }
+
     .slick-dots {
         justify-content: center;
     }
@@ -403,4 +428,19 @@ input:checked::before {
 .main-admin-container {
     overflow-y: auto;
     max-height: calc(100vh - 56px);
+}
+
+/*model*/
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: .3rem;
+    outline: 0;
 }

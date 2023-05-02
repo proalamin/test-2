@@ -11,6 +11,7 @@ interface InputInterface {
     placeholder?: string
     className?: string
     prefix?: any
+    withGetStarted?: boolean
 }
 
 export const Input: React.FC<InputInterface> = (
@@ -23,7 +24,8 @@ export const Input: React.FC<InputInterface> = (
         error,
         placeholder,
         className,
-        prefix
+        prefix,
+        withGetStarted
     }
 ) => {
     return (
@@ -43,9 +45,12 @@ export const Input: React.FC<InputInterface> = (
                     value={value}
                     onChange={onChange}
                     placeholder={placeholder}
-                    className={`${prefix ? 'pr-[50px]' : ''} bg-[#FFFFFF] rounded-[31.5px] text-[#101D2C] text-[16px] leading-[26px] px-[30px] py-[17px] border-[0.3px] w-full placeholder:text-[16px] placeholder:text-[#101D2C] placeholder:leading-[26px] placeholder:font-normal ${className}`}
+                    className={
+                        `${prefix ? 'pr-[50px]' : ''} bg-[#FFFFFF] text-[16px] leading-[26px] px-[30px] py-[17px] w-full placeholder:text-[16px] placeholder:leading-[26px] placeholder:font-normal ${className}
+                        ${withGetStarted ? 'bg-[#f8f8f8] border-[2px] text-[#72849a] placeholder:text-[#72849a] rounded-[10px]' : 'rounded-[31.5px] text-[#101D2C] placeholder:text-[#101D2C] border-[0.3px]'}
+                        `}
                     style={{
-                        borderColor: 'rgba(75, 90, 105, .62)'
+                        borderColor: !withGetStarted ? 'rgba(75, 90, 105, .62)' : '#f8f8f8'
                     }}
                 />
                 {

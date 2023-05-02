@@ -3,9 +3,39 @@ import { ContactUsInterface } from "@/types";
 import { Input } from "@/utils/Input";
 import PhoneInput from 'react-phone-input-2'
 import { Button } from "@/utils/Button";
+import toast from "react-hot-toast";
 
 export const ContactUs: React.FC<ContactUsInterface> = (props) => {
     const { title, subtitle, description, form, countries } = props;
+    const [params, setParams] = React.useState({
+        f_name: "",
+        l_name: "",
+        phone: "",
+        email: "",
+        is_checked: false,
+    });
+
+    const setParam = (key: string, value: any) => {
+        setParams((prev) => ({ ...prev, [key]: value }));
+    }
+
+    const send = async () => {
+        const response = await fetch("/api/sendMail", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                to: params.email, body: JSON.stringify(params)
+            }),
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            toast.success("Email Send successfully!");
+        }
+    }
     return <div
         className="md:px-[140px] sm:px-[50px] px-[20px] pt-[134px] pb-[140px]"
     >
@@ -26,15 +56,15 @@ export const ContactUs: React.FC<ContactUsInterface> = (props) => {
                     <div className="sm:max-w-[238px]">
                         <Input
                             placeholder={form.f_name.label}
-                            value={form.f_name.value}
-                            onChange={e => console.log(e.target.value)}
+                            value={params.f_name}
+                            onChange={e => setParam('f_name', e.target.value)}
                         />
                     </div>
                     <div className="flex-1">
                         <Input
                             placeholder={form.l_name.label}
-                            value={form.l_name.value}
-                            onChange={e => console.log(e.target.value)}
+                            value={params.l_name}
+                            onChange={e => setParam('l_name', e.target.value)}
                         />
                     </div>
                 </div>
@@ -42,15 +72,15 @@ export const ContactUs: React.FC<ContactUsInterface> = (props) => {
                     <PhoneInput
                         country={'us'}
                         onlyCountries={countries}
-                        value={form.mobile.value}
-                        onChange={phone => console.log(phone)}
+                        value={params.phone}
+                        onChange={phone => setParam('phone', phone)}
                     />
                 </div>
                 <div className="pb-[10px]">
                     <Input
                         placeholder={form.email.label}
-                        value={form.email.value}
-                        onChange={e => console.log(e.target.value)}
+                        value={params.email}
+                        onChange={e => setParam('email', e.target.value)}
                     />
                 </div>
                 <div className="pl-[30px] mb-[16px]">
@@ -59,6 +89,8 @@ export const ContactUs: React.FC<ContactUsInterface> = (props) => {
                             id="check"
                             type="checkbox"
                             defaultChecked={true}
+                            value={params.is_checked}
+                            onChange={e => setParam('is_checked', e.target.checked)}
                             className="relative appearance-none p-[2px] w-[14px] h-[14px] rounded-full bg-white border border-primary checked:bg-primary"
                         />
                         <p className="ml-[7px] text-[13px] leading-[26px] text-[#101D2C] font-normal">
@@ -71,6 +103,7 @@ export const ContactUs: React.FC<ContactUsInterface> = (props) => {
                         type="button"
                         color="primary"
                         label="Submit Right Now"
+                        onClick={send}
                         className="md:text-[16px] leading-[19.36px] tracking-[-0.21px] font-semibold w-full xxl:h-[53px] h-[50px]"
                     />
                 </div>
