@@ -18,9 +18,10 @@ export const Header: React.FC<HeaderInterface> = (props) => {
                 <div className="flex">
                     <a
                         href="#"
-                        className="text-[#FFFFFF] xxl:text-[17px] sm:text-[16px] text-[14px] md:leading-[27px] sm:leading-[17px] leading-[14px] tracking-[-0.24px] d-block"
+                        className="text-[#FFFFFF] xxl:text-[17px] sm:text-[16px] text-[14px] md:leading-[27px] sm:leading-[17px] leading-[14px] tracking-[-0.24px] flex"
                     >
-                        Explore
+                        <span>Explore</span>
+                        <Img src="/images/arrow-down.svg" alt="Arrow Down" className="w-[8px] ml-[7px]"/>
                     </a>
                 </div>
             </div>

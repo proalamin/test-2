@@ -37,11 +37,11 @@ export const TrackYourProject: React.FC<TrackYourProjectInterface> = (props) => 
                 </p>
             </div>
             <div
-                className="grid sm:grid-cols-3 grid-rows-3 sm:grid-rows-none gap-[60px]"
+                className="md:grid md:grid-cols-3 flex flex-col gap-[60px]"
             >
                 {
                     items?.map((item, index) => {
-                        return <div key={index} className="sm:max-w-[300px] track-project-item relative">
+                        return <div key={index} className="max-w-[300px] mx-auto track-project-item relative">
                             <Card
                                 icon={item.icon}
                                 position={item.position}

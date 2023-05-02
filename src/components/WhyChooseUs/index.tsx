@@ -32,7 +32,7 @@ export const WhyChooseUs: React.FC<WhyChooseUsInterface> = (props) => {
                     </div>
                     <div className="flex-1">
                         <div
-                            className="why-choose-expert-grid-1 grid sm:grid-cols-2 grid-rows-2 sm:grid-rows-none xl:gap-[30px] md:gap-[20px] gap-[50px] max-w-[775px] xl:ml-[220px] md:ml-[125px] pb-[33px]">
+                            className="why-choose-expert-grid-1 grid sm:grid-cols-2 grid-rows-2 sm:grid-rows-none xl:gap-[30px] md:gap-[20px] gap-[50px] max-w-[775px] xl:ml-[220px] md:ml-[125px] pb-[50px]">
                             <div className="sm:max-w-[299px] w-full flex flex-col md:items-start items-center">
                                 <WhyChooseIcon icon={items[0].icon} title={items[0].title}/>
                                 <div className="md:pl-[35px]">

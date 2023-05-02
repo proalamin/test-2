@@ -361,7 +361,7 @@ input:checked::before {
     .why-choose-data-section-wrapper {
         background-image: url("/images/why-choose-us-bg.svg");
         background-repeat: no-repeat;
-        background-size: 190% auto;
+        background-size: 165% auto;
     }
 
     .why-choose-data-overlay {
