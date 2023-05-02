@@ -29,7 +29,7 @@ export const TrackYourProject: React.FC<TrackYourProjectInterface> = (props) => 
                     <Img
                         src="/images/underline-dark.svg"
                         alt="underline"
-                        className="absolute bottom-[8%] left-0 w-full"
+                        className="absolute xxl:bottom-0 bottom-[8%] left-0 w-full"
                     />
                 </h2>
                 <p className="xxl:text-[19px] xl:text-[17px] text-[14px] leading-[30px] tracking-[-0.26px] text-[#101D2C] font-medium">
