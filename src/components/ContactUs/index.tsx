@@ -41,7 +41,7 @@ export const ContactUs: React.FC<ContactUsInterface> = (props) => {
         setIsLoading(false);
     }
     return <div
-        className="md:px-[140px] sm:px-[50px] px-[20px] pt-[134px] pb-[94px]"
+        className="md:px-[140px] sm:px-[50px] px-[20px] pt-[100px] pb-[94px]"
     >
         <div className="max-w-[1380px] mx-auto">
             <div className="max-w-[395px] mx-auto text-center mb-[52px]">
