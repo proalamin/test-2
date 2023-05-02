@@ -19,12 +19,39 @@ const GetStarted: React.FC = () => {
         is_checked: false,
     });
     const [open, setOpen] = React.useState(false);
-
+    const [errors, setErrors] = React.useState({
+        f_name: "",
+        l_name: "",
+        phone: "",
+        email: "",
+    });
     const setParam = (key: string, value: any) => {
         setParams((prev) => ({ ...prev, [key]: value }));
     }
 
+    const checkErrors = () => {
+        const errors: any = {};
+
+        const requiredFields = ['f_name', 'l_name', 'phone', 'email'];
+        for (const field of requiredFields) {
+            if (!params[field]) {
+                errors[field] = `Please enter your ${field.replace('_', ' ')}`;
+            }
+        }
+
+        if (params.email && !/\S+@\S+\.\S+/.test(params.email)) {
+            errors.email = "Please enter a valid email address";
+        }
+
+        setErrors(errors);
+
+        return Object.keys(errors).length === 0;
+    }
+
     const sendEmail = async () => {
+        if (!checkErrors()) {
+            return;
+        }
         setIsLoading(true);
         const response = await fetch("/api/sendMail", {
             method: "POST",
@@ -90,6 +117,11 @@ const GetStarted: React.FC = () => {
                                     className="pl-[50px]"
                                 />
                             </div>
+                            {
+                                errors.f_name && <p className="text-[12px] capitalize text-primary">
+                                    {errors.f_name}
+                                </p>
+                            }
                         </div>
                         <div className="flex-1">
                             <div className="relative">
@@ -104,6 +136,11 @@ const GetStarted: React.FC = () => {
                                     className="pl-[50px]"
                                 />
                             </div>
+                            {
+                                errors.l_name && <p className="text-[12px] capitalize text-primary">
+                                    {errors.l_name}
+                                </p>
+                            }
                         </div>
                     </div>
                     <div className="flex items-center gap-[15px] pb-[15px]">
@@ -115,6 +152,11 @@ const GetStarted: React.FC = () => {
                                 onChange={phone => setParam("phone", phone)}
                                 inputClass="with-get-started"
                             />
+                            {
+                                errors.phone && <p className="text-[12px] capitalize text-primary">
+                                    {errors.phone}
+                                </p>
+                            }
                         </div>
                         <div>
                             <Img
@@ -137,6 +179,11 @@ const GetStarted: React.FC = () => {
                                 className="pl-[50px]"
                             />
                         </div>
+                        {
+                            errors.email && <p className="text-[12px] capitalize text-primary">
+                                {errors.email}
+                            </p>
+                        }
                     </div>
                     <div className="py-[15px] pb-[30px] px-[5px]">
                         <label htmlFor="check" className="flex items-center">

@@ -10,18 +10,56 @@ export const ContactUs: React.FC<ContactUsInterface> = (props) => {
     const { title, subtitle, description, form, countries } = props;
     const { setIsLoading } = useContext(LoaderContext);
     const [params, setParams] = React.useState({
-        f_name: "",
-        l_name: "",
+        first_name: "",
+        last_name: "",
         phone: "",
         email: "",
         is_checked: false,
+    });
+    const [errors, setErrors] = React.useState({
+        first_name: "",
+        last_name: "",
+        phone: "",
+        email: "",
     });
 
     const setParam = (key: string, value: any) => {
         setParams((prev) => ({ ...prev, [key]: value }));
     }
 
+    const resetParams = () => {
+        setParams({
+            first_name: "",
+            last_name: "",
+            phone: "+1",
+            email: "",
+            is_checked: false
+        })
+    }
+
+    const checkErrors = () => {
+        const errors: any = {};
+
+        const requiredFields = ['first_name', 'last_name', 'phone', 'email'];
+        for (const field of requiredFields) {
+            if (!params[field]) {
+                errors[field] = `Please enter your ${field.replace('_', ' ')}`;
+            }
+        }
+
+        if (params.email && !/\S+@\S+\.\S+/.test(params.email)) {
+            errors.email = "Please enter a valid email address";
+        }
+
+        setErrors(errors);
+
+        return Object.keys(errors).length === 0;
+    }
+
     const send = async () => {
+        if (!checkErrors()) {
+            return;
+        }
         setIsLoading(true);
         const response = await fetch("/api/sendMail", {
             method: "POST",
@@ -37,9 +75,11 @@ export const ContactUs: React.FC<ContactUsInterface> = (props) => {
 
         if (data.success) {
             toast.success("Email Send successfully!");
+            resetParams();
         }
         setIsLoading(false);
     }
+
     return <div
         className="md:px-[140px] sm:px-[50px] px-[20px] pt-[100px] pb-[94px]"
     >
@@ -60,16 +100,28 @@ export const ContactUs: React.FC<ContactUsInterface> = (props) => {
                     <div className="sm:max-w-[238px]">
                         <Input
                             placeholder={form.f_name.label}
-                            value={params.f_name}
-                            onChange={e => setParam('f_name', e.target.value)}
+                            value={params.first_name}
+                            withHeight={false}
+                            onChange={e => setParam('first_name', e.target.value)}
                         />
+                        {
+                            errors.first_name && <p className="text-[12px] capitalize text-primary pl-[12px]">
+                                {errors.first_name}
+                            </p>
+                        }
                     </div>
                     <div className="flex-1">
                         <Input
                             placeholder={form.l_name.label}
-                            value={params.l_name}
-                            onChange={e => setParam('l_name', e.target.value)}
+                            value={params.last_name}
+                            withHeight={false}
+                            onChange={e => setParam('last_name', e.target.value)}
                         />
+                        {
+                            errors.last_name && <p className="text-[12px] capitalize text-primary pl-[12px]">
+                                {errors.last_name}
+                            </p>
+                        }
                     </div>
                 </div>
                 <div className="pb-[10px]">
@@ -79,13 +131,24 @@ export const ContactUs: React.FC<ContactUsInterface> = (props) => {
                         value={params.phone}
                         onChange={phone => setParam('phone', phone)}
                     />
+                    {
+                        errors.phone && <p className="text-[12px] capitalize text-primary pl-[12px]">
+                            {errors.phone}
+                        </p>
+                    }
                 </div>
                 <div className="pb-[10px]">
                     <Input
                         placeholder={form.email.label}
                         value={params.email}
+                        withHeight={false}
                         onChange={e => setParam('email', e.target.value)}
                     />
+                    {
+                        errors.email && <p className="text-[12px] capitalize text-primary pl-[12px]">
+                            {errors.email}
+                        </p>
+                    }
                 </div>
                 <div className="pl-[30px] mb-[16px]">
                     <label htmlFor="check" className="flex items-center">

@@ -12,6 +12,7 @@ interface InputInterface {
     className?: string
     prefix?: any
     withGetStarted?: boolean
+    withHeight?: boolean
 }
 
 export const Input: React.FC<InputInterface> = (
@@ -25,11 +26,12 @@ export const Input: React.FC<InputInterface> = (
         placeholder,
         className,
         prefix,
-        withGetStarted
+        withGetStarted,
+        withHeight = true
     }
 ) => {
     return (
-        <div className="input-container h-[100%]">
+        <div className={`input-container ${withHeight ? 'h-[100%]' : ''}`}>
             {
                 label && <label
                     htmlFor={name}
