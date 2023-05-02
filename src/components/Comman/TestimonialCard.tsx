@@ -49,7 +49,7 @@ export const TestimonialCard: React.FC<TestimonialsItemInterface> = (props) => {
                     })
                 }
             </div>
-            <p className="text-[#202224] xl:text-[14px] sm:text-[12px] text-[14px] leading-[16.94px] font-medium text-right">
+            <p className="text-[#202224] xl:text-[14px] text-[12px] leading-[16.94px] font-medium text-right">
                 {daysAgo} days ago
             </p>
         </div>
@@ -59,7 +59,7 @@ export const TestimonialCard: React.FC<TestimonialsItemInterface> = (props) => {
         <p className="xxl:text-[17px] xl:text-[15.5px] sm:text-[14px] text-[15px] leading-[20.57px] text-[#202224] pb-[10px] font-medium">
             {title}
         </p>
-        <p className="xxl:text-[17px] xl:text-[15.5px] sm:text-[14px] text-[15px] leading-[26px] text-[#202224] pb-[13px] font-normal min-h-[220px]">
+        <p className="xxl:text-[17px] xl:text-[15.5px] sm:text-[14px] text-[15px] leading-[26px] text-[#202224] pb-[13px] font-normal min-h-[230px]">
             {description}
         </p>
         <p className="xxl:text-[14px] md:text-[13px] sm:text-[12px] text-[14px] leading-[16.94px] text-[#202224] font-medium">
