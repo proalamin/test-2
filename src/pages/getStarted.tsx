@@ -12,16 +12,16 @@ const GetStarted: React.FC = () => {
     const router = useRouter();
     const { setIsLoading } = useContext(LoaderContext);
     const [params, setParams] = React.useState({
-        f_name: "",
-        l_name: "",
+        first_name: "",
+        last_name: "",
         phone: "",
         email: "",
         is_checked: false,
     });
     const [open, setOpen] = React.useState(false);
     const [errors, setErrors] = React.useState({
-        f_name: "",
-        l_name: "",
+        first_name: "",
+        last_name: "",
         phone: "",
         email: "",
     });
@@ -32,7 +32,7 @@ const GetStarted: React.FC = () => {
     const checkErrors = () => {
         const errors: any = {};
 
-        const requiredFields = ['f_name', 'l_name', 'phone', 'email'];
+        const requiredFields = ['first_name', 'last_name', 'phone', 'email'];
         for (const field of requiredFields) {
             if (!params[field]) {
                 errors[field] = `Please enter your ${field.replace('_', ' ')}`;
@@ -46,6 +46,16 @@ const GetStarted: React.FC = () => {
         setErrors(errors);
 
         return Object.keys(errors).length === 0;
+    }
+
+    const resetParams = () => {
+        setParams({
+            first_name: "",
+            last_name: "",
+            phone: "+1",
+            email: "",
+            is_checked: false
+        })
     }
 
     const sendEmail = async () => {
@@ -67,6 +77,7 @@ const GetStarted: React.FC = () => {
 
         if (data.success) {
             toast.success("Email Send successfully!");
+            resetParams();
         }
         setIsLoading(false);
     }
@@ -112,14 +123,14 @@ const GetStarted: React.FC = () => {
                                 <Input
                                     placeholder="First Name"
                                     withGetStarted
-                                    value={params.f_name}
-                                    onChange={e => setParam("f_name", e.target.value)}
+                                    value={params.first_name}
+                                    onChange={e => setParam("first_name", e.target.value)}
                                     className="pl-[50px]"
                                 />
                             </div>
                             {
-                                errors.f_name && <p className="text-[12px] capitalize text-primary">
-                                    {errors.f_name}
+                                errors.first_name && <p className="text-[12px] capitalize text-primary">
+                                    {errors.first_name}
                                 </p>
                             }
                         </div>
@@ -130,15 +141,15 @@ const GetStarted: React.FC = () => {
                                 </div>
                                 <Input
                                     placeholder="Last Name"
-                                    value={params.l_name}
+                                    value={params.last_name}
                                     withGetStarted
-                                    onChange={e => setParam("l_name", e.target.value)}
+                                    onChange={e => setParam("last_name", e.target.value)}
                                     className="pl-[50px]"
                                 />
                             </div>
                             {
-                                errors.l_name && <p className="text-[12px] capitalize text-primary">
-                                    {errors.l_name}
+                                errors.last_name && <p className="text-[12px] capitalize text-primary">
+                                    {errors.last_name}
                                 </p>
                             }
                         </div>
