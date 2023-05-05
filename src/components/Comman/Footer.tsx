@@ -170,7 +170,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                                 {
                                     socialMediaLinks?.map((item, index) => {
                                         return <div key={index}>
-                                            <Img src={item.icon} alt={item.name}
+                                            <Img src={item.icon} alt="Social Icon"
                                                  className="w-[23px] h-[23px]"/>
                                         </div>
                                     })
