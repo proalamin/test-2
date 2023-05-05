@@ -20,7 +20,7 @@ body {
 .header.header-sticky {
     z-index: 999;
     padding-top: 24px;
-    background: #FFFFFF;
+    background: #F4F9FF;
     padding-bottom: 24px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
