@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { LoaderContext } from "@/context/LoaderContext";
 
 interface User {
-    email: string;
+    username: string;
     password: string;
 }
 

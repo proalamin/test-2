@@ -11,28 +11,28 @@ import data from "@/data/config.json";
 const GetStarted: React.FC = () => {
     const router = useRouter();
     const { setIsLoading } = useContext(LoaderContext);
-    const [params, setParams] = React.useState({
+    const [params, setParams] = React.useState<any>({
         first_name: "",
         last_name: "",
         phone: "",
         email: "",
         is_checked: false,
     });
-    const [open, setOpen] = React.useState(false);
-    const [errors, setErrors] = React.useState({
+    const [open, setOpen] = React.useState<any>(false);
+    const [errors, setErrors] = React.useState<any>({
         first_name: "",
         last_name: "",
         phone: "",
         email: "",
     });
     const setParam = (key: string, value: any) => {
-        setParams((prev) => ({ ...prev, [key]: value }));
+        setParams((prev: any) => ({ ...prev, [key]: value }));
     }
 
     const checkErrors = () => {
         const errors: any = {};
 
-        const requiredFields = ['first_name', 'last_name', 'phone', 'email'];
+        const requiredFields: any = ['first_name', 'last_name', 'phone', 'email'];
         for (const field of requiredFields) {
             if (!params[field]) {
                 errors[field] = `Please enter your ${field.replace('_', ' ')}`;
