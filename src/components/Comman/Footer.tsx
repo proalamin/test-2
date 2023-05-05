@@ -39,7 +39,7 @@ export const Footer: React.FC<FooterInterface> = (props) => {
             }}
         >
             <div className="max-w-[1263px] mx-auto">
-                <div className="grid md:grid-cols-6 grid-cols-2 xxl:gap-[80px] md:gap-[60px]">
+                <div className="grid md:grid-cols-6 grid-cols-2 xxl:gap-[60px] xl:gap-[50px] md:gap-[40px]">
                     <div className="md:pb-0 pb-[30px]">
                         <h5
                             className="xxl:text-[16px] xl:text-[15px] text-[14px] leading-[27px] tracking-[-0.05px] font-semibold md:pb-[26px] pb-[23px] text-[#101D2C]"
@@ -126,23 +126,45 @@ export const Footer: React.FC<FooterInterface> = (props) => {
                         >
                             {legal.title}
                         </h5>
-                        <p
-                            className="xxl:text-[18px] xl:text-[15px] text-[14px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
-                        >
-                            {legal.address}
-                        </p>
-                        <a
-                            href={`mailto:${legal.email}`}
-                            className="d-block xxl:text-[18px] xl:text-[15px] text-[14px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
-                        >
-                            {legal.email}
-                        </a>
-                        <a
-                            href={`tel:${legal.phone}`}
-                            className="d-block xxl:text-[18px] xl:text-[15px] text-[14px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
-                        >
-                            {legal.phone}
-                        </a>
+                        <div className="flex">
+                            <Img
+                                src="/images/icons/map.svg"
+                                alt="Address Icon"
+                                className="w-[14px] mr-[8px]"
+                            />
+                            <p
+                                className="xxl:text-[18px] xl:text-[15px] text-[14px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
+                            >
+                                {legal.address}
+                            </p>
+                        </div>
+
+                        <div className="flex">
+                            <Img
+                                src="/images/icons/mail.svg"
+                                alt="Address Icon"
+                                className="w-[14px] mr-[8px]"
+                            />
+                            <a
+                                href={`mailto:${legal.email}`}
+                                className="d-block xxl:text-[18px] xl:text-[15px] text-[14px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
+                            >
+                                {legal.email}
+                            </a>
+                        </div>
+                        <div className="flex">
+                            <Img
+                                src="/images/icons/phone.svg"
+                                alt="Address Icon"
+                                className="w-[14px] mr-[8px]"
+                            />
+                            <a
+                                href={`tel:${legal.phone}`}
+                                className="d-block xxl:text-[18px] xl:text-[15px] text-[14px] leading-[36px] tracking-[-0.32px] font-light text-[#101D2C]"
+                            >
+                                {legal.phone}
+                            </a>
+                        </div>
                         <div className="mt-[20px]">
                             <div className="flex gap-[10px] items-center">
                                 {

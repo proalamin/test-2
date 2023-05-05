@@ -13,6 +13,18 @@ body {
     overflow-x: hidden;
 }
 
+.header {
+    transition: .2s linear;
+}
+
+.header.header-sticky {
+    z-index: 999;
+    padding-top: 24px;
+    background: #FFFFFF;
+    padding-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
 .testimonial-slider .slick-slide {
     opacity: .41;
     padding: 0 20px;

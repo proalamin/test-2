@@ -7,6 +7,8 @@
     "light": "/images/logo.svg" ,
     "dark": "/images/logo_dark.svg"
   } ,
+  "logo_dark": "/images/logo_dark.svg" ,
+  "logo_light": "/images/logo.svg" ,
   "socialMedia": {
     "facebook": "" ,
     "twitter": "" ,

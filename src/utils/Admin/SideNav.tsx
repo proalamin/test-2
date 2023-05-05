@@ -39,9 +39,9 @@ export const SideNav: React.FC<SideNavInterface> = (props) => {
                                         </p>
                                         <div>
                                             <Img
-                                                src="/images/arrow-down.svg"
+                                                src="/images/arrow.svg"
                                                 alt="Arrow"
-                                                className={`w-[20px] h-[20px] transition-all ${showDropdownIndex === index ? 'rotate-180' : 'rotate-0'}`}
+                                                className={`w-[10px] h-[10px] transition-all ${showDropdownIndex === index ? 'rotate-180' : 'rotate-0'}`}
                                             />
                                         </div>
                                     </div>

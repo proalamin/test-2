@@ -12,7 +12,6 @@ export interface BannerInterface {
 }
 
 export interface HeaderInterface {
-    logo: string;
     button: {
         title: string;
         href?: string;
