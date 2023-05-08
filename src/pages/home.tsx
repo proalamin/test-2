@@ -16,7 +16,7 @@ import awesomeNumberData from '@/data/awesomeNumbers.json';
 import testimonials from '@/data/testimonials.json';
 import Head from "next/head";
 
-const Home: React.FC = () => {
+export const Home: React.FC = () => {
     return <>
         <Head>
             <title>
@@ -115,5 +115,3 @@ const Home: React.FC = () => {
         </div>
     </>
 }
-
-export default Home;
