@@ -1,3 +1,11 @@
-import { Home } from "@/pages/home";
+import React from 'react'
+import Home from "@/pages/home";
 
-export default Home;
+export default function index () {
+    return <>
+        <div className="main">
+            <Home/>
+        </div>
+    </>
+}
+
